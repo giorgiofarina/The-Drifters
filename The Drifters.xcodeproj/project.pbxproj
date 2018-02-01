@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99DC2E7D20234B0800412EE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E7C20234B0800412EE4 /* AppDelegate.swift */; };
+		99DC2E7F20234B0800412EE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E7E20234B0800412EE4 /* ViewController.swift */; };
+		99DC2E8220234B0800412EE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DC2E8020234B0800412EE4 /* Main.storyboard */; };
+		99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */; };
+		99DC2E8720234B0800412EE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99DC2E8620234B0800412EE4 /* Assets.xcassets */; };
+		99DC2E8A20234B0800412EE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */; };
+		99DC2E9520234B0800412EE4 /* The_DriftersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E9420234B0800412EE4 /* The_DriftersTests.swift */; };
+		99DC2EA020234B0800412EE4 /* The_DriftersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E9F20234B0800412EE4 /* The_DriftersUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99DC2E9120234B0800412EE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99DC2E7120234B0800412EE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99DC2E7820234B0800412EE4;
+			remoteInfo = "The Drifters";
+		};
+		99DC2E9C20234B0800412EE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99DC2E7120234B0800412EE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99DC2E7820234B0800412EE4;
+			remoteInfo = "The Drifters";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		99DC2E7920234B0800412EE4 /* The Drifters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Drifters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99DC2E7C20234B0800412EE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99DC2E7E20234B0800412EE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99DC2E8120234B0800412EE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99DC2E8420234B0800412EE4 /* The_Drifters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = The_Drifters.xcdatamodel; sourceTree = "<group>"; };
+		99DC2E8620234B0800412EE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99DC2E8920234B0800412EE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99DC2E8B20234B0800412EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99DC2E9020234B0800412EE4 /* The DriftersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The DriftersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99DC2E9420234B0800412EE4 /* The_DriftersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_DriftersTests.swift; sourceTree = "<group>"; };
+		99DC2E9620234B0800412EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99DC2E9B20234B0800412EE4 /* The DriftersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The DriftersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99DC2E9F20234B0800412EE4 /* The_DriftersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_DriftersUITests.swift; sourceTree = "<group>"; };
+		99DC2EA120234B0800412EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99DC2E7620234B0800412EE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC2E8D20234B0800412EE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC2E9820234B0800412EE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99DC2E7020234B0800412EE4 = {
+			isa = PBXGroup;
+			children = (
+				99DC2E7B20234B0800412EE4 /* The Drifters */,
+				99DC2E9320234B0800412EE4 /* The DriftersTests */,
+				99DC2E9E20234B0800412EE4 /* The DriftersUITests */,
+				99DC2E7A20234B0800412EE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99DC2E7A20234B0800412EE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99DC2E7920234B0800412EE4 /* The Drifters.app */,
+				99DC2E9020234B0800412EE4 /* The DriftersTests.xctest */,
+				99DC2E9B20234B0800412EE4 /* The DriftersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99DC2E7B20234B0800412EE4 /* The Drifters */ = {
+			isa = PBXGroup;
+			children = (
+				99DC2E7C20234B0800412EE4 /* AppDelegate.swift */,
+				99DC2E7E20234B0800412EE4 /* ViewController.swift */,
+				99DC2E8020234B0800412EE4 /* Main.storyboard */,
+				99DC2E8620234B0800412EE4 /* Assets.xcassets */,
+				99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */,
+				99DC2E8B20234B0800412EE4 /* Info.plist */,
+				99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */,
+			);
+			path = "The Drifters";
+			sourceTree = "<group>";
+		};
+		99DC2E9320234B0800412EE4 /* The DriftersTests */ = {
+			isa = PBXGroup;
+			children = (
+				99DC2E9420234B0800412EE4 /* The_DriftersTests.swift */,
+				99DC2E9620234B0800412EE4 /* Info.plist */,
+			);
+			path = "The DriftersTests";
+			sourceTree = "<group>";
+		};
+		99DC2E9E20234B0800412EE4 /* The DriftersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				99DC2E9F20234B0800412EE4 /* The_DriftersUITests.swift */,
+				99DC2EA120234B0800412EE4 /* Info.plist */,
+			);
+			path = "The DriftersUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99DC2E7820234B0800412EE4 /* The Drifters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99DC2EA420234B0800412EE4 /* Build configuration list for PBXNativeTarget "The Drifters" */;
+			buildPhases = (
+				99DC2E7520234B0800412EE4 /* Sources */,
+				99DC2E7620234B0800412EE4 /* Frameworks */,
+				99DC2E7720234B0800412EE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Drifters";
+			productName = "The Drifters";
+			productReference = 99DC2E7920234B0800412EE4 /* The Drifters.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99DC2E8F20234B0800412EE4 /* The DriftersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99DC2EA720234B0800412EE4 /* Build configuration list for PBXNativeTarget "The DriftersTests" */;
+			buildPhases = (
+				99DC2E8C20234B0800412EE4 /* Sources */,
+				99DC2E8D20234B0800412EE4 /* Frameworks */,
+				99DC2E8E20234B0800412EE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99DC2E9220234B0800412EE4 /* PBXTargetDependency */,
+			);
+			name = "The DriftersTests";
+			productName = "The DriftersTests";
+			productReference = 99DC2E9020234B0800412EE4 /* The DriftersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99DC2E9A20234B0800412EE4 /* The DriftersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99DC2EAA20234B0800412EE4 /* Build configuration list for PBXNativeTarget "The DriftersUITests" */;
+			buildPhases = (
+				99DC2E9720234B0800412EE4 /* Sources */,
+				99DC2E9820234B0800412EE4 /* Frameworks */,
+				99DC2E9920234B0800412EE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99DC2E9D20234B0800412EE4 /* PBXTargetDependency */,
+			);
+			name = "The DriftersUITests";
+			productName = "The DriftersUITests";
+			productReference = 99DC2E9B20234B0800412EE4 /* The DriftersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99DC2E7120234B0800412EE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Graziella Caputo";
+				TargetAttributes = {
+					99DC2E7820234B0800412EE4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					99DC2E8F20234B0800412EE4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 99DC2E7820234B0800412EE4;
+					};
+					99DC2E9A20234B0800412EE4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 99DC2E7820234B0800412EE4;
+					};
+				};
+			};
+			buildConfigurationList = 99DC2E7420234B0800412EE4 /* Build configuration list for PBXProject "The Drifters" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99DC2E7020234B0800412EE4;
+			productRefGroup = 99DC2E7A20234B0800412EE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99DC2E7820234B0800412EE4 /* The Drifters */,
+				99DC2E8F20234B0800412EE4 /* The DriftersTests */,
+				99DC2E9A20234B0800412EE4 /* The DriftersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99DC2E7720234B0800412EE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99DC2E8A20234B0800412EE4 /* LaunchScreen.storyboard in Resources */,
+				99DC2E8720234B0800412EE4 /* Assets.xcassets in Resources */,
+				99DC2E8220234B0800412EE4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC2E8E20234B0800412EE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC2E9920234B0800412EE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99DC2E7520234B0800412EE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99DC2E7F20234B0800412EE4 /* ViewController.swift in Sources */,
+				99DC2E7D20234B0800412EE4 /* AppDelegate.swift in Sources */,
+				99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC2E8C20234B0800412EE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99DC2E9520234B0800412EE4 /* The_DriftersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DC2E9720234B0800412EE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99DC2EA020234B0800412EE4 /* The_DriftersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99DC2E9220234B0800412EE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99DC2E7820234B0800412EE4 /* The Drifters */;
+			targetProxy = 99DC2E9120234B0800412EE4 /* PBXContainerItemProxy */;
+		};
+		99DC2E9D20234B0800412EE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99DC2E7820234B0800412EE4 /* The Drifters */;
+			targetProxy = 99DC2E9C20234B0800412EE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99DC2E8020234B0800412EE4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99DC2E8120234B0800412EE4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99DC2E8920234B0800412EE4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99DC2EA220234B0800412EE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		99DC2EA320234B0800412EE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99DC2EA520234B0800412EE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58273SULBX;
+				INFOPLIST_FILE = "The Drifters/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-Drifters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99DC2EA620234B0800412EE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58273SULBX;
+				INFOPLIST_FILE = "The Drifters/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-Drifters";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		99DC2EA820234B0800412EE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58273SULBX;
+				INFOPLIST_FILE = "The DriftersTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-DriftersTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Drifters.app/The Drifters";
+			};
+			name = Debug;
+		};
+		99DC2EA920234B0800412EE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58273SULBX;
+				INFOPLIST_FILE = "The DriftersTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-DriftersTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Drifters.app/The Drifters";
+			};
+			name = Release;
+		};
+		99DC2EAB20234B0800412EE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58273SULBX;
+				INFOPLIST_FILE = "The DriftersUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-DriftersUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "The Drifters";
+			};
+			name = Debug;
+		};
+		99DC2EAC20234B0800412EE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58273SULBX;
+				INFOPLIST_FILE = "The DriftersUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-DriftersUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "The Drifters";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99DC2E7420234B0800412EE4 /* Build configuration list for PBXProject "The Drifters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99DC2EA220234B0800412EE4 /* Debug */,
+				99DC2EA320234B0800412EE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99DC2EA420234B0800412EE4 /* Build configuration list for PBXNativeTarget "The Drifters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99DC2EA520234B0800412EE4 /* Debug */,
+				99DC2EA620234B0800412EE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99DC2EA720234B0800412EE4 /* Build configuration list for PBXNativeTarget "The DriftersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99DC2EA820234B0800412EE4 /* Debug */,
+				99DC2EA920234B0800412EE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99DC2EAA20234B0800412EE4 /* Build configuration list for PBXNativeTarget "The DriftersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99DC2EAB20234B0800412EE4 /* Debug */,
+				99DC2EAC20234B0800412EE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				99DC2E8420234B0800412EE4 /* The_Drifters.xcdatamodel */,
+			);
+			currentVersion = 99DC2E8420234B0800412EE4 /* The_Drifters.xcdatamodel */;
+			path = The_Drifters.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 99DC2E7120234B0800412EE4 /* Project object */;
+}
