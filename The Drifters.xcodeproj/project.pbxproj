@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87B82A382024BA9600AAF7CC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B82A372024BA9600AAF7CC /* Home.storyboard */; };
+		87B82A3A2024BAB100AAF7CC /* MyGarden.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B82A392024BAB100AAF7CC /* MyGarden.storyboard */; };
+		87B82A3C2024BABE00AAF7CC /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B82A3B2024BABE00AAF7CC /* Favourites.storyboard */; };
 		99DC2E7D20234B0800412EE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E7C20234B0800412EE4 /* AppDelegate.swift */; };
 		99DC2E7F20234B0800412EE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E7E20234B0800412EE4 /* ViewController.swift */; };
 		99DC2E8220234B0800412EE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DC2E8020234B0800412EE4 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87B82A372024BA9600AAF7CC /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		87B82A392024BAB100AAF7CC /* MyGarden.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyGarden.storyboard; sourceTree = "<group>"; };
+		87B82A3B2024BABE00AAF7CC /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
 		99DC2E7920234B0800412EE4 /* The Drifters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Drifters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DC2E7C20234B0800412EE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99DC2E7E20234B0800412EE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +112,9 @@
 				99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */,
 				99DC2E8B20234B0800412EE4 /* Info.plist */,
 				99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */,
+				87B82A372024BA9600AAF7CC /* Home.storyboard */,
+				87B82A392024BAB100AAF7CC /* MyGarden.storyboard */,
+				87B82A3B2024BABE00AAF7CC /* Favourites.storyboard */,
 			);
 			path = "The Drifters";
 			sourceTree = "<group>";
@@ -235,7 +244,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B82A3A2024BAB100AAF7CC /* MyGarden.storyboard in Resources */,
 				99DC2E8A20234B0800412EE4 /* LaunchScreen.storyboard in Resources */,
+				87B82A3C2024BABE00AAF7CC /* Favourites.storyboard in Resources */,
+				87B82A382024BA9600AAF7CC /* Home.storyboard in Resources */,
 				99DC2E8720234B0800412EE4 /* Assets.xcassets in Resources */,
 				99DC2E8220234B0800412EE4 /* Main.storyboard in Resources */,
 			);
