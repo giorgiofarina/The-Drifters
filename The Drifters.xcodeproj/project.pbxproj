@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2280998E202D8F9900C2BCDD /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2280998D202D8F9900C2BCDD /* Onboarding.storyboard */; };
+		22809990202D900C00C2BCDD /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2280998F202D900C00C2BCDD /* PageViewController.swift */; };
+		22809992202D9E3700C2BCDD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22809991202D9E3700C2BCDD /* FirstViewController.swift */; };
+		22809994202D9E4900C2BCDD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22809993202D9E4900C2BCDD /* SecondViewController.swift */; };
+		22809996202D9E5300C2BCDD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22809995202D9E5300C2BCDD /* ThirdViewController.swift */; };
 		87B82A382024BA9600AAF7CC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B82A372024BA9600AAF7CC /* Home.storyboard */; };
 		87B82A3A2024BAB100AAF7CC /* MyGarden.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B82A392024BAB100AAF7CC /* MyGarden.storyboard */; };
 		87B82A3C2024BABE00AAF7CC /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B82A3B2024BABE00AAF7CC /* Favourites.storyboard */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2280998D202D8F9900C2BCDD /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		2280998F202D900C00C2BCDD /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		22809991202D9E3700C2BCDD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		22809993202D9E4900C2BCDD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		22809995202D9E5300C2BCDD /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		87B82A372024BA9600AAF7CC /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		87B82A392024BAB100AAF7CC /* MyGarden.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyGarden.storyboard; sourceTree = "<group>"; };
 		87B82A3B2024BABE00AAF7CC /* Favourites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
@@ -82,6 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2280998C202D8F3900C2BCDD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2280998D202D8F9900C2BCDD /* Onboarding.storyboard */,
+				2280998F202D900C00C2BCDD /* PageViewController.swift */,
+				22809991202D9E3700C2BCDD /* FirstViewController.swift */,
+				22809993202D9E4900C2BCDD /* SecondViewController.swift */,
+				22809995202D9E5300C2BCDD /* ThirdViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		99DC2E7020234B0800412EE4 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +131,7 @@
 				99DC2E7E20234B0800412EE4 /* ViewController.swift */,
 				99DC2E8020234B0800412EE4 /* Main.storyboard */,
 				99DC2E8620234B0800412EE4 /* Assets.xcassets */,
+				2280998C202D8F3900C2BCDD /* Onboarding */,
 				99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */,
 				99DC2E8B20234B0800412EE4 /* Info.plist */,
 				99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */,
@@ -248,6 +271,7 @@
 				99DC2E8A20234B0800412EE4 /* LaunchScreen.storyboard in Resources */,
 				87B82A3C2024BABE00AAF7CC /* Favourites.storyboard in Resources */,
 				87B82A382024BA9600AAF7CC /* Home.storyboard in Resources */,
+				2280998E202D8F9900C2BCDD /* Onboarding.storyboard in Resources */,
 				99DC2E8720234B0800412EE4 /* Assets.xcassets in Resources */,
 				99DC2E8220234B0800412EE4 /* Main.storyboard in Resources */,
 			);
@@ -274,9 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22809994202D9E4900C2BCDD /* SecondViewController.swift in Sources */,
+				22809992202D9E3700C2BCDD /* FirstViewController.swift in Sources */,
 				99DC2E7F20234B0800412EE4 /* ViewController.swift in Sources */,
+				22809996202D9E5300C2BCDD /* ThirdViewController.swift in Sources */,
 				99DC2E7D20234B0800412EE4 /* AppDelegate.swift in Sources */,
 				99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */,
+				22809990202D900C00C2BCDD /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 58273SULBX;
+				DEVELOPMENT_TEAM = Z9SSNET996;
 				INFOPLIST_FILE = "The Drifters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-Drifters";
@@ -458,7 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 58273SULBX;
+				DEVELOPMENT_TEAM = Z9SSNET996;
 				INFOPLIST_FILE = "The Drifters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-Drifters";
