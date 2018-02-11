@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="610" y="133"/>
         </scene>
-        <!--Favourites-->
+        <!--SearchView-->
         <scene sceneID="ZFA-c8-mC2">
             <objects>
-                <viewControllerPlaceholder storyboardName="Favourites" id="DvZ-ve-qpK" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SearchView" id="DvZ-ve-qpK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="i0d-gh-Rdy"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVM-u9-oQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
