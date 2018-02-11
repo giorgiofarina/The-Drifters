@@ -10,8 +10,11 @@ import UIKit
 
 class SearchTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imgPlantView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+
+    @IBOutlet weak var customCellView: UIView!
+    @IBOutlet weak var plantImageView: UIImageView!
+    @IBOutlet weak var namePlantLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

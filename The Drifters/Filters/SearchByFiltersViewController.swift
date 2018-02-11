@@ -39,6 +39,8 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            self.navigationController?.isNavigationBarHidden = true
+            
             scrollView.isScrollEnabled = false
             scrollView.contentInsetAdjustmentBehavior = .never
             
