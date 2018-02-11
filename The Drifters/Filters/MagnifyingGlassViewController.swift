@@ -36,7 +36,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate {
     
 
 //    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange SelectedScope: Int) -> Bool {
-//        
+//
 //    }
     
     private func setUpSearchBar(){
