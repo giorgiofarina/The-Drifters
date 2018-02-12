@@ -30,7 +30,7 @@
         <scene sceneID="3oh-FD-Yto">
             <objects>
                 <navigationController id="n8T-a5-maL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Camera" image="ù" id="Pln-a5-fIZ"/>
+                    <tabBarItem key="tabBarItem" title="Camera" id="Pln-a5-fIZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2FC-Hl-LK4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -45,7 +45,4 @@
             <point key="canvasLocation" x="-788" y="-253"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ù" width="16" height="16"/>
-    </resources>
 </document>

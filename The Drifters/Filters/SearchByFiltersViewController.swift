@@ -9,29 +9,62 @@
 import UIKit
 import CoreLocation
 
-class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
+class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate {
+    
+    
+    
         
         @IBOutlet weak var scrollView: UIScrollView!
         
-        
         @IBOutlet weak var currentLocationButton: UIButton!
-    
-    
-        @IBOutlet weak var dedicationButton: UIButton!
-    
-    
+
         @IBOutlet weak var matchingButton: UIButton!
     
-    
-    
-    
-    
+        @IBOutlet weak var dedicationButton: UIButton!
         @IBOutlet weak var categoryButton: UIButton!
-        @IBOutlet weak var categoryLabel: UILabel!
-        @IBOutlet weak var categoryPickerView: UIPickerView!
-        
-    
         @IBOutlet weak var spaceButton: UIButton!
+        @IBOutlet weak var brightnessButton: UIButton!
+    
+        @IBOutlet weak var categoryTextField: UITextField!{
+            didSet {
+                categoryTextField.delegate = self
+            }
+        }
+        @IBOutlet weak var spaceTextField: UITextField!{
+            didSet {
+                spaceTextField.delegate = self
+            }
+        }
+    
+    
+    
+    
+        @IBOutlet weak var dedicationTextField: UITextField!
+        @IBOutlet weak var brightnessTextField: UITextField!
+    
+        var searchController = UISearchController()
+        @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+
+    
+    
+        let categoryPickerView = UIPickerView()
+        let spacePickerView = UIPickerView()
+        let dedicationPickerView = UIPickerView()
+    
+    
+        let category = ["Officinal Plants",
+                    "Ornamental Plants",
+                    "Aquatic Plants",
+                    "Vegetables", "Fruit Plants"]
+        let space = ["Inside","Outside"]
+    
+        let dedication = ["5min per day",
+                      "15min per day",
+                      "1h per day",
+                      "more than 1h per day", "1h per week"]
+    
     
         var latitude: String = ""
         var longitude: String = ""
@@ -51,6 +84,8 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             super.viewDidLoad()
             self.navigationController?.isNavigationBarHidden = true
             
+            scrollView.isScrollEnabled = false
+            scrollView.contentInsetAdjustmentBehavior = .never
             
     //SETTING SHAPES OF THE BUTTON
             categoryButton.layer.cornerRadius = 10
@@ -61,27 +96,83 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             dedicationButton.layer.masksToBounds = true
             matchingButton.layer.cornerRadius = 10
             matchingButton.layer.masksToBounds = true
+            brightnessButton.layer.cornerRadius = 10
+            brightnessButton.layer.masksToBounds = true
             currentLocationButton.layer.cornerRadius = currentLocationButton.frame.size.width / 2
             currentLocationButton.clipsToBounds = true
             
-            
-            scrollView.isScrollEnabled = false
-            scrollView.contentInsetAdjustmentBehavior = .never
+     
             
             
-            categoryPickerView.isHidden = true
-            categoryPickerView.delegate = self
+    //SET TOOLBAR
+            
+            let toolbar = UIToolbar()
+            toolbar.sizeToFit()
+            
+            let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+            let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+            
+            let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(self.cancelClicked))
+            
+           
+            toolbar.setItems([cancelButton, flexibleSpace, doneButton], animated: false)
+            
+            categoryTextField.inputAccessoryView = toolbar
+            spaceTextField.inputAccessoryView = toolbar
+            dedicationTextField.inputAccessoryView = toolbar
+            
             categoryPickerView.dataSource = self
+            categoryPickerView.delegate = self
+            
+            spacePickerView.dataSource = self
+            spacePickerView.delegate = self
+            
+            dedicationPickerView.dataSource = self
+            dedicationPickerView.delegate = self
+            
+            categoryTextField.tintColor = UIColor.clear
+            spaceTextField.tintColor = UIColor.clear
+            dedicationTextField.tintColor = UIColor.clear
+            
+            categoryTextField.inputView = categoryPickerView
+            spaceTextField.inputView = spacePickerView
+            dedicationTextField.inputView = dedicationPickerView
+            
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(sender:)))
+            view.addGestureRecognizer(tapGesture)
+            view.isUserInteractionEnabled = true
             
             
         }
+    
+    
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
-        
-        
+    
+    
+    
+        @objc func viewTapped(sender: UITapGestureRecognizer) {
+            categoryTextField.resignFirstResponder()
+            spaceTextField.resignFirstResponder()
+            dedicationTextField.resignFirstResponder()
+        }
+    
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            
+            if (textField == categoryTextField || textField == spaceTextField ){
+            scrollView.setContentOffset(CGPoint(x: 0, y: 220), animated: true)
+            }
+        }
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            if (textField == categoryTextField || textField == spaceTextField ){
+                scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+            }
+        }
+
+    
     //BUTTON TO GET THE CURRENT LOCATION
         
         @IBAction func currentLocationButtonTapped(_ sender: Any) {
@@ -108,64 +199,71 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
                 print("unauthorized location service")
             }
         }
-        
+    
         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [AnyObject]) {
             location = (locations as! [CLLocation]).last
             locationManager.stopUpdatingLocation()
         }
         
         
-    //PICKER TO SELECT THE TYPE OF PLANT
-        @IBAction func categoryButtonPressed(_ sender: Any) {
-            scrollView.isScrollEnabled = true
-            scrollView.setContentOffset(CGPoint(x: 0, y: 120), animated: true)
-            
-            if categoryPickerView.isHidden {
-                categoryPickerView.isHidden = false
-            }
-            
-        }
-        
-        
-        let category = ["Officinal Plants",
-                        "Ornamental Plants",
-                        "Aquatic Plants",
-                        "Vegetables", "Fruit Plants"]
+    //PICKER
+    
         
         public func numberOfComponents(in pickerView: UIPickerView) -> Int{
             return 1
         }
         
-        
-        public func pickerView(_ pickerVSearchByFiltersViewControlleriew: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+ 
+        if pickerView == categoryPickerView {
             return category.count
+        } else if pickerView == spacePickerView {
+            return space.count
+        } else {
+            return dedication.count
         }
+        
+    }
         
         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return category[row]
+            if pickerView == categoryPickerView {
+                return category[row]
+            } else if pickerView == spacePickerView{
+                return space[row]
+            } else {
+                return dedication[row]
+            }
+           
         }
-        
+    
         func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
             
-            scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
-            categoryLabel.text = category[row]
-            categoryLabel.resignFirstResponder()
-            categoryPickerView.isHidden = true
+            
+            if pickerView == categoryPickerView {
+                categoryTextField.text = category[row]
+            } else if pickerView == spacePickerView{
+                spaceTextField.text = space[row]
+            } else {
+                dedicationTextField.text = dedication[row]
+            }
+          
             scrollView.isScrollEnabled = false
         }
-        
-        
-        //PICKER TO SELECT THE SPACE AVAILABLE
-        
-        
-        @IBAction func spaceButtonPressed(_ sender: Any) {
-            scrollView.isScrollEnabled = true
-            scrollView.setContentOffset(CGPoint(x: 0, y: 120), animated: true)
-            
-        }
-        
     
+    
+        @objc func doneClicked() {
+            categoryTextField.resignFirstResponder()
+            spaceTextField.resignFirstResponder()
+            dedicationTextField.resignFirstResponder()
+            view.endEditing(true)
+        }
+    
+        @objc func cancelClicked() {
+            view.endEditing(true)
+        }
+
  
     
-
 }
+
+
