@@ -125,11 +125,10 @@
                                                     <outlet property="delegate" destination="Nfy-mT-1ji" id="e8G-TD-OvR"/>
                                                 </connections>
                                             </searchBar>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-OR-Kuj">
-                                                <rect key="frame" x="321" y="81" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-OR-Kuj">
+                                                <rect key="frame" x="322" y="79" width="35" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Pos"/>
+                                                <state key="normal" image="current-location"/>
                                                 <connections>
                                                     <action selector="currentLocationButtonTapped:" destination="Nfy-mT-1ji" eventType="touchUpInside" id="2NP-H3-rJi"/>
                                                 </connections>
@@ -267,6 +266,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="current-location" width="512" height="512"/>
         <image name="lente" width="512" height="512"/>
         <image name="sprout-2" width="512" height="512"/>
     </resources>
