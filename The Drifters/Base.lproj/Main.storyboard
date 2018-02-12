@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="589" y="-98"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Main View Controller-->
         <scene sceneID="XTb-PN-pom">
             <objects>
-                <tabBarController id="vRC-ce-bDb" sceneMemberID="viewController">
+                <tabBarController id="vRC-ce-bDb" customClass="TabBarMainViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m1g-Zx-VQc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

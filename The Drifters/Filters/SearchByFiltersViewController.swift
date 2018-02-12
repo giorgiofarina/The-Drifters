@@ -15,14 +15,24 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         
         
         @IBOutlet weak var currentLocationButton: UIButton!
-        
-        
+    
+    
+        @IBOutlet weak var dedicationButton: UIButton!
+    
+    
+        @IBOutlet weak var matchingButton: UIButton!
+    
+    
+    
+    
+    
         @IBOutlet weak var categoryButton: UIButton!
         @IBOutlet weak var categoryLabel: UILabel!
         @IBOutlet weak var categoryPickerView: UIPickerView!
         
     
-        
+        @IBOutlet weak var spaceButton: UIButton!
+    
         var latitude: String = ""
         var longitude: String = ""
         
@@ -41,6 +51,20 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             super.viewDidLoad()
             self.navigationController?.isNavigationBarHidden = true
             
+            
+    //SETTING SHAPES OF THE BUTTON
+            categoryButton.layer.cornerRadius = 10
+            categoryButton.layer.masksToBounds = true
+            spaceButton.layer.cornerRadius = 10
+            spaceButton.layer.masksToBounds = true
+            dedicationButton.layer.cornerRadius = 10
+            dedicationButton.layer.masksToBounds = true
+            matchingButton.layer.cornerRadius = 10
+            matchingButton.layer.masksToBounds = true
+            currentLocationButton.layer.cornerRadius = currentLocationButton.frame.size.width / 2
+            currentLocationButton.clipsToBounds = true
+            
+            
             scrollView.isScrollEnabled = false
             scrollView.contentInsetAdjustmentBehavior = .never
             
@@ -58,7 +82,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         }
         
         
-        //BUTTON TO GET THE CURRENT LOCATION
+    //BUTTON TO GET THE CURRENT LOCATION
         
         @IBAction func currentLocationButtonTapped(_ sender: Any) {
             locationManager.startUpdatingLocation()
@@ -91,7 +115,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         }
         
         
-        //PICKER TO SELECT THE TYPE OF PLANT
+    //PICKER TO SELECT THE TYPE OF PLANT
         @IBAction func categoryButtonPressed(_ sender: Any) {
             scrollView.isScrollEnabled = true
             scrollView.setContentOffset(CGPoint(x: 0, y: 120), animated: true)

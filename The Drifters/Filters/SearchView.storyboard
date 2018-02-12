@@ -14,6 +14,8 @@
         <scene sceneID="ojM-LP-GfR">
             <objects>
                 <navigationController id="6Bl-pr-xIW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="QO6-lO-X4Y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="th3-zz-OhA">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -42,10 +44,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="810"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8u-pp-8cs">
-                                                <rect key="frame" x="286" y="0.0" width="69" height="44"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8u-pp-8cs">
+                                                <rect key="frame" x="330" y="8" width="37" height="39"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Search"/>
+                                                <state key="normal" image="lente" backgroundImage="lente"/>
                                                 <connections>
                                                     <segue destination="C3E-Qr-1Pq" kind="show" id="7gy-pT-jS8"/>
                                                 </connections>
@@ -57,7 +59,7 @@
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khR-Ay-Jpa">
-                                                <rect key="frame" x="56" y="378" width="100" height="100"/>
+                                                <rect key="frame" x="56" y="319" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.32074000539999997" green="0.98335858369999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
@@ -66,14 +68,14 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8X-zF-YSN">
-                                                <rect key="frame" x="56" y="486" width="100" height="50"/>
+                                                <rect key="frame" x="56" y="427" width="100" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzD-cf-mFp">
-                                                <rect key="frame" x="218" y="378" width="100" height="100"/>
+                                                <rect key="frame" x="218" y="319" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.26610164660000002" green="0.61965673580000002" blue="0.18892557700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
@@ -82,41 +84,41 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Space" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62m-fn-Ovh">
-                                                <rect key="frame" x="218" y="486" width="100" height="50"/>
+                                                <rect key="frame" x="218" y="427" width="100" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-7R-pF9">
-                                                <rect key="frame" x="137" y="544" width="100" height="50"/>
+                                                <rect key="frame" x="137" y="485" width="100" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Match"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ay-U2-De3">
-                                                <rect key="frame" x="218" y="190" width="100" height="100"/>
+                                                <rect key="frame" x="218" y="145" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.1426997019" blue="0.98830862259999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dedication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDj-BE-nB4">
-                                                <rect key="frame" x="218" y="298" width="100" height="50"/>
+                                                <rect key="frame" x="218" y="253" width="100" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Filters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml0-4A-mLN">
-                                                <rect key="frame" x="137" y="52" width="100" height="30"/>
+                                                <rect key="frame" x="137" y="30" width="100" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="608-ZB-A79">
-                                                <rect key="frame" x="8" y="82" width="359" height="56"/>
+                                                <rect key="frame" x="8" y="68" width="359" height="56"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -124,7 +126,7 @@
                                                 </connections>
                                             </searchBar>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-OR-Kuj">
-                                                <rect key="frame" x="309" y="95" width="46" height="30"/>
+                                                <rect key="frame" x="321" y="81" width="30" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Pos"/>
@@ -147,9 +149,12 @@
                         <outlet property="categoryButton" destination="khR-Ay-Jpa" id="mkN-pe-2xj"/>
                         <outlet property="categoryLabel" destination="P8X-zF-YSN" id="YN3-R3-nIz"/>
                         <outlet property="categoryPickerView" destination="AAi-hi-Am8" id="Q8V-p8-hpo"/>
-                        <outlet property="currentLocationButton" destination="wdp-OR-Kuj" id="e2G-Kg-m4z"/>
+                        <outlet property="currentLocationButton" destination="wdp-OR-Kuj" id="UjP-xp-KMo"/>
+                        <outlet property="dedicationButton" destination="7ay-U2-De3" id="TJ5-Pf-5Yz"/>
+                        <outlet property="matchingButton" destination="2ve-7R-pF9" id="2Aa-mY-mqb"/>
                         <outlet property="scrollView" destination="jua-Tl-i2t" id="DEj-xz-44s"/>
                         <outlet property="searchDisplayController" destination="elp-fm-5Hs" id="qBB-jP-Mlw"/>
+                        <outlet property="spaceButton" destination="CzD-cf-mFp" id="xBg-4e-wy8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUa-Zh-1Xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +187,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FEd-Fk-gLN">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="TJ8-Kv-lco">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -262,6 +267,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="lente" width="512" height="512"/>
         <image name="sprout-2" width="512" height="512"/>
     </resources>
 </document>

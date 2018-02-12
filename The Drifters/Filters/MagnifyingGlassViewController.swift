@@ -19,6 +19,8 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
+        
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
