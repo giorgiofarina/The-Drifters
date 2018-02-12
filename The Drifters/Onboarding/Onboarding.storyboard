@@ -33,6 +33,17 @@
                                 <color key="textColor" red="0.99270355701446533" green="0.23362152278423309" blue="0.18827898800373077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1R-MF-jqD">
+                                <rect key="frame" x="148" y="228" width="76" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.918448805809021" green="0.21377794444561005" blue="0.17652334272861481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fairy-2164607__340" translatesAutoresizingMaskIntoConstraints="NO" id="cFi-Ek-atd">
+                                <rect key="frame" x="66" y="305" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="yU2-sp-tki"/>
@@ -64,7 +75,7 @@
                                 <color key="textColor" red="0.91847085952758789" green="0.23326264321804047" blue="0.19613485038280487" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sprout-2" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-g0-h0s">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plant" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-g0-h0s">
                                 <rect key="frame" x="75" y="309" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -99,14 +110,14 @@
                                 <color key="textColor" red="0.91847562789916992" green="0.23716180026531219" blue="0.20005698502063751" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 2" translatesAutoresizingMaskIntoConstraints="NO" id="eih-la-d8C">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture" translatesAutoresizingMaskIntoConstraints="NO" id="eih-la-d8C">
                                 <rect key="frame" x="67" y="311" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBN-E9-WWG">
-                                <rect key="frame" x="147" y="543" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBN-E9-WWG">
+                                <rect key="frame" x="72" y="539" width="235" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Get Started"/>
+                                <state key="normal" image="GetStartedButton"/>
                                 <connections>
                                     <segue destination="oad-Ze-a6x" kind="show" id="rvk-r1-R6e"/>
                                 </connections>
@@ -130,7 +141,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 2" width="160" height="187"/>
-        <image name="sprout-2" width="512" height="512"/>
+        <image name="GetStartedButton" width="236" height="48"/>
+        <image name="Picture" width="135" height="187"/>
+        <image name="Plant" width="512" height="512"/>
+        <image name="fairy-2164607__340" width="208" height="177"/>
     </resources>
 </document>
