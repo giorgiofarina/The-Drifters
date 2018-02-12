@@ -40,7 +40,7 @@
                                 <color key="textColor" red="0.918448805809021" green="0.21377794444561005" blue="0.17652334272861481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plant-a-tree-3" translatesAutoresizingMaskIntoConstraints="NO" id="cFi-Ek-atd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fairy-2164607__340" translatesAutoresizingMaskIntoConstraints="NO" id="cFi-Ek-atd">
                                 <rect key="frame" x="66" y="305" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -144,6 +144,6 @@
         <image name="GetStartedButton" width="236" height="48"/>
         <image name="Picture" width="135" height="187"/>
         <image name="Plant" width="512" height="512"/>
-        <image name="plant-a-tree-3" width="194" height="190"/>
+        <image name="fairy-2164607__340" width="208" height="177"/>
     </resources>
 </document>
