@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate {
+class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate, UISearchBarDelegate {
     
     
     
