@@ -40,14 +40,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="820"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8u-pp-8cs">
-                                        <rect key="frame" x="331" y="61" width="36" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="searching-magnifying-glass"/>
-                                        <connections>
-                                            <segue destination="C3E-Qr-1Pq" kind="show" id="7gy-pT-jS8"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khR-Ay-Jpa">
                                         <rect key="frame" x="15" y="391" width="168" height="168"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,7 +60,7 @@
                                         <rect key="frame" x="191" y="215" width="168" height="168"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.80392156862745101" green="0.19215686274509802" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <inset key="imageEdgeInsets" minX="30" minY="80" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="35" minY="80" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="watering-can"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Filters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml0-4A-mLN">
@@ -105,13 +97,6 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Space" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5So-Q8-IvO" userLabel="spaceTextField">
-                                        <rect key="frame" x="195" y="395" width="160" height="160"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Dedication" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="33Q-j3-Sxv" userLabel="dedicationTextField">
                                         <rect key="frame" x="195" y="219" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -135,11 +120,26 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzD-cf-mFp">
-                                        <rect key="frame" x="191" y="395" width="168" height="168"/>
+                                        <rect key="frame" x="191" y="391" width="168" height="168"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <inset key="imageEdgeInsets" minX="30" minY="70" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="35" minY="60" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="pot"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Space" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5So-Q8-IvO" userLabel="spaceTextField">
+                                        <rect key="frame" x="195" y="395" width="160" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8u-pp-8cs">
+                                        <rect key="frame" x="331" y="69" width="36" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="searching-magnifying-glass"/>
+                                        <connections>
+                                            <segue destination="C3E-Qr-1Pq" kind="show" id="7gy-pT-jS8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>
