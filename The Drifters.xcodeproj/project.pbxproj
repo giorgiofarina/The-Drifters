@@ -168,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				99DC2E7C20234B0800412EE4 /* AppDelegate.swift */,
-				229012012032309100AEFB08 /* Garden */,
 				99DC2E7E20234B0800412EE4 /* ViewController.swift */,
 				99DC2E8020234B0800412EE4 /* Main.storyboard */,
 				99DC2E8620234B0800412EE4 /* Assets.xcassets */,
@@ -179,6 +178,7 @@
 				87B82A392024BAB100AAF7CC /* MyGarden.storyboard */,
 				87B82A3B2024BABE00AAF7CC /* Favourites.storyboard */,
 				993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */,
+				229012012032309100AEFB08 /* Garden */,
 				99C23062202F399F0044C561 /* Filters */,
 				2280998C202D8F3900C2BCDD /* Onboarding */,
 			);
