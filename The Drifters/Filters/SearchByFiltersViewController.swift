@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate {
+class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate, UISearchBarDelegate {
     
     
     
@@ -42,7 +42,6 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         @IBOutlet weak var dedicationTextField: UITextField!
         @IBOutlet weak var brightnessTextField: UITextField!
     
-        var searchController = UISearchController()
         @IBOutlet weak var searchBar: UISearchBar!
     
     
@@ -263,7 +262,17 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         }
 
  
+        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            
+        }
     
+//        func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange SelectedScope: Int) -> Bool {
+//            return true
+//        }
+    
+        private func setUpSearchBar(){
+            searchBar.delegate = self
+        }
 }
 
 
