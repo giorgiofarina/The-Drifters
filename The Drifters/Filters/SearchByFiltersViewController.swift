@@ -91,9 +91,9 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         override func viewDidLoad() {
             super.viewDidLoad()
             self.navigationController?.isNavigationBarHidden = true
-            
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
             scrollView.isScrollEnabled = true
-//            scrollView.contentInsetAdjustmentBehavior = .never
+           
             
             
     //SETTING SHAPES OF THE BUTTON

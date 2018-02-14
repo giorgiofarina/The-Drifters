@@ -22,6 +22,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         self.navigationController?.isNavigationBarHidden = false
        
         navigationController?.navigationBar.tintColor = UIColor.red
+    
         
         tableView.delegate = self
         tableView.dataSource = self

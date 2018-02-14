@@ -49,12 +49,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khR-Ay-Jpa">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khR-Ay-Jpa">
                                                 <rect key="frame" x="11" y="445" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.42352941176470588" green="0.21568627450980393" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <inset key="imageEdgeInsets" minX="30" minY="60" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" image="sprout-3"/>
+                                                <inset key="imageEdgeInsets" minX="53" minY="71" maxX="13" maxY="10"/>
+                                                <state key="normal" image="TypePlant"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-7R-pF9">
                                                 <rect key="frame" x="135" y="621" width="100" height="50"/>
@@ -65,19 +65,19 @@
                                                     <color key="titleColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ay-U2-De3">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ay-U2-De3">
                                                 <rect key="frame" x="187" y="269" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.80392156862745101" green="0.19215686274509802" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <inset key="imageEdgeInsets" minX="35" minY="80" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" image="watering-can"/>
+                                                <inset key="imageEdgeInsets" minX="61" minY="72" maxX="12" maxY="10"/>
+                                                <state key="normal" image="PlantSize"/>
                                             </button>
                                             <button opaque="NO" contentMode="bottomRight" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfN-XR-3Rt">
                                                 <rect key="frame" x="11" y="269" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.68627450980392157" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="10"/>
-                                                <state key="normal" image="sun"/>
+                                                <inset key="imageEdgeInsets" minX="53" minY="80" maxX="12" maxY="10"/>
+                                                <state key="normal" image="Dedication"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzD-cf-mFp">
                                                 <rect key="frame" x="187" y="445" width="168" height="168"/>
@@ -94,19 +94,19 @@
                                                     <segue destination="C3E-Qr-1Pq" kind="show" id="7gy-pT-jS8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-0t-yWA">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-0t-yWA">
                                                 <rect key="frame" x="187" y="93" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.63137254901960782" green="0.15294117647058825" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <inset key="imageEdgeInsets" minX="35" minY="80" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" image="sun"/>
+                                                <inset key="imageEdgeInsets" minX="53" minY="63" maxX="12" maxY="10"/>
+                                                <state key="normal" image="Brightness"/>
                                             </button>
                                             <button opaque="NO" contentMode="bottomRight" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-ss-Ya3">
                                                 <rect key="frame" x="11" y="93" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.60784313729999995" green="0.074509803920000006" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="10"/>
-                                                <state key="normal" image="sun"/>
+                                                <inset key="imageEdgeInsets" minX="46" minY="70" maxX="14" maxY="13"/>
+                                                <state key="normal" image="Climate"/>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Category" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="U3L-wc-JGw" userLabel="categoryTextField">
                                                 <rect key="frame" x="15" y="449" width="160" height="160"/>
@@ -298,15 +298,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRz-B9-WVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="-879.31034482758628"/>
+            <point key="canvasLocation" x="974" y="-718"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Brightness" width="166" height="166"/>
+        <image name="Climate" width="234" height="158"/>
+        <image name="Dedication" width="214" height="158"/>
         <image name="Phone" width="160" height="187"/>
+        <image name="PlantSize" width="160" height="166"/>
+        <image name="TypePlant" width="178" height="150"/>
         <image name="pot" width="81" height="70"/>
         <image name="searching-magnifying-glass" width="22" height="22"/>
-        <image name="sprout-3" width="89" height="75"/>
-        <image name="sun" width="83" height="83"/>
-        <image name="watering-can" width="85" height="63"/>
     </resources>
 </document>
