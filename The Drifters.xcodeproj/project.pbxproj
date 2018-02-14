@@ -20,6 +20,7 @@
 		4209FEE820349B0F00C64C7F /* plants.json in Resources */ = {isa = PBXBuildFile; fileRef = 4209FEE720349B0F00C64C7F /* plants.json */; };
 		879348142034CDE6001B1E4E /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 879348132034CDE6001B1E4E /* camera.png */; };
 		879348182034CF2B001B1E4E /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879348172034CF2B001B1E4E /* Camera.storyboard */; };
+		8793481A2034D0E9001B1E4E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879348192034D0E9001B1E4E /* CameraViewController.swift */; };
 		87B82A3A2024BAB100AAF7CC /* MyGarden.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B82A392024BAB100AAF7CC /* MyGarden.storyboard */; };
 		992C76CA203043D000F50966 /* SearchByFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */; };
 		993D6DEF20317E9C00E7EEB4 /* TabBarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */; };
@@ -68,6 +69,7 @@
 		4209FEE720349B0F00C64C7F /* plants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plants.json; sourceTree = "<group>"; };
 		879348132034CDE6001B1E4E /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		879348172034CF2B001B1E4E /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		879348192034D0E9001B1E4E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		87B82A392024BAB100AAF7CC /* MyGarden.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyGarden.storyboard; sourceTree = "<group>"; };
 		992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByFiltersViewController.swift; sourceTree = "<group>"; };
 		993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				99DC2E7E20234B0800412EE4 /* ViewController.swift */,
 				99DC2E8020234B0800412EE4 /* Main.storyboard */,
 				99DC2E8620234B0800412EE4 /* Assets.xcassets */,
+				879348192034D0E9001B1E4E /* CameraViewController.swift */,
 				879348172034CF2B001B1E4E /* Camera.storyboard */,
 				99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */,
 				99DC2E8B20234B0800412EE4 /* Info.plist */,
@@ -392,6 +395,7 @@
 				4209FEE220348E7E00C64C7F /* Plant+CoreDataClass.swift in Sources */,
 				99C23068202F39BD0044C561 /* MagnifyingGlassViewController.swift in Sources */,
 				99C23067202F39BD0044C561 /* SearchTableViewCell.swift in Sources */,
+				8793481A2034D0E9001B1E4E /* CameraViewController.swift in Sources */,
 				99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */,
 				22809990202D900C00C2BCDD /* PageViewController.swift in Sources */,
 			);
@@ -560,7 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC89RN7CV7;
+				DEVELOPMENT_TEAM = X77UFX3DVY;
 				INFOPLIST_FILE = "The Drifters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-Drifters";
@@ -575,7 +579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC89RN7CV7;
+				DEVELOPMENT_TEAM = X77UFX3DVY;
 				INFOPLIST_FILE = "The Drifters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-Drifters";
