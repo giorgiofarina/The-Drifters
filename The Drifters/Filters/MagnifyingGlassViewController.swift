@@ -20,12 +20,22 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
+       
+        navigationController?.navigationBar.tintColor = UIColor.red
+    
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+    
+        
+        
         // Do any additional setup after loading the view.
     }
 
+
+    
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return elements.count
     }
