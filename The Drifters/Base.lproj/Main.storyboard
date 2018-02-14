@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="611" y="360"/>
         </scene>
-        <!--Home-->
+        <!--Camera-->
         <scene sceneID="0l3-Im-QIY">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="4RW-H2-gQa" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Camera" id="4RW-H2-gQa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="pko-o0-TIQ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nK3-U7-WMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
