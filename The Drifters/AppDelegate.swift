@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //checkDataStore()
+        
         return true
     }
 
@@ -88,6 +90,71 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    /*
+    // check if there are already plants, otherwise upload data from json file
+    func checkDataStore(){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
+        do {
+            let plantCount = try context.count(for: request)
+            print("Total plant count: \(plantCount)")
+            if plantCount == 0 {
+                uploadPlantsData()
+            }
+        }
+        catch {
+            print(error)
+        }
+    }
+    
+    // upload function from json file
+    func uploadPlantsData() {
+        // NOME FILE RISORSA JSON
+        let resource = "plants"
+        let resourceExtension = "json"
+        let url = Bundle.main.url(forResource: resource, withExtension: resourceExtension)
+        
+        do {
+            let data = try Data.init(contentsOf: url!)
+            
+            do {
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+                
+                // "plant" titolo all'inizio del file json
+                let jsonArray = jsonResult.value(forKey: "plant") as! NSArray
+                
+                for json in jsonArray {
+                    let plant = NSEntityDescription.insertNewObject(forEntityName: "Plant", into: context) as! Plant
+     
+                    // campo database = dato json
+                    plant.commonName = json["commonName"] as? String
+     
+                    // campo immagine database = immagine
+                    let imageName = json["img1"] as? String
+                    let image = UIImage(named: imageName!)
+                    let imageData = UIImageJPEGRepresentation(image, 1.0)
+                    plant.img1 = imageData
+                }
+                appDelegate.saveContext()
+                
+                let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
+                do {
+                    let plantCount = try context.count(for: request)
+                    print("Total plant count after uploading: \(plantCount)")
+                }
+                catch {
+                    print(error)
+                }
+            }
+            catch {
+                fatalError("Error in uploading data")
+            }
+        } catch {
+            print(error)
+        }
+    }*/
 }
+
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let context = appDelegate.persistentContainer.viewContext
 
