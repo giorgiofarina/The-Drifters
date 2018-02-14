@@ -18,8 +18,8 @@
 		4209FEE320348E7E00C64C7F /* Plant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209FEDF20348E7E00C64C7F /* Plant+CoreDataProperties.swift */; };
 		4209FEE6203498D500C64C7F /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4209FEE5203498D500C64C7F /* 001.jpg */; };
 		4209FEE820349B0F00C64C7F /* plants.json in Resources */ = {isa = PBXBuildFile; fileRef = 4209FEE720349B0F00C64C7F /* plants.json */; };
-		87B82A382024BA9600AAF7CC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B82A372024BA9600AAF7CC /* Home.storyboard */; };
 		87B82A3A2024BAB100AAF7CC /* MyGarden.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B82A392024BAB100AAF7CC /* MyGarden.storyboard */; };
+		87D43FDA2034C6D900EB9945 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87D43FD92034C6D900EB9945 /* Camera.storyboard */; };
 		992C76CA203043D000F50966 /* SearchByFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */; };
 		993D6DEF20317E9C00E7EEB4 /* TabBarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */; };
 		994B4B16202F72A70037F14D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994B4B15202F72A70037F14D /* CoreLocation.framework */; };
@@ -65,8 +65,8 @@
 		4209FEDF20348E7E00C64C7F /* Plant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4209FEE5203498D500C64C7F /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
 		4209FEE720349B0F00C64C7F /* plants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plants.json; sourceTree = "<group>"; };
-		87B82A372024BA9600AAF7CC /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		87B82A392024BAB100AAF7CC /* MyGarden.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyGarden.storyboard; sourceTree = "<group>"; };
+		87D43FD92034C6D900EB9945 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByFiltersViewController.swift; sourceTree = "<group>"; };
 		993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainViewController.swift; sourceTree = "<group>"; };
 		994B4B15202F72A70037F14D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -207,7 +207,7 @@
 				99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */,
 				99DC2E8B20234B0800412EE4 /* Info.plist */,
 				99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */,
-				87B82A372024BA9600AAF7CC /* Home.storyboard */,
+				87D43FD92034C6D900EB9945 /* Camera.storyboard */,
 				87B82A392024BAB100AAF7CC /* MyGarden.storyboard */,
 				993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */,
 				229012012032309100AEFB08 /* Garden */,
@@ -344,13 +344,12 @@
 			files = (
 				87B82A3A2024BAB100AAF7CC /* MyGarden.storyboard in Resources */,
 				99DC2E8A20234B0800412EE4 /* LaunchScreen.storyboard in Resources */,
-				87B82A3C2024BABE00AAF7CC /* Favourites.storyboard in Resources */,
 				4209FEE6203498D500C64C7F /* 001.jpg in Resources */,
-				87B82A382024BA9600AAF7CC /* Home.storyboard in Resources */,
 				2280998E202D8F9900C2BCDD /* Onboarding.storyboard in Resources */,
 				99C23069202F39BD0044C561 /* SearchView.storyboard in Resources */,
 				99DC2E8720234B0800412EE4 /* Assets.xcassets in Resources */,
 				99DC2E8220234B0800412EE4 /* Main.storyboard in Resources */,
+				87D43FDA2034C6D900EB9945 /* Camera.storyboard in Resources */,
 				4209FEE820349B0F00C64C7F /* plants.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
