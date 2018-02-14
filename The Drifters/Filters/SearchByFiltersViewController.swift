@@ -81,8 +81,8 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
                           "Small"]
         let category = ["Officinal Plants",
                     "Ornamental Plants",
-                    "Aquatic Plants",
-                    "Vegetables", "Fruit Plants"]
+                    "Aromatic Plants",
+                    "Vegetables", "Fruit Plants", "Flower Plant"]
         let space = ["Inside","Outside"]
     
 
@@ -90,6 +90,8 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            
             self.navigationController?.isNavigationBarHidden = true
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
             scrollView.isScrollEnabled = true

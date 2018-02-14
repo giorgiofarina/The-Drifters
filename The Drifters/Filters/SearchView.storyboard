@@ -50,14 +50,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khR-Ay-Jpa">
-                                                <rect key="frame" x="11" y="445" width="168" height="168"/>
+                                                <rect key="frame" x="15" y="445" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.42352941176470588" green="0.21568627450980393" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <inset key="imageEdgeInsets" minX="53" minY="71" maxX="13" maxY="10"/>
                                                 <state key="normal" image="TypePlant"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-7R-pF9">
-                                                <rect key="frame" x="135" y="621" width="100" height="50"/>
+                                                <rect key="frame" x="139" y="621" width="100" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,28 +66,28 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ay-U2-De3">
-                                                <rect key="frame" x="187" y="269" width="168" height="168"/>
+                                                <rect key="frame" x="191" y="269" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.80392156862745101" green="0.19215686274509802" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <inset key="imageEdgeInsets" minX="61" minY="72" maxX="12" maxY="10"/>
                                                 <state key="normal" image="PlantSize"/>
                                             </button>
                                             <button opaque="NO" contentMode="bottomRight" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfN-XR-3Rt">
-                                                <rect key="frame" x="11" y="269" width="168" height="168"/>
+                                                <rect key="frame" x="15" y="269" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.68627450980392157" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <inset key="imageEdgeInsets" minX="53" minY="80" maxX="12" maxY="10"/>
                                                 <state key="normal" image="Dedication"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzD-cf-mFp">
-                                                <rect key="frame" x="187" y="445" width="168" height="168"/>
+                                                <rect key="frame" x="191" y="445" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <inset key="imageEdgeInsets" minX="35" minY="60" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" image="pot"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8u-pp-8cs" userLabel="searchButton">
-                                                <rect key="frame" x="327" y="8" width="36" height="38"/>
+                                                <rect key="frame" x="331" y="8" width="36" height="38"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" backgroundImage="searching-magnifying-glass"/>
                                                 <connections>
@@ -95,56 +95,56 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-0t-yWA">
-                                                <rect key="frame" x="187" y="93" width="168" height="168"/>
+                                                <rect key="frame" x="191" y="93" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.63137254901960782" green="0.15294117647058825" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <inset key="imageEdgeInsets" minX="53" minY="63" maxX="12" maxY="10"/>
                                                 <state key="normal" image="Brightness"/>
                                             </button>
                                             <button opaque="NO" contentMode="bottomRight" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-ss-Ya3">
-                                                <rect key="frame" x="11" y="93" width="168" height="168"/>
+                                                <rect key="frame" x="15" y="93" width="168" height="168"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.60784313729999995" green="0.074509803920000006" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <inset key="imageEdgeInsets" minX="46" minY="70" maxX="14" maxY="13"/>
+                                                <inset key="imageEdgeInsets" minX="46" minY="70" maxX="14" maxY="12"/>
                                                 <state key="normal" image="Climate"/>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Category" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="U3L-wc-JGw" userLabel="categoryTextField">
-                                                <rect key="frame" x="15" y="449" width="160" height="160"/>
+                                                <rect key="frame" x="19" y="449" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Plant size" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="33Q-j3-Sxv" userLabel="dedicationTextField">
-                                                <rect key="frame" x="191" y="273" width="160" height="160"/>
+                                                <rect key="frame" x="195" y="273" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Dedication" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9Y8-pi-mRz" userLabel="brightnessTextField">
-                                                <rect key="frame" x="15" y="273" width="160" height="160"/>
+                                                <rect key="frame" x="19" y="273" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Space" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5So-Q8-IvO" userLabel="spaceTextField">
-                                                <rect key="frame" x="191" y="449" width="160" height="160"/>
+                                                <rect key="frame" x="195" y="449" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Brightness" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="4u0-Bu-L67" userLabel="dedicationTextField">
-                                                <rect key="frame" x="191" y="97" width="160" height="160"/>
+                                                <rect key="frame" x="195" y="97" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Climate" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="064-8v-FsW" userLabel="brightnessTextField">
-                                                <rect key="frame" x="15" y="97" width="160" height="160"/>
+                                                <rect key="frame" x="19" y="97" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -174,6 +174,7 @@
                         <viewLayoutGuide key="safeArea" id="pPb-FH-VWG"/>
                     </view>
                     <navigationItem key="navigationItem" id="u5s-1C-k0B"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="brightnessButton" destination="ePR-0t-yWA" id="X4L-xN-Yhf"/>
