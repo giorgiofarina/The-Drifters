@@ -124,7 +124,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
             let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
-            doneButton.tintColor = .red
+            doneButton.tintColor = UIColor.red
             
             
            
