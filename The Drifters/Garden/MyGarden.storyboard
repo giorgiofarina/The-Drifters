@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fMc-82-69b">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lists View Controller-->
+        <scene sceneID="U4F-1v-SWJ">
+            <objects>
+                <viewController id="vfZ-Ct-cj1" customClass="ListsViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ipw-eA-0uz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UTG-jK-QId">
+                                <rect key="frame" x="0.0" y="110" width="375" height="508"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainTableViewCell" rowHeight="120" id="cDJ-e8-YOa" customClass="MainTableViewCell" customModule="The_Drifters" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cDJ-e8-YOa" id="uWW-f1-ZEp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Iln-ri-bmU">
+                                                    <rect key="frame" x="7" y="0.0" width="361" height="120"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="a7W-ar-Blh"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tvn-bK-uq8">
+                                                        <size key="itemSize" width="130" height="120"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InsideCollectionViewCell" id="pAO-np-Bal" customClass="InsideCollectionViewCell" customModule="The_Drifters" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JRb-FW-cgz">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="JRb-FW-cgz" firstAttribute="leading" secondItem="pAO-np-Bal" secondAttribute="leading" id="FrM-tf-Ic2"/>
+                                                                <constraint firstAttribute="trailing" secondItem="JRb-FW-cgz" secondAttribute="trailing" id="ddE-ju-W0c"/>
+                                                                <constraint firstAttribute="bottom" secondItem="JRb-FW-cgz" secondAttribute="bottom" id="imA-MO-GEr"/>
+                                                                <constraint firstItem="JRb-FW-cgz" firstAttribute="top" secondItem="pAO-np-Bal" secondAttribute="top" id="yXz-B6-W1J"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageCell" destination="JRb-FW-cgz" id="Rjm-tD-O3S"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="vfZ-Ct-cj1" id="ZGG-HI-wkn"/>
+                                                        <outlet property="delegate" destination="vfZ-Ct-cj1" id="Z3i-aD-KBW"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Iln-ri-bmU" firstAttribute="top" secondItem="uWW-f1-ZEp" secondAttribute="top" id="IHJ-fr-XJu"/>
+                                                <constraint firstAttribute="bottom" secondItem="Iln-ri-bmU" secondAttribute="bottom" id="KGh-Y9-eRb"/>
+                                                <constraint firstAttribute="trailing" secondItem="Iln-ri-bmU" secondAttribute="trailing" constant="7" id="M3W-2V-0qt"/>
+                                                <constraint firstItem="Iln-ri-bmU" firstAttribute="leading" secondItem="uWW-f1-ZEp" secondAttribute="leading" constant="7" id="zDA-Uy-j53"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="clCollectionView" destination="Iln-ri-bmU" id="Q6R-OP-xSe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vfZ-Ct-cj1" id="cZt-u8-unu"/>
+                                    <outlet property="delegate" destination="vfZ-Ct-cj1" id="3gl-Do-RIx"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jsY-Jq-f9T">
+                                <rect key="frame" x="0.0" y="83" width="375" height="29"/>
+                                <segments>
+                                    <segment title="Garden"/>
+                                    <segment title="Favorite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SelectSegmentedControll:" destination="vfZ-Ct-cj1" eventType="valueChanged" id="DgM-TU-nWI"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UTG-jK-QId" firstAttribute="trailing" secondItem="irL-hu-90E" secondAttribute="trailing" id="BUJ-Ej-Dgj"/>
+                            <constraint firstItem="UTG-jK-QId" firstAttribute="top" secondItem="jsY-Jq-f9T" secondAttribute="bottom" constant="-1" id="FNc-1j-im1"/>
+                            <constraint firstItem="jsY-Jq-f9T" firstAttribute="top" secondItem="irL-hu-90E" secondAttribute="top" constant="19" id="Olg-DD-vRY"/>
+                            <constraint firstItem="UTG-jK-QId" firstAttribute="bottom" secondItem="irL-hu-90E" secondAttribute="bottom" id="WZZ-u2-6Sv"/>
+                            <constraint firstItem="UTG-jK-QId" firstAttribute="leading" secondItem="irL-hu-90E" secondAttribute="leading" id="jCY-ZG-Ufq"/>
+                            <constraint firstItem="jsY-Jq-f9T" firstAttribute="leading" secondItem="irL-hu-90E" secondAttribute="leading" id="rGQ-P1-vcC"/>
+                            <constraint firstItem="irL-hu-90E" firstAttribute="trailing" secondItem="jsY-Jq-f9T" secondAttribute="trailing" id="zxj-S1-HzD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="irL-hu-90E"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="79F-9C-Tys"/>
+                    <connections>
+                        <outlet property="segmentedControll" destination="jsY-Jq-f9T" id="fPE-YH-wTi"/>
+                        <outlet property="tableView" destination="UTG-jK-QId" id="KYw-BZ-a7B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCA-yn-SIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="234.33283358320841"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="QFg-ex-96q">
+            <objects>
+                <viewController id="Ukr-o3-N2M" customClass="DetailViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YmS-dM-rhu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-5h-MCr">
+                                <rect key="frame" x="0.0" y="54" width="375" height="347"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="G1j-L5-sfy"/>
+                    </view>
+                    <connections>
+                        <outlet property="destinationImage" destination="1WW-5h-MCr" id="gE6-pU-alY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDl-R6-JHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.60000000000002" y="233.43328335832086"/>
+        </scene>
+        <!--Garden-->
+        <scene sceneID="aGh-L2-0sI">
+            <objects>
+                <navigationController id="fMc-82-69b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Garden" id="ngk-J7-rbZ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MBy-eE-xQj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vfZ-Ct-cj1" kind="relationship" relationship="rootViewController" id="613-YV-gDk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydU-hT-cIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-847" y="234"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+</document>
