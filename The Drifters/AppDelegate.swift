@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let context = appDelegate.persistentContainer.viewContext
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //checkDataStore()
+        checkDataStore()
         
         return true
     }
@@ -91,8 +94,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    /*
-    // check if there are already plants, otherwise upload data from json file
+    
+    // Check if there are already stored data
+    
     func checkDataStore(){
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
         do {
@@ -107,54 +111,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    // upload function from json file
+    // Upload data from .json file
+    
     func uploadPlantsData() {
-        // NOME FILE RISORSA JSON
+        // * Nome file .json
         let resource = "plants"
+        
         let resourceExtension = "json"
         let url = Bundle.main.url(forResource: resource, withExtension: resourceExtension)
         
         do {
-            let data = try Data.init(contentsOf: url!)
             
-            do {
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                
-                // "plant" titolo all'inizio del file json
-                let jsonArray = jsonResult.value(forKey: "plant") as! NSArray
-                
-                for json in jsonArray {
-                    let plant = NSEntityDescription.insertNewObject(forEntityName: "Plant", into: context) as! Plant
-     
-                    // campo database = dato json
-                    plant.commonName = json["commonName"] as? String
-     
-                    // campo immagine database = immagine
-                    let imageName = json["img1"] as? String
-                    let image = UIImage(named: imageName!)
-                    let imageData = UIImageJPEGRepresentation(image, 1.0)
-                    plant.img1 = imageData
-                }
-                appDelegate.saveContext()
-                
-                let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
-                do {
-                    let plantCount = try context.count(for: request)
-                    print("Total plant count after uploading: \(plantCount)")
-                }
-                catch {
-                    print(error)
-                }
-            }
-            catch {
-                fatalError("Error in uploading data")
-            }
-        } catch {
-            print(error)
-        }
-    }*/
-}
+            let data = try Data.init(contentsOf: url!)
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: Any]
 
-let appDelegate = UIApplication.shared.delegate as! AppDelegate
-let context = appDelegate.persistentContainer.viewContext
+            // * Nome array "plant" in .json
+            let jsonArray = jsonResult["plant"] as? [[String: AnyObject]]
+
+            for json in jsonArray! {
+                let plant = NSEntityDescription.insertNewObject(forEntityName: "Plant", into: context) as! Plant
+
+              // * campo CoreData uguagliato a campo di ogni elemento in .json
+              plant.commonName = json["commonName"] as? String
+
+              // * immagine
+              let imageName = json["img1"] as? String
+              let image = UIImage(named: imageName!)
+              let imageData = UIImageJPEGRepresentation(image!, 1.0)
+              plant.img1 = imageData as NSData?
+                }
+            
+            appDelegate.saveContext()
+
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
+            let plantCount = try context.count(for: request)
+            print("Total plant count after uploading: \(plantCount)")
+        }
+        catch {
+            fatalError("Error in uploading data")
+        }
+    }
+    
+}
 
