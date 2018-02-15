@@ -43,12 +43,11 @@
         <scene sceneID="XTb-PN-pom">
             <objects>
                 <tabBarController id="vRC-ce-bDb" customClass="TabBarMainViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="m1g-Zx-VQc">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="m1g-Zx-VQc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.68460792299999995" green="0.25590330360000002" blue="0.21566250919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="selectedImageTintColor" red="0.68460792303085327" green="0.25590330362319946" blue="0.21566250920295715" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.68460792299999995" green="0.25590330360000002" blue="0.21566250919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="p6y-Rj-BL2" kind="relationship" relationship="viewControllers" id="Oi1-z0-gzL"/>
