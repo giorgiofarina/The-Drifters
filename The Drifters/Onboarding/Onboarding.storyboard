@@ -29,20 +29,20 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ScX-7S-amB">
                                 <rect key="frame" x="119.5" y="234" width="137.5" height="199.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaW-Jj-aOn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaW-Jj-aOn">
                                         <rect key="frame" x="12.5" y="0.0" width="112.5" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eden" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1R-MF-jqD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Eden" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1R-MF-jqD">
                                         <rect key="frame" x="33.5" y="34.5" width="70.5" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" red="0.918448805809021" green="0.21377794444561005" blue="0.17652334272861481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plant-on-a-hand-2" translatesAutoresizingMaskIntoConstraints="NO" id="cFi-Ek-atd">
-                                        <rect key="frame" x="0.5" y="78.5" width="137" height="121"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Smooth Corners2" translatesAutoresizingMaskIntoConstraints="NO" id="cFi-Ek-atd">
+                                        <rect key="frame" x="0.0" y="78.5" width="137.5" height="121"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -178,6 +178,6 @@
         <image name="GetStartedButton" width="236" height="48"/>
         <image name="Phone" width="160" height="187"/>
         <image name="SecondOnB" width="154" height="184"/>
-        <image name="plant-on-a-hand-2" width="137" height="121"/>
+        <image name="Smooth Corners2" width="512" height="512"/>
     </resources>
 </document>
