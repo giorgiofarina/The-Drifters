@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let context = appDelegate.persistentContainer.viewContext
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        //checkDataStore()
+        
         return true
     }
 
@@ -88,6 +94,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    // Check if there are already stored data
+    
+    func checkDataStore(){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
+        do {
+            let plantCount = try context.count(for: request)
+            print("Total plant count: \(plantCount)")
+            if plantCount == 0 {
+                uploadPlantsData()
+            }
+        }
+        catch {
+            print(error)
+        }
+    }
+    
+    // Upload data from .json file
+    
+    func uploadPlantsData() {
+        // * Nome file .json
+        let resource = "plants"
+        
+        let resourceExtension = "json"
+        let url = Bundle.main.url(forResource: resource, withExtension: resourceExtension)
+        
+        do {
+            
+            let data = try Data.init(contentsOf: url!)
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: Any]
 
+            // * Nome array "plant" in .json
+            let jsonArray = jsonResult["plant"] as? [[String: AnyObject]]
+
+            for json in jsonArray! {
+                let plant = NSEntityDescription.insertNewObject(forEntityName: "Plant", into: context) as! Plant
+
+              // * campo CoreData uguagliato a campo di ogni elemento in .json
+              plant.commonName = json["commonName"] as? String
+
+              // * immagine
+              let imageName = json["img1"] as? String
+              let image = UIImage(named: imageName!)
+              let imageData = UIImageJPEGRepresentation(image!, 1.0)
+              plant.img1 = imageData as NSData?
+                }
+            
+            appDelegate.saveContext()
+
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
+            let plantCount = try context.count(for: request)
+            print("Total plant count after uploading: \(plantCount)")
+        }
+        catch {
+            fatalError("Error in uploading data")
+        }
+    }
+    
 }
 

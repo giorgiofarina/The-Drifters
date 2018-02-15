@@ -14,18 +14,28 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
 
-    let elements = ["plant1", "plant2", "plant3"]
+    var elements = ["001.jpg", "plant2", "plant3"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
+       
+        navigationController?.navigationBar.tintColor = UIColor.red
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+    
+        
+        
         // Do any additional setup after loading the view.
     }
 
+
+    
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return elements.count
     }
@@ -47,6 +57,17 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         return cell
     }
 
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedIndex = indexPath.row
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController{
+//        destination.elements = elements[(tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
