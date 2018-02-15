@@ -40,9 +40,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             selectedSegment = 2
         }
         
-        self.tableView.reloadData()
-//        reloadData della collectionView in base alla sezione della segmented selezionata?
-        
+        self.tableView.reloadData()        
     }
     
     
@@ -62,7 +60,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
        
         buttonBar.translatesAutoresizingMaskIntoConstraints = false
-        buttonBar.backgroundColor = UIColor.red
+        buttonBar.backgroundColor = UIColor(red: 175.0/255.0, green: 65.0/255.0, blue: 55.0/255.0, alpha: 1.00)
         view.addSubview(buttonBar)
         buttonBar.topAnchor.constraint(equalTo: segmentedControll.bottomAnchor).isActive = true
         buttonBar.heightAnchor.constraint(equalToConstant: 2).isActive = true
@@ -87,7 +85,9 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
-
+        
+        cell.clCollectionView.reloadData()
+        
         return cell
     }
     
@@ -102,12 +102,12 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return 1
     }
     
     //   collection view delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         if selectedSegment == 1 {
             return imageArrayTest1.count
         } else {
