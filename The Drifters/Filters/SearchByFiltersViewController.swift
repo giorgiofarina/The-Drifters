@@ -16,7 +16,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         
    
 
-        @IBOutlet weak var matchingButton: UIButton!
+
     
         @IBOutlet weak var climateButton: UIButton!
         @IBOutlet weak var dedicationButton: UIButton!
@@ -85,14 +85,14 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
                     "Vegetables", "Fruit Plants", "Flower Plant"]
         let space = ["Inside","Outside"]
     
-
+    let ScrollingNavigationController = UINavigationController()
         
         
         override func viewDidLoad() {
             super.viewDidLoad()
             
             
-            self.navigationController?.isNavigationBarHidden = true
+            self.navigationController?.isNavigationBarHidden = false
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
             scrollView.isScrollEnabled = true
            
@@ -124,6 +124,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
             let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+            doneButton.tintColor = .red
             
             
            
@@ -174,15 +175,15 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             view.addGestureRecognizer(tapGesture)
             view.isUserInteractionEnabled = true
             
-            
+        
         }
-    
-    
+  
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
+    
     
     
     

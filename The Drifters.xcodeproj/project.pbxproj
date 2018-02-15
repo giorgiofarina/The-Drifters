@@ -25,6 +25,10 @@
 		992C76CA203043D000F50966 /* SearchByFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */; };
 		993D6DEF20317E9C00E7EEB4 /* TabBarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */; };
 		994B4B16202F72A70037F14D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994B4B15202F72A70037F14D /* CoreLocation.framework */; };
+		99AEC4D72034E49B007358C1 /* SuggestedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4D62034E49B007358C1 /* SuggestedViewController.swift */; };
+		99AEC4D92034E4D4007358C1 /* SuggestedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4D82034E4D4007358C1 /* SuggestedTableViewCell.swift */; };
+		99AEC4DB2034F69A007358C1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4DA2034F69A007358C1 /* DetailsViewController.swift */; };
+		99AEC4DF2035BE15007358C1 /* SearchNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4DE2035BE15007358C1 /* SearchNavigationViewController.swift */; };
 		99C23067202F39BD0044C561 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C23063202F39BC0044C561 /* SearchTableViewCell.swift */; };
 		99C23068202F39BD0044C561 /* MagnifyingGlassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C23064202F39BC0044C561 /* MagnifyingGlassViewController.swift */; };
 		99C23069202F39BD0044C561 /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C23065202F39BD0044C561 /* SearchView.storyboard */; };
@@ -74,6 +78,10 @@
 		992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByFiltersViewController.swift; sourceTree = "<group>"; };
 		993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainViewController.swift; sourceTree = "<group>"; };
 		994B4B15202F72A70037F14D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		99AEC4D62034E49B007358C1 /* SuggestedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedViewController.swift; sourceTree = "<group>"; };
+		99AEC4D82034E4D4007358C1 /* SuggestedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedTableViewCell.swift; sourceTree = "<group>"; };
+		99AEC4DA2034F69A007358C1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		99AEC4DE2035BE15007358C1 /* SearchNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationViewController.swift; sourceTree = "<group>"; };
 		99C23063202F39BC0044C561 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		99C23064202F39BC0044C561 /* MagnifyingGlassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifyingGlassViewController.swift; sourceTree = "<group>"; };
 		99C23065202F39BD0044C561 /* SearchView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchView.storyboard; sourceTree = "<group>"; };
@@ -173,6 +181,10 @@
 				99C23063202F39BC0044C561 /* SearchTableViewCell.swift */,
 				99C23065202F39BD0044C561 /* SearchView.storyboard */,
 				992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */,
+				99AEC4D62034E49B007358C1 /* SuggestedViewController.swift */,
+				99AEC4D82034E4D4007358C1 /* SuggestedTableViewCell.swift */,
+				99AEC4DA2034F69A007358C1 /* DetailsViewController.swift */,
+				99AEC4DE2035BE15007358C1 /* SearchNavigationViewController.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -386,13 +398,17 @@
 				4209FEE120348E7E00C64C7F /* List+CoreDataProperties.swift in Sources */,
 				22809994202D9E4900C2BCDD /* SecondViewController.swift in Sources */,
 				22809992202D9E3700C2BCDD /* FirstViewController.swift in Sources */,
+				99AEC4DF2035BE15007358C1 /* SearchNavigationViewController.swift in Sources */,
 				99DC2E7F20234B0800412EE4 /* ViewController.swift in Sources */,
 				22809996202D9E5300C2BCDD /* ThirdViewController.swift in Sources */,
 				992C76CA203043D000F50966 /* SearchByFiltersViewController.swift in Sources */,
+				99AEC4D92034E4D4007358C1 /* SuggestedTableViewCell.swift in Sources */,
+				99AEC4D72034E49B007358C1 /* SuggestedViewController.swift in Sources */,
 				99DC2E7D20234B0800412EE4 /* AppDelegate.swift in Sources */,
 				993D6DEF20317E9C00E7EEB4 /* TabBarMainViewController.swift in Sources */,
 				4209FEE020348E7E00C64C7F /* List+CoreDataClass.swift in Sources */,
 				4209FEE220348E7E00C64C7F /* Plant+CoreDataClass.swift in Sources */,
+				99AEC4DB2034F69A007358C1 /* DetailsViewController.swift in Sources */,
 				99C23068202F39BD0044C561 /* MagnifyingGlassViewController.swift in Sources */,
 				99C23067202F39BD0044C561 /* SearchTableViewCell.swift in Sources */,
 				8793481A2034D0E9001B1E4E /* CameraViewController.swift in Sources */,
