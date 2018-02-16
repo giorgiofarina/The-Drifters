@@ -73,8 +73,8 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+       
         
-
     }
     
     //  override function viewWillAppear to hidden FOREVER navigationBar in Lists view
