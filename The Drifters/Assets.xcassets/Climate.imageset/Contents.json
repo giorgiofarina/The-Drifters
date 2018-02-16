@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Sun&Cloudy.pdf",
+      "filename" : "Group 4.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Sun&Cloudy@2x.pdf",
+      "filename" : "Group 4@2x.pdf",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Sun&Cloudy@3x.pdf",
+      "filename" : "Group 4@3x.pdf",
       "scale" : "3x"
     }
   ],
