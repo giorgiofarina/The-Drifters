@@ -14,8 +14,11 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
 
-    var elements = ["001.jpg", "plant2", "plant3"]
+   
     
+    
+    var elements = ["001.jpg", "plant2", "plant3"]
+    var currentElements = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +30,9 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         tableView.delegate = self
         tableView.dataSource = self
         
+        searchBar.delegate = self
     
-        
+        self.tableView.separatorColor = UIColor.clear
         
         // Do any additional setup after loading the view.
     }
@@ -42,31 +46,35 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 200
     }
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! SearchTableViewCell
-        
-        cell.customCellView.layer.cornerRadius = cell.customCellView.frame.height / 2
-        
-        
+ 
+        cell.customCellView.layer.cornerRadius = 10
         cell.namePlantLabel.text = elements[indexPath.row]
         cell.plantImageView.image = UIImage(named: elements[indexPath.row])
-        cell.plantImageView.layer.cornerRadius = cell.plantImageView.frame.height / 2
+        cell.plantImageView.layer.cornerRadius = 10
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = backgroundView
         
         return cell
     }
 
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedIndex = indexPath.row
-        performSegue(withIdentifier: "showDetails", sender: self)
+//        let selectedIndex = indexPath.row
+//        performSegue(withIdentifier: "showDetails", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? DetailsViewController{
+        
+
+//     if let destination = segue.destinison as? DetailsViewController{
 //        destination.elements = elements[(tableView.indexPathForSelectedRow?.row)!]
-        }
+//        }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
