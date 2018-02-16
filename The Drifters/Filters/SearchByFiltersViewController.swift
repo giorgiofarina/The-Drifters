@@ -94,10 +94,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             self.navigationController?.isNavigationBarHidden = false
             
-            
-//            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//            
-           self.navigationController?.navigationBar.shadowImage = UIImage()
+          self.navigationController?.navigationBar.shadowImage = UIImage()
             
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
             
