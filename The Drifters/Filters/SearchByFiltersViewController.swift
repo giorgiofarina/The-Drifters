@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate  {
+class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIScrollViewDelegate {
 
         
         @IBOutlet weak var scrollView: UIScrollView!
@@ -93,7 +93,14 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             
             self.navigationController?.isNavigationBarHidden = false
+            
+            
+//            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//            
+           self.navigationController?.navigationBar.shadowImage = UIImage()
+            
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+            
             scrollView.isScrollEnabled = true
            
             
@@ -179,8 +186,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         }
     
     override func viewDidAppear(_ animated: Bool) {
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            self.navigationController?.navigationBar.shadowImage = UIImage()
+        
        
         
     }
@@ -300,7 +306,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             view.endEditing(true)
         }
     
-       
+  
 
 }
 
