@@ -22,7 +22,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    let imageArrayTest1 = [UIImage(named: "currentLocation"), UIImage(named: "Picture"), UIImage(named: "SecondOnB")]
+    let imageArrayTest1 = [UIImage(named: "001.jpg"), UIImage(named: "001.jpg"), UIImage(named: "Picture"), UIImage(named: "SecondOnB")]
     let imageArrayTest2 = [UIImage(named: "Picture"), UIImage(named: "plant-on-a-hand-2"), UIImage(named: "searching-magnifying-glass")]
     let textArray1 = ["One", "Two", "Three"] //array di prova per le sezioni di garden
     let textArray2 = ["1", "2", "3"] //array di prova per le sezioni di favorite
@@ -122,6 +122,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InsideCollectionViewCell", for: indexPath) as! InsideCollectionViewCell
+        
         if selectedSegment == 1 {
             cell.imageCell.image = imageArrayTest1[indexPath.row]
         } else {
@@ -160,7 +161,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        sectionView.backgroundColor = UIColor(red: 175.0/255.0, green: 65.0/255.0, blue: 55.0/255.0, alpha: 0.30)
         let backgroundImage = UIImageView()
         backgroundImage.image = #imageLiteral(resourceName: "backgroundSection")
-        backgroundImage.frame = CGRect(x: 7, y: 4, width: 361, height: 25)
+        backgroundImage.frame = CGRect(x: 7, y: 6, width: 361, height: 25)
         sectionView.addSubview(backgroundImage)
         let titleSectionLabel = UILabel()
     if selectedSegment == 1 {
@@ -169,7 +170,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     titleSectionLabel.text = textArray2[section]
     }
         sectionView.addSubview(titleSectionLabel)
-        titleSectionLabel.frame = CGRect(x: 30, y: 0, width: 100, height: 35)
+        titleSectionLabel.frame = CGRect(x: 20, y: 1, width: 100, height: 35)
         titleSectionLabel.textColor = .white
         titleSectionLabel.font = UIFont.boldSystemFont(ofSize: 18)
 

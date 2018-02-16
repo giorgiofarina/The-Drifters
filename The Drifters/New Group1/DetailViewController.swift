@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    
     @IBOutlet weak var destinationImage: UIImageView!
     var image = UIImage()
     
@@ -19,6 +20,7 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         destinationImage.image = image
         navigationController?.isNavigationBarHidden = false
+        
 
     }
 

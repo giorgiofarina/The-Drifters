@@ -22,7 +22,6 @@
 		992C76CA203043D000F50966 /* SearchByFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */; };
 		993D6DEF20317E9C00E7EEB4 /* TabBarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */; };
 		9944B6AA2036273A00A46B5D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A32036273900A46B5D /* DetailViewController.swift */; };
-		9944B6AB2036273A00A46B5D /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A42036273900A46B5D /* MainCollectionViewCell.swift */; };
 		9944B6AC2036273A00A46B5D /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A52036273900A46B5D /* ListsViewController.swift */; };
 		9944B6AD2036273A00A46B5D /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A62036273900A46B5D /* MainTableViewCell.swift */; };
 		9944B6AE2036273A00A46B5D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A72036273900A46B5D /* TableViewController.swift */; };
@@ -78,7 +77,6 @@
 		992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByFiltersViewController.swift; sourceTree = "<group>"; };
 		993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainViewController.swift; sourceTree = "<group>"; };
 		9944B6A32036273900A46B5D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		9944B6A42036273900A46B5D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		9944B6A52036273900A46B5D /* ListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		9944B6A62036273900A46B5D /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		9944B6A72036273900A46B5D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 				9944B6A32036273900A46B5D /* DetailViewController.swift */,
 				9944B6A82036273900A46B5D /* InsideCollectionViewCell.swift */,
 				9944B6A52036273900A46B5D /* ListsViewController.swift */,
-				9944B6A42036273900A46B5D /* MainCollectionViewCell.swift */,
 				9944B6A62036273900A46B5D /* MainTableViewCell.swift */,
 				9944B6A92036273A00A46B5D /* MyGarden.storyboard */,
 				9944B6A72036273900A46B5D /* TableViewController.swift */,
@@ -414,7 +411,6 @@
 				99C23068202F39BD0044C561 /* MagnifyingGlassViewController.swift in Sources */,
 				99C23067202F39BD0044C561 /* SearchTableViewCell.swift in Sources */,
 				9944B6AC2036273A00A46B5D /* ListsViewController.swift in Sources */,
-				9944B6AB2036273A00A46B5D /* MainCollectionViewCell.swift in Sources */,
 				99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */,
 				9944B6AF2036273A00A46B5D /* InsideCollectionViewCell.swift in Sources */,
 				22809990202D900C00C2BCDD /* PageViewController.swift in Sources */,
