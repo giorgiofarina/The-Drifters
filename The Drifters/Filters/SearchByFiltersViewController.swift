@@ -177,6 +177,16 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
         
         }
+    
+    override func viewDidAppear(_ animated: Bool) {
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            self.navigationController?.navigationBar.shadowImage = UIImage()
+       
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
   
         
         override func didReceiveMemoryWarning() {
