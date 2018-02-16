@@ -21,7 +21,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
        
-        navigationController?.navigationBar.tintColor = UIColor.red
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         
         tableView.delegate = self

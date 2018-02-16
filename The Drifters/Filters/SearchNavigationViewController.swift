@@ -14,7 +14,7 @@ class SearchNavigationViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
+
         self.navigationBar.shadowImage = UIImage()
         // Do any additional setup after loading the view.
     }

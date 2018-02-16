@@ -20,6 +20,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="th3-zz-OhA">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.60784313725490191" green="0.074509803921568626" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
@@ -142,9 +143,9 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add your filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lse-Pu-mv6">
-                                                <rect key="frame" x="15" y="8" width="224" height="55"/>
+                                                <rect key="frame" x="15" y="18" width="224" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -379,7 +380,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YVJ-Mc-fgJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qKo-lk-NfF"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qKo-lk-NfF"/>
                     <connections>
                         <outlet property="searchBar" destination="TJ8-Kv-lco" id="FSd-rZ-E6y"/>
                         <outlet property="tableView" destination="FEd-Fk-gLN" id="JO8-Yd-6AW"/>

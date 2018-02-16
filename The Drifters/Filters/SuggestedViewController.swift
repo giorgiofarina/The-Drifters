@@ -19,7 +19,7 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         
         
         self.navigationController?.isNavigationBarHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.red
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         suggestedTableView.delegate = self
         suggestedTableView.dataSource = self
