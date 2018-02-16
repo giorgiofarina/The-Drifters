@@ -121,7 +121,7 @@
                     <connections>
                         <outlet property="segmentedControll" destination="jsY-Jq-f9T" id="fPE-YH-wTi"/>
                         <outlet property="tableView" destination="UTG-jK-QId" id="KYw-BZ-a7B"/>
-                        <segue destination="Ukr-o3-N2M" kind="show" id="9Rj-D4-LYv"/>
+                        <segue destination="Ukr-o3-N2M" kind="show" identifier="showPlantDetails" id="9Rj-D4-LYv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCA-yn-SIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
