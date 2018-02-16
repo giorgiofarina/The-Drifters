@@ -98,6 +98,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
             
+            scrollView.delegate = self
             scrollView.isScrollEnabled = true
            
             
@@ -178,6 +179,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(sender:)))
             view.addGestureRecognizer(tapGesture)
             view.isUserInteractionEnabled = true
+   
             
         
         }
@@ -207,7 +209,6 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             plantSizeTextField.resignFirstResponder()
             categoryTextField.resignFirstResponder()
             spaceTextField.resignFirstResponder()
-            
             
         }
     
@@ -303,7 +304,9 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             view.endEditing(true)
         }
     
-  
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        view.endEditing(true)
+    }
 
 }
 
