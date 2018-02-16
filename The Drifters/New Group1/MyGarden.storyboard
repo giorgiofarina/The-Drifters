@@ -121,7 +121,7 @@
                     <connections>
                         <outlet property="segmentedControll" destination="jsY-Jq-f9T" id="fPE-YH-wTi"/>
                         <outlet property="tableView" destination="UTG-jK-QId" id="KYw-BZ-a7B"/>
-                        <segue destination="Ukr-o3-N2M" kind="show" id="9Rj-D4-LYv"/>
+                        <segue destination="Ukr-o3-N2M" kind="show" identifier="showPlantDetails" id="9Rj-D4-LYv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCA-yn-SIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,7 +162,7 @@
         <scene sceneID="aGh-L2-0sI">
             <objects>
                 <navigationController id="fMc-82-69b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Garden" image="listsIcon2" id="ngk-J7-rbZ"/>
+                    <tabBarItem key="tabBarItem" title="Garden" image="listsIcon" id="ngk-J7-rbZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MBy-eE-xQj">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -179,7 +179,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="listsIcon2" width="24" height="24"/>
+        <image name="listsIcon" width="31" height="30"/>
     </resources>
     <color key="tintColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
 </document>
