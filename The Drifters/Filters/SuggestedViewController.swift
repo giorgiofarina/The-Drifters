@@ -61,5 +61,10 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         
         return cell
     }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        performSegue(withIdentifier: "showDetailsSuggestedPlants", sender: self)
+    }
    
 }

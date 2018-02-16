@@ -18,7 +18,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
     
     var elements = ["001.jpg", "plant2", "plant3"]
-    var currentElements = [String]()
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let selectedIndex = indexPath.row
-//        performSegue(withIdentifier: "showDetails", sender: self)
+        performSegue(withIdentifier: "showDetails", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

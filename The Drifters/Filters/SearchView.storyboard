@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -138,12 +139,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-7R-pF9" userLabel="matchButton">
-                                                <rect key="frame" x="117" y="628" width="140" height="60"/>
+                                                <rect key="frame" x="117" y="621" width="140" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="MatchButton">
+                                                <state key="normal" image="matchButton">
                                                     <color key="titleColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
@@ -369,48 +370,29 @@
                     <connections>
                         <outlet property="searchBar" destination="3w9-z6-CLN" id="O6T-Dg-s7K"/>
                         <outlet property="tableView" destination="nV1-Ej-Q63" id="Hx8-G6-R4L"/>
-                        <segue destination="IDT-O3-u7N" kind="show" identifier="showDetails" id="DgI-FG-xMP"/>
+                        <segue destination="IDT-O3-u7N" kind="show" identifier="showDetails" id="7SA-LS-Yir"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRz-B9-WVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1245.5" y="-725.5"/>
+            <point key="canvasLocation" x="1518" y="-723"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Details-->
         <scene sceneID="zIY-aR-PfD">
             <objects>
                 <viewController id="IDT-O3-u7N" customClass="DetailsViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BNw-ma-yjo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRc-og-Rv2">
-                                <rect key="frame" x="67" y="205" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7x-yt-AqW">
-                                <rect key="frame" x="139" y="341" width="96" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCO-k9-2oB">
-                                <rect key="frame" x="139" y="94" width="96" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iSn-z7-fvi"/>
                     </view>
-                    <connections>
-                        <outlet property="descriptionLabel" destination="FCO-k9-2oB" id="OK9-nY-q5f"/>
-                        <outlet property="detailsLabel" destination="R7x-yt-AqW" id="KLb-3C-YxV"/>
-                        <outlet property="plantImageView" destination="bRc-og-Rv2" id="qiH-p5-8zp"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Details" id="qhi-e9-61Z">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="listsIcon2" id="xOu-Ic-oJ9"/>
+                            <barButtonItem systemItem="add" id="1m8-9N-oDw"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ON0-Q1-cW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -421,14 +403,15 @@
         <image name="Brightness" width="166" height="166"/>
         <image name="Climate" width="238" height="204"/>
         <image name="Dedication" width="214" height="158"/>
-        <image name="MatchButton" width="216" height="96"/>
         <image name="PlantSize" width="160" height="166"/>
         <image name="TypePlant" width="178" height="150"/>
         <image name="backgroundPlantName" width="730" height="68"/>
+        <image name="listsIcon2" width="24" height="24"/>
+        <image name="matchButton" width="216" height="96"/>
         <image name="nil" width="16" height="16"/>
         <image name="pot" width="81" height="70"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DgI-FG-xMP"/>
+        <segue reference="7SA-LS-Yir"/>
     </inferredMetricsTieBreakers>
 </document>
