@@ -19,8 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UTG-jK-QId">
-                                <rect key="frame" x="0.0" y="110" width="375" height="508"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="107" width="375" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainTableViewCell" rowHeight="120" id="cDJ-e8-YOa" customClass="MainTableViewCell" customModule="The_Drifters" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="120"/>
@@ -89,7 +92,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jsY-Jq-f9T">
-                                <rect key="frame" x="0.0" y="83" width="375" height="29"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="29"/>
                                 <segments>
                                     <segment title="Garden"/>
                                     <segment title="Favorite"/>
@@ -102,9 +105,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UTG-jK-QId" firstAttribute="trailing" secondItem="irL-hu-90E" secondAttribute="trailing" id="BUJ-Ej-Dgj"/>
-                            <constraint firstItem="UTG-jK-QId" firstAttribute="top" secondItem="jsY-Jq-f9T" secondAttribute="bottom" constant="-1" id="FNc-1j-im1"/>
-                            <constraint firstItem="jsY-Jq-f9T" firstAttribute="top" secondItem="irL-hu-90E" secondAttribute="top" constant="19" id="Olg-DD-vRY"/>
-                            <constraint firstItem="UTG-jK-QId" firstAttribute="bottom" secondItem="irL-hu-90E" secondAttribute="bottom" id="WZZ-u2-6Sv"/>
+                            <constraint firstItem="UTG-jK-QId" firstAttribute="top" secondItem="jsY-Jq-f9T" secondAttribute="bottom" constant="1" id="FNc-1j-im1"/>
+                            <constraint firstItem="jsY-Jq-f9T" firstAttribute="top" secondItem="irL-hu-90E" secondAttribute="top" constant="14" id="Olg-DD-vRY"/>
+                            <constraint firstItem="UTG-jK-QId" firstAttribute="bottom" secondItem="irL-hu-90E" secondAttribute="bottom" constant="-3" id="WZZ-u2-6Sv"/>
                             <constraint firstItem="UTG-jK-QId" firstAttribute="leading" secondItem="irL-hu-90E" secondAttribute="leading" id="jCY-ZG-Ufq"/>
                             <constraint firstItem="jsY-Jq-f9T" firstAttribute="leading" secondItem="irL-hu-90E" secondAttribute="leading" id="rGQ-P1-vcC"/>
                             <constraint firstItem="irL-hu-90E" firstAttribute="trailing" secondItem="jsY-Jq-f9T" secondAttribute="trailing" id="zxj-S1-HzD"/>
@@ -124,13 +127,13 @@
         <!--Detail View Controller-->
         <scene sceneID="QFg-ex-96q">
             <objects>
-                <viewController id="Ukr-o3-N2M" customClass="DetailViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="Ukr-o3-N2M" customClass="DetailViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YmS-dM-rhu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-5h-MCr">
-                                <rect key="frame" x="0.0" y="54" width="375" height="347"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="347"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

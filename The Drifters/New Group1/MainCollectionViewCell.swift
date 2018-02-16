@@ -12,6 +12,14 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var plantImage: UIImageView!
     
-    @IBOutlet weak var plantNameLabel: UILabel!
     
 }
+
+
+
+
+
+
+
+//                                        !!!!!eliminare questo file!!!!!
+

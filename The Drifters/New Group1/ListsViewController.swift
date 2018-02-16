@@ -24,7 +24,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let imageArrayTest1 = [UIImage(named: "currentLocation"), UIImage(named: "Picture"), UIImage(named: "SecondOnB")]
     let imageArrayTest2 = [UIImage(named: "Picture"), UIImage(named: "plant-on-a-hand-2"), UIImage(named: "searching-magnifying-glass")]
-    let textArray1 = ["one", "two", "three"] //array di prova per le sezioni di garden
+    let textArray1 = ["One", "Two", "Three"] //array di prova per le sezioni di garden
     let textArray2 = ["1", "2", "3"] //array di prova per le sezioni di favorite
 
     @IBOutlet weak var tableView: UITableView!
@@ -74,8 +74,13 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        navigationController?.isNavigationBarHidden = true
 
+    }
+    
+    //  override function viewWillAppear to hidden FOREVER navigationBar in Lists view
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,7 +90,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
-        
+
         cell.clCollectionView.reloadData()
         
         return cell
@@ -127,6 +132,21 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let destinazioneVC = mainStoryboard.instantiateViewController(withIdentifier: "DatailViewController") as! DatailViewController
+//        destinazioneVC.image = imageArray[indexPath.row]!
+//        self.navigationController?.pushViewController(destinazioneVC, animated: true)
+        
+        let garderStoryboard: UIStoryboard = UIStoryboard(name: "MyGarden", bundle: nil)
+        let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        if selectedSegment == 1 {
+            destinationView.image = imageArrayTest1[indexPath.row]!
+        } else {
+            destinationView.image = imageArrayTest2[indexPath.row]!
+        }
+        self.navigationController?.pushViewController(destinationView, animated: true)
+    }
     
     
     //    header tableView
@@ -134,8 +154,33 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return 30
     }
     
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionView = UIView()
+//        sectionView.backgroundColor = UIColor(red: 175.0/255.0, green: 65.0/255.0, blue: 55.0/255.0, alpha: 0.30)
+        let backgroundImage = UIImageView()
+        backgroundImage.image = #imageLiteral(resourceName: "backgroundSection")
+        backgroundImage.frame = CGRect(x: 7, y: 4, width: 361, height: 25)
+        sectionView.addSubview(backgroundImage)
+        let titleSectionLabel = UILabel()
+    if selectedSegment == 1 {
+    titleSectionLabel.text = textArray1[section]
+    } else {
+    titleSectionLabel.text = textArray2[section]
+    }
+        sectionView.addSubview(titleSectionLabel)
+        titleSectionLabel.frame = CGRect(x: 30, y: 0, width: 100, height: 35)
+        titleSectionLabel.textColor = .white
+        titleSectionLabel.font = UIFont.boldSystemFont(ofSize: 18)
+
+        return sectionView
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 45
+    }
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        //        return objects[section].type
         if selectedSegment == 1 {
             return textArray1[section]
         } else {
