@@ -91,6 +91,12 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
 
+//        to delete background in the cell when the cell is selected
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = backgroundView
+        
+//        reload collection view data according to segmented control segment
         cell.clCollectionView.reloadData()
         
         return cell
