@@ -176,7 +176,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pPb-FH-VWG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="u5s-1C-k0B">
+                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="u5s-1C-k0B">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="WZj-0a-wPS">
                             <color key="tintColor" red="0.68627450980392157" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -221,7 +221,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="68" y="-229.38530734632684"/>
+            <point key="canvasLocation" x="860" y="-231"/>
         </scene>
         <!--Suggested-->
         <scene sceneID="02f-JX-ThB">
@@ -232,7 +232,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rbg-MA-1cW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customSuggestedCell" rowHeight="200" id="w7h-7x-sZb" userLabel="customSuggestedCell" customClass="SuggestedTableViewCell" customModule="The_Drifters" customModuleProvider="target">
@@ -287,7 +287,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PHc-ri-9PC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Suggested" id="BHP-KM-MDU"/>
+                    <navigationItem key="navigationItem" title="Suggested" largeTitleDisplayMode="always" id="BHP-KM-MDU"/>
                     <connections>
                         <outlet property="suggestedTableView" destination="rbg-MA-1cW" id="YQ1-tK-f4Z"/>
                         <segue destination="IDT-O3-u7N" kind="show" identifier="showDetailsSuggestedPlants" id="waj-ZT-eph"/>
@@ -295,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSQ-I3-u0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1245.5" y="559.5"/>
+            <point key="canvasLocation" x="1518" y="327"/>
         </scene>
         <!--Magnifying Glass View Controller-->
         <scene sceneID="7gr-PM-tc2">
@@ -387,7 +387,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iSn-z7-fvi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Details" id="qhi-e9-61Z">
+                    <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="qhi-e9-61Z">
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="listsIcon2" id="xOu-Ic-oJ9"/>
                             <barButtonItem systemItem="add" id="1m8-9N-oDw"/>
@@ -396,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ON0-Q1-cW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2628" y="-193.85307346326837"/>
+            <point key="canvasLocation" x="2303" y="-231"/>
         </scene>
     </scenes>
     <resources>
@@ -412,6 +412,6 @@
         <image name="pot" width="81" height="70"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7SA-LS-Yir"/>
+        <segue reference="waj-ZT-eph"/>
     </inferredMetricsTieBreakers>
 </document>
