@@ -435,7 +435,7 @@
     <resources>
         <image name="001.jpg" width="1200" height="900"/>
         <image name="Brightness" width="166" height="166"/>
-        <image name="Climate" width="234" height="158"/>
+        <image name="Climate" width="238" height="204"/>
         <image name="Dedication" width="214" height="158"/>
         <image name="PlantSize" width="160" height="166"/>
         <image name="TypePlant" width="178" height="150"/>
