@@ -144,7 +144,7 @@
                                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="matchButton">
+                                                <state key="normal" image="matchingButton">
                                                     <color key="titleColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
@@ -409,7 +409,7 @@
         <image name="TypePlant" width="178" height="150"/>
         <image name="backgroundPlantName" width="730" height="68"/>
         <image name="listsIcon" width="31" height="30"/>
-        <image name="matchButton" width="216" height="96"/>
+        <image name="matchingButton" width="216" height="96"/>
         <image name="nil" width="16" height="16"/>
         <image name="pot" width="81" height="70"/>
         <image name="starNavBar" width="60" height="60"/>
