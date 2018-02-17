@@ -13,9 +13,6 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
 
         
         @IBOutlet weak var scrollView: UIScrollView!
-        
-   
-
 
     
         @IBOutlet weak var climateButton: UIButton!
@@ -70,11 +67,13 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
     
-        let climate = ["None", "Mediterranean", "Tropical", "Polar", "Dry", "Moderate", "Continental"]
+    let climate = ["None", "Tropical","Equatorial","Subtropical","Temperate","Wet temperate","Oceanic","Mediterranean",
+        "Continental","Subarctic","Trans-Siberian","Polar","Glacial" ,"Steppe", "Desert" ,"Monsoon" , "Sinic" ,
+        "Climate of the savannah","Alpine","Boreal"]
         let brightness = ["None", "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
         let dedication = ["None", "Rarely", "Often", "Assiduously"]
         let plantSize = ["None", "Big","Medium","Small"]
-        let category = ["None", "Officinal Plants","Ornamental Plants","Aromatic Plants", "Vegetables", "Fruit Plants", "Flower Plants"]
+        let category = ["None", "Aquatic", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant",  ]
         let space = ["None", "Inside","Outside"]
     
     let ScrollingNavigationController = UINavigationController()
