@@ -140,6 +140,7 @@
 				22809991202D9E3700C2BCDD /* FirstViewController.swift */,
 				22809993202D9E4900C2BCDD /* SecondViewController.swift */,
 				22809995202D9E5300C2BCDD /* ThirdViewController.swift */,
+				999928022038B5FF007DCCBC /* DataModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -176,6 +177,24 @@
 			);
 			name = MyGarden;
 			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		999928042038C68D007DCCBC /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				99DC2E8020234B0800412EE4 /* Main.storyboard */,
+				993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		999928052038C730007DCCBC /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				879348192034D0E9001B1E4E /* CameraViewController.swift */,
+				879348172034CF2B001B1E4E /* Camera.storyboard */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		99C23062202F399F0044C561 /* Filters */ = {
@@ -216,23 +235,20 @@
 		99DC2E7B20234B0800412EE4 /* The Drifters */ = {
 			isa = PBXGroup;
 			children = (
-				4209FEE720349B0F00C64C7F /* plants.json */,
-				4209FEE4203498AD00C64C7F /* images */,
+				999928052038C730007DCCBC /* Camera */,
+				999928042038C68D007DCCBC /* MainTabBar */,
 				4209FED720348DC700C64C7F /* CoreDataClasses */,
-				99DC2E7C20234B0800412EE4 /* AppDelegate.swift */,
-				99DC2E7E20234B0800412EE4 /* ViewController.swift */,
-				99DC2E8020234B0800412EE4 /* Main.storyboard */,
-				99DC2E8620234B0800412EE4 /* Assets.xcassets */,
-				879348192034D0E9001B1E4E /* CameraViewController.swift */,
-				879348172034CF2B001B1E4E /* Camera.storyboard */,
-				99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */,
-				99DC2E8B20234B0800412EE4 /* Info.plist */,
-				99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */,
-				993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */,
 				2280998C202D8F3900C2BCDD /* Onboarding */,
 				9944B6A2203626FA00A46B5D /* MyGarden */,
 				99C23062202F399F0044C561 /* Filters */,
-				999928022038B5FF007DCCBC /* DataModel.swift */,
+				4209FEE720349B0F00C64C7F /* plants.json */,
+				99DC2E7C20234B0800412EE4 /* AppDelegate.swift */,
+				99DC2E7E20234B0800412EE4 /* ViewController.swift */,
+				99DC2E8620234B0800412EE4 /* Assets.xcassets */,
+				99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */,
+				99DC2E8B20234B0800412EE4 /* Info.plist */,
+				99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */,
+				4209FEE4203498AD00C64C7F /* images */,
 			);
 			path = "The Drifters";
 			sourceTree = "<group>";

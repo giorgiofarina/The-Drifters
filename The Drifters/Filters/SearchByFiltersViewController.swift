@@ -73,7 +73,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         let brightness = ["None", "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
         let dedication = ["None", "Rarely", "Often", "Assiduously"]
         let plantSize = ["None", "Big","Medium","Small"]
-        let category = ["None", "Aquatic", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant",  ]
+        let category = ["None", "Aquatic", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"  ]
         let space = ["None", "Inside","Outside"]
     
     let ScrollingNavigationController = UINavigationController()
