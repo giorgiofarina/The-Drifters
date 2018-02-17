@@ -27,6 +27,7 @@
 		9944B6AE2036273A00A46B5D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A72036273900A46B5D /* TableViewController.swift */; };
 		9944B6AF2036273A00A46B5D /* InsideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A82036273900A46B5D /* InsideCollectionViewCell.swift */; };
 		9944B6B02036273A00A46B5D /* MyGarden.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944B6A92036273A00A46B5D /* MyGarden.storyboard */; };
+		999928032038B5FF007DCCBC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999928022038B5FF007DCCBC /* DataModel.swift */; };
 		99AEC4D72034E49B007358C1 /* SuggestedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4D62034E49B007358C1 /* SuggestedViewController.swift */; };
 		99AEC4D92034E4D4007358C1 /* SuggestedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4D82034E4D4007358C1 /* SuggestedTableViewCell.swift */; };
 		99AEC4DB2034F69A007358C1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4DA2034F69A007358C1 /* DetailsViewController.swift */; };
@@ -82,6 +83,7 @@
 		9944B6A72036273900A46B5D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9944B6A82036273900A46B5D /* InsideCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsideCollectionViewCell.swift; sourceTree = "<group>"; };
 		9944B6A92036273A00A46B5D /* MyGarden.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyGarden.storyboard; sourceTree = "<group>"; };
+		999928022038B5FF007DCCBC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		99AEC4D62034E49B007358C1 /* SuggestedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedViewController.swift; sourceTree = "<group>"; };
 		99AEC4D82034E4D4007358C1 /* SuggestedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedTableViewCell.swift; sourceTree = "<group>"; };
 		99AEC4DA2034F69A007358C1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				2280998C202D8F3900C2BCDD /* Onboarding */,
 				9944B6A2203626FA00A46B5D /* MyGarden */,
 				99C23062202F399F0044C561 /* Filters */,
+				999928022038B5FF007DCCBC /* DataModel.swift */,
 			);
 			path = "The Drifters";
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				4209FEE120348E7E00C64C7F /* List+CoreDataProperties.swift in Sources */,
 				9944B6AA2036273A00A46B5D /* DetailViewController.swift in Sources */,
 				22809994202D9E4900C2BCDD /* SecondViewController.swift in Sources */,
+				999928032038B5FF007DCCBC /* DataModel.swift in Sources */,
 				22809992202D9E3700C2BCDD /* FirstViewController.swift in Sources */,
 				99DC2E7F20234B0800412EE4 /* ViewController.swift in Sources */,
 				22809996202D9E5300C2BCDD /* ThirdViewController.swift in Sources */,

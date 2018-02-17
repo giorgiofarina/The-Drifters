@@ -70,20 +70,12 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
     
-        let climate = ["Mediterranean", "Tropical", "Polar", "Dry",             "Moderate", "Continental"]
-        let brightness = ["High", "Medium", "Low"]
-        let dedication = ["5min per day",
-                          "15min per day",
-                          "1h per day",
-                          "more than 1h per day", "1h per week"]
-        let plantSize = ["Big",
-                          "Medium",
-                          "Small"]
-        let category = ["Officinal Plants",
-                    "Ornamental Plants",
-                    "Aromatic Plants",
-                    "Vegetables", "Fruit Plants", "Flower Plant"]
-        let space = ["Inside","Outside"]
+        let climate = ["None", "Mediterranean", "Tropical", "Polar", "Dry", "Moderate", "Continental"]
+        let brightness = ["None", "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
+        let dedication = ["None", "Rarely", "Often", "Assiduously"]
+        let plantSize = ["None", "Big","Medium","Small"]
+        let category = ["None", "Officinal Plants","Ornamental Plants","Aromatic Plants", "Vegetables", "Fruit Plants", "Flower Plants"]
+        let space = ["None", "Inside","Outside"]
     
     let ScrollingNavigationController = UINavigationController()
         
@@ -176,7 +168,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             spaceTextField.inputView = spacePickerView
             
             
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(sender:)))
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(textFieldShouldReturn(_:)))
             view.addGestureRecognizer(tapGesture)
             view.isUserInteractionEnabled = true
    
@@ -202,15 +194,18 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
     
-        @objc func viewTapped(sender: UITapGestureRecognizer) {
-            climateTextField.resignFirstResponder()
-            brightnessTextField.resignFirstResponder()
-            dedicationTextField.resignFirstResponder()
-            plantSizeTextField.resignFirstResponder()
-            categoryTextField.resignFirstResponder()
-            spaceTextField.resignFirstResponder()
+    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        climateTextField.resignFirstResponder()
+        brightnessTextField.resignFirstResponder()
+        dedicationTextField.resignFirstResponder()
+        plantSizeTextField.resignFirstResponder()
+        categoryTextField.resignFirstResponder()
+        spaceTextField.resignFirstResponder()
+        return true
+    }
+    
             
-        }
+    
     
         func textFieldDidBeginEditing(_ textField: UITextField) {
             if (textField == dedicationTextField || textField == plantSizeTextField ){
@@ -228,6 +223,9 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             }
         }
 
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 
     
         

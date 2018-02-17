@@ -19,6 +19,12 @@ class TabBarMainViewController: UITabBarController {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: unselectedColor], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: selectedColor], for: .selected)
         
+        if DataModel.shared.isFirstTime{
+          selectedIndex = 2
+        } else {
+            selectedIndex = 0
+        }
+        
         // Do any additional setup after loading the view.
     }
 

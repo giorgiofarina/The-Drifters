@@ -12,27 +12,33 @@ import CoreData
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let context = appDelegate.persistentContainer.viewContext
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//
-//        let defaults = UserDefaults.standard
-//        if defaults.object(forKey: "isFirstTime") == nil {
-//            defaults.set("No", forKey:"isFirstTime")
-//            defaults.synchronize()
-//            let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil) //Write your storyboard name
-//            let viewController = storyboard.instantiateViewController(withIdentifier: "Welcome") as! TabBarMainViewController
-//            self.window?.rootViewController = viewController
-//            self.window?.makeKeyAndVisible()
-//        }
-    
+
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        var viewController: UIViewController!
         
        
-     
+        
+        Thread.sleep(forTimeInterval: 1.0)
+       
+        if DataModel.shared.isFirstTime {
+            viewController = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
+        } else {
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        }
+        
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
         
         return true
     }
