@@ -19,16 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-      
-        let defaults = UserDefaults.standard
-        if defaults.object(forKey: "isFirstTime") == nil {
-            defaults.set("No", forKey:"isFirstTime")
-            defaults.synchronize()
-            let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil) //Write your storyboard name
-            let viewController = storyboard.instantiateViewController(withIdentifier: "Welcome") as! TabBarMainViewController
-            self.window?.rootViewController = viewController
-            self.window?.makeKeyAndVisible()
-        }
+//
+//        let defaults = UserDefaults.standard
+//        if defaults.object(forKey: "isFirstTime") == nil {
+//            defaults.set("No", forKey:"isFirstTime")
+//            defaults.synchronize()
+//            let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil) //Write your storyboard name
+//            let viewController = storyboard.instantiateViewController(withIdentifier: "Welcome") as! TabBarMainViewController
+//            self.window?.rootViewController = viewController
+//            self.window?.makeKeyAndVisible()
+//        }
+    
+        
+       
      
         
         return true
@@ -50,6 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        
+    
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

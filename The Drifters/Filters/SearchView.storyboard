@@ -389,8 +389,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="qhi-e9-61Z">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="listsIcon2" id="xOu-Ic-oJ9"/>
-                            <barButtonItem systemItem="add" id="1m8-9N-oDw"/>
+                            <barButtonItem title="Item" image="listsIcon" id="1m8-9N-oDw"/>
+                            <barButtonItem title="Item" image="starNavBar" id="xOu-Ic-oJ9">
+                                <inset key="imageInsets" minX="49" minY="-2" maxX="-5" maxY="0.0"/>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </viewController>
@@ -406,10 +408,11 @@
         <image name="PlantSize" width="160" height="166"/>
         <image name="TypePlant" width="178" height="150"/>
         <image name="backgroundPlantName" width="730" height="68"/>
-        <image name="listsIcon2" width="24" height="24"/>
+        <image name="listsIcon" width="31" height="30"/>
         <image name="matchButton" width="216" height="96"/>
         <image name="nil" width="16" height="16"/>
         <image name="pot" width="81" height="70"/>
+        <image name="starNavBar" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="waj-ZT-eph"/>
