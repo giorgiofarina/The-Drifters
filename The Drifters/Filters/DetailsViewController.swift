@@ -11,8 +11,10 @@ import UIKit
 class DetailsViewController: UIViewController {
 
     @IBOutlet weak var plantImageView: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var commonPlantNameLabel: UILabel!
+    @IBOutlet weak var scientificPlantNameLabel: UILabel!
+    @IBOutlet weak var descriptionPlantLabel: UILabel!
+    
     
     let elements = ["001.jpg", "plant2", "plant3", "plant4", "plant5", "plant6", "plant7"]
     

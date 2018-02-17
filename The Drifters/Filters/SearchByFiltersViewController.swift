@@ -67,17 +67,17 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
     
-    let climate = ["None", "Tropical","Equatorial","Subtropical","Temperate","Wet temperate","Oceanic","Mediterranean",
-        "Continental","Subarctic","Trans-Siberian","Polar","Glacial" ,"Steppe", "Desert" ,"Monsoon" , "Sinic" ,
-        "Climate of the savannah","Alpine","Boreal"]
+        let climate = ["None", "Tropical","Equatorial","Subtropical","Temperate","Wet temperate","Oceanic","Mediterranean",
+                       "Continental","Subarctic","Trans-Siberian","Polar","Glacial" ,"Steppe", "Desert" ,"Monsoon" , "Sinic" ,
+                       "Climate of the savannah","Alpine","Boreal"]
         let brightness = ["None", "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
         let dedication = ["None", "Rarely", "Often", "Assiduously"]
         let plantSize = ["None", "Big","Medium","Small"]
-        let category = ["None", "Aquatic", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"  ]
+        let category = ["None", "Aquatic", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"]
         let space = ["None", "Inside","Outside"]
     
-    let ScrollingNavigationController = UINavigationController()
-        
+   
+    
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -85,7 +85,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             self.navigationController?.isNavigationBarHidden = false
             
-          self.navigationController?.navigationBar.shadowImage = UIImage()
+            self.navigationController?.navigationBar.shadowImage = UIImage()
             
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
             
@@ -113,7 +113,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
  
             
             
-    //SET TOOLBAR
+    //ASSIGN PICKERVIEW TO EACH TEXTFIELD. SET ITS TOOLBAR.
             
             let toolbar = UIToolbar()
             toolbar.sizeToFit()
@@ -121,8 +121,6 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
             let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
             doneButton.tintColor = UIColor.red
-            
-            
            
             toolbar.setItems([flexibleSpace, doneButton], animated: false)
             
@@ -175,15 +173,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         
         }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-       
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-  
+
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
@@ -193,18 +183,15 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
     
-    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        climateTextField.resignFirstResponder()
-        brightnessTextField.resignFirstResponder()
-        dedicationTextField.resignFirstResponder()
-        plantSizeTextField.resignFirstResponder()
-        categoryTextField.resignFirstResponder()
-        spaceTextField.resignFirstResponder()
-        return true
-    }
-    
-            
-    
+        @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            climateTextField.resignFirstResponder()
+            brightnessTextField.resignFirstResponder()
+            dedicationTextField.resignFirstResponder()
+            plantSizeTextField.resignFirstResponder()
+            categoryTextField.resignFirstResponder()
+            spaceTextField.resignFirstResponder()
+            return true
+        }
     
         func textFieldDidBeginEditing(_ textField: UITextField) {
             if (textField == dedicationTextField || textField == plantSizeTextField ){
@@ -221,11 +208,14 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
                 scrollView.setContentOffset(CGPoint(x: 0, y: 150), animated: true)
             }
         }
-
+    
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             self.view.endEditing(true)
         }
 
+        func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+            view.endEditing(true)
+        }
     
         
     //PICKER
@@ -301,9 +291,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             view.endEditing(true)
         }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        view.endEditing(true)
-    }
+    
 
 }
 
