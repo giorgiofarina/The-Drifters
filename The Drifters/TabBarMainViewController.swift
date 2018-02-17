@@ -20,11 +20,11 @@ class TabBarMainViewController: UITabBarController {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: selectedColor], for: .selected)
         
         if DataModel.shared.isFirstTime{
-          selectedIndex = 2
+            selectedIndex = 2
+            UserDefaults.standard.set(false, forKey: "Onboarding")
         } else {
             selectedIndex = 0
         }
-        
         // Do any additional setup after loading the view.
     }
 

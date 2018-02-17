@@ -27,8 +27,7 @@ class ThirdViewController: UIViewController {
     
     @IBAction func getStartedButtonTapped(_ sender: Any) {
         
-        UserDefaults.standard.set(false, forKey: "Onboarding")
-        
+
 
         
     }
