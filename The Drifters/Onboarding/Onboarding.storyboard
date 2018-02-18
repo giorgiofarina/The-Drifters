@@ -164,7 +164,6 @@
                                 </constraints>
                                 <state key="normal" image="buttonGetStarted"/>
                                 <connections>
-                                    <action selector="getStartedButtonTapped:" destination="0rj-nT-YyC" eventType="touchUpInside" id="VMF-XH-aJ4"/>
                                     <segue destination="oad-Ze-a6x" kind="show" id="rvk-r1-R6e"/>
                                 </connections>
                             </button>

@@ -485,8 +485,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="qhi-e9-61Z">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="listsIcon" id="1m8-9N-oDw"/>
-                            <barButtonItem title="Item" image="starNavBar" id="xOu-Ic-oJ9">
+                            <barButtonItem image="listsIcon" id="1m8-9N-oDw"/>
+                            <barButtonItem image="starNavBar" id="xOu-Ic-oJ9">
                                 <inset key="imageInsets" minX="49" minY="-2" maxX="-5" maxY="0.0"/>
                             </barButtonItem>
                         </rightBarButtonItems>

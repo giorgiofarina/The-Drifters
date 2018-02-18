@@ -25,7 +25,7 @@ class ThirdViewController: UIViewController {
     
 
     
-    @IBAction func getStartedButtonTapped(_ sender: Any) {
+   
         
 
 
@@ -33,4 +33,4 @@ class ThirdViewController: UIViewController {
     }
     
     
-}
+

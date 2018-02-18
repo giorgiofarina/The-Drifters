@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+    //TUTORIAL FUNCTION. MAKE IT APPEAR ONLY AT THE FIRST ACCESS
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         var viewController: UIViewController!

@@ -9,9 +9,9 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
-    @IBOutlet weak var plantImageView: UIImageView!
+    
     @IBOutlet weak var commonPlantNameLabel: UILabel!
+    @IBOutlet weak var plantImageView: UIImageView!
     @IBOutlet weak var scientificPlantNameLabel: UILabel!
     @IBOutlet weak var descriptionPlantLabel: UILabel!
     
@@ -20,6 +20,7 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 //        descriptionLabel.text = elements[IndexPath.row]
 
     }
