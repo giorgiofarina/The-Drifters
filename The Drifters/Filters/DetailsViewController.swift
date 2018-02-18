@@ -20,6 +20,9 @@ class DetailsViewController: UIViewController {
     
     let elements = ["001.jpg", "plant2", "plant3", "plant4", "plant5", "plant6", "plant7"]
     
+    var image = UIImage()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,9 +35,12 @@ class DetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//fetch dati da database della pianta selezionata e popolamento campi descrittivi di ciascuna pianta
+    
+    
 
     @IBAction func addToFavouriteList(_ sender: Any) {
-        
+
     }
     
 

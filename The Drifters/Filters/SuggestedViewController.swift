@@ -48,13 +48,17 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = suggestedTableView.dequeueReusableCell(withIdentifier: "customSuggestedCell") as! SuggestedTableViewCell
         
-        cell.suggestedView.layer.cornerRadius = 10
-        
+//  fetch dati da mostrare nella cella in base al filtraggio effettuato
         cell.suggestedPlantNameLabel.text = elements[indexPath.row]
         cell.suggestedPlantImageView.image = UIImage(named: elements[indexPath.row])
         
-        cell.suggestedPlantImageView.layer.cornerRadius = 10
         
+        
+        
+        
+        
+        cell.suggestedPlantImageView.layer.cornerRadius = 10
+        cell.suggestedPlantImageView.layer.masksToBounds = true
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.clear
         cell.selectedBackgroundView = backgroundView
@@ -64,7 +68,12 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        performSegue(withIdentifier: "showDetailsSuggestedPlants", sender: self)
+        let garderStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
+        let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailsID") as! DetailsViewController
+        
+        destinationView.image = UIImage(named: elements[indexPath.row])!
+        
+        self.navigationController?.pushViewController(destinationView, animated: true)
     }
    
 }

@@ -32,7 +32,8 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         self.tableView.separatorColor = UIColor.clear
         
         searchBar.delegate = self
-
+        setUpSearchBar()
+        
 //        self.fetchData()
         
         // Do any additional setup after loading the view.
@@ -52,17 +53,19 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! SearchTableViewCell
  
-       
+  
+        
+//fetch per riempire le celle con info dal database in base alle keyword inserite nella barra di ricerca
         cell.namePlantLabel.text = elements[indexPath.row]
         cell.plantImageView.image = UIImage(named: elements[indexPath.row])
         
+        
+        
+        
+        
+        
         cell.plantImageView.layer.cornerRadius = 10
         cell.plantImageView.layer.masksToBounds = true
-        
-        
-        
-        
-        
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.clear
         cell.selectedBackgroundView = backgroundView
@@ -72,29 +75,34 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
 
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedIndex = indexPath.row
-//        performSegue(withIdentifier: "showDetails", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
 
-//            if let destination = segue.destination as? DetailsViewController{
-//                destination.elements = elements[(tableView.indexPathForSelectedRow?.row)!]
-//                }
+        let garderStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
+        let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailsID") as! DetailsViewController
+        
+        destinationView.image = UIImage(named: elements[indexPath.row])!
+        
+        self.navigationController?.pushViewController(destinationView, animated: true)
     }
     
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            return
+        }
+            print(searchText)
         
     }
     
 
-//    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange SelectedScope: Int) -> Bool {
-//
-//    }
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.resignFirstResponder()
+        return true
+    }
     
     private func setUpSearchBar(){
         searchBar.delegate = self
+        self.tableView.tableHeaderView = searchBar
     }
     
     

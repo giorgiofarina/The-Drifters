@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreLocation
 
 class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIScrollViewDelegate {
 
@@ -92,7 +91,6 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             scrollView.delegate = self
             scrollView.isScrollEnabled = true
            
-            
             
     //SETTING SHAPES OF THE BUTTON
 
@@ -203,7 +201,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
         func textFieldDidEndEditing(_ textField: UITextField) {
             if (textField == dedicationTextField || textField == plantSizeTextField ){
-                scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+                scrollView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
             } else if (textField == categoryTextField || textField == environmentTextField ){
                 scrollView.setContentOffset(CGPoint(x: 0, y: 150), animated: true)
             }
@@ -292,31 +290,68 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         }
     
     
+    @IBAction func researchInDatabaseTapped(_ sender: Any) {
+        
+        let searchViewStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
+        let destinationView = searchViewStoryboard.instantiateViewController(withIdentifier: "searchInDatabaseID") as! MagnifyingGlassViewController
+        
+        self.navigationController?.pushViewController(destinationView, animated: true)
+        
+    }
+    
+    
+    
+    func alertMessage (title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)}))
+        
+        self.present(alert, animated: true , completion: nil)
+
+    }
+    
+
     
     @IBAction func matchingButtonTapped(_ sender: Any) {
         
-        //SAVING A FILTER DICTIONARY TO MAKE A QUERY TO SELECT PLANTS FROM THE DATABASE
         
+        //Check if field is empty
+        if (climateTextField.text == "Climate" && exposureTextField.text! == "Exposure" && dedicationTextField.text! == "Dedication" && plantSizeTextField.text! == "Plant size" && categoryTextField.text! == "Category" && environmentTextField.text! == "Environment")  {
+            alertMessage(title:"Attention", message: "Please, enter at least one filter!" )
+        } else {
+            
+            //SAVING A FILTER DICTIONARY TO MAKE A QUERY TO SELECT PLANTS FROM THE DATABASE
+            
+            
+            //        let newFilter =
+            
+            
+            //        do {
+            //            try context.save()
+            //        } catch {
+            //            print(error)
+            //        }
+            //        _ = navigationController?.popViewController(animated: true)
+            //    }
+            
+            
+            let searchViewStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
+            let destinationView = searchViewStoryboard.instantiateViewController(withIdentifier: "suggestedViewID") as! SuggestedViewController
+            
+        self.navigationController?.pushViewController(destinationView, animated: true)
+        }
         
-//        let newFilter =
-//        newFilter.setValue(self.climateTextField!.text, forKey: "climate")
-//        newFilter.setValue(self.exposureTextField!.text, forKey: "exposure")
-//        newFilter.setValue(self.dedicationTextField!.text, forKey: "dedication")
-//        newFilter.setValue(self.plantSizeTextField!.text, forKey: "size")
-//        newFilter.setValue(self.categoryTextField!.text, forKey: "category")
-//        newFilter.setValue(self.environmentTextField!.text, forKey: "environment")
-//
-//
-//
-//        do {
-//            try context.save()
-//        } catch {
-//            print(error)
-//        }
-//        _ = navigationController?.popViewController(animated: true)
-//    }
     
     
     }
+    
+    
+
+        
+        
+    
+    
+    
 
 }
