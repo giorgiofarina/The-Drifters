@@ -110,13 +110,6 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Space" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5So-Q8-IvO" userLabel="spaceTextField">
-                                                <rect key="frame" x="195" y="449" width="160" height="160"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Exposure" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="4u0-Bu-L67" userLabel="dedicationTextField">
                                                 <rect key="frame" x="195" y="97" width="160" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -148,9 +141,17 @@
                                                     <color key="titleColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="matchingButtonTapped:" destination="Nfy-mT-1ji" eventType="touchUpInside" id="ENI-Vf-c7g"/>
                                                     <segue destination="ad4-5z-pT4" kind="show" id="n8r-Ig-Doz"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Environment" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5So-Q8-IvO" userLabel="environmentTextField">
+                                                <rect key="frame" x="195" y="449" width="160" height="160"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -187,20 +188,20 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="720"/>
                     <connections>
-                        <outlet property="brightnessButton" destination="ePR-0t-yWA" id="X4L-xN-Yhf"/>
-                        <outlet property="brightnessTextField" destination="4u0-Bu-L67" id="MCU-Ka-nhp"/>
                         <outlet property="categoryButton" destination="khR-Ay-Jpa" id="7ah-Xp-0bC"/>
                         <outlet property="categoryTextField" destination="U3L-wc-JGw" id="5RN-Je-CCJ"/>
                         <outlet property="climateButton" destination="Eg9-ss-Ya3" id="P1U-Kt-cUN"/>
                         <outlet property="climateTextField" destination="064-8v-FsW" id="MtF-0k-PvA"/>
                         <outlet property="dedicationButton" destination="vfN-XR-3Rt" id="jTE-ER-vel"/>
                         <outlet property="dedicationTextField" destination="9Y8-pi-mRz" id="Lzx-dk-ACt"/>
+                        <outlet property="environmentButton" destination="CzD-cf-mFp" id="P5c-Vz-p63"/>
+                        <outlet property="environmentTextField" destination="5So-Q8-IvO" id="YLH-Yx-m7w"/>
+                        <outlet property="exposureButton" destination="ePR-0t-yWA" id="PbL-tv-De1"/>
+                        <outlet property="exposureTextField" destination="4u0-Bu-L67" id="2Oe-Mi-Uxq"/>
                         <outlet property="plantSizeButton" destination="7ay-U2-De3" id="fA7-oN-clW"/>
                         <outlet property="plantSizeTextField" destination="33Q-j3-Sxv" id="8ud-Jm-jpZ"/>
                         <outlet property="scrollView" destination="jua-Tl-i2t" id="YaG-mT-IHz"/>
                         <outlet property="searchDisplayController" destination="elp-fm-5Hs" id="qBB-jP-Mlw"/>
-                        <outlet property="spaceButton" destination="CzD-cf-mFp" id="Eyi-Dz-mND"/>
-                        <outlet property="spaceTextField" destination="5So-Q8-IvO" id="pFP-l6-lgX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUa-Zh-1Xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -485,14 +486,23 @@
                     </view>
                     <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="qhi-e9-61Z">
                         <rightBarButtonItems>
-                            <barButtonItem image="listsIcon" id="1m8-9N-oDw"/>
+                            <barButtonItem image="listsIcon" id="1m8-9N-oDw">
+                                <connections>
+                                    <action selector="addToGardenList:" destination="IDT-O3-u7N" id="6da-AT-ogb"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="starNavBar" id="xOu-Ic-oJ9">
                                 <inset key="imageInsets" minX="49" minY="-2" maxX="-5" maxY="0.0"/>
+                                <connections>
+                                    <action selector="addToFavouriteList:" destination="IDT-O3-u7N" id="T6b-Bt-vw2"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
+                        <outlet property="addToFavouritesBarButtonItem" destination="xOu-Ic-oJ9" id="PTY-Wl-UOk"/>
+                        <outlet property="addToGardenBarButtonItem" destination="1m8-9N-oDw" id="CXa-NI-f1V"/>
                         <outlet property="commonPlantNameLabel" destination="Z9X-4y-5XF" id="Z5X-z7-y2H"/>
                         <outlet property="descriptionPlantLabel" destination="mtP-Sb-IL3" id="w9d-2s-fgd"/>
                         <outlet property="plantImageView" destination="HwP-SB-opN" id="NNM-RT-dGd"/>

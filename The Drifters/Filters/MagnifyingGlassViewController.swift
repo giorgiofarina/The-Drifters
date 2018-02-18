@@ -14,25 +14,26 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
 
-   
-    
+    var plantArray: [Plant] = []
+  
     
     var elements = ["001.jpg", "plant2", "plant3"]
  
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.isNavigationBarHidden = false
        
-        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.separatorColor = UIColor.clear
         
         searchBar.delegate = self
-    
-        self.tableView.separatorColor = UIColor.clear
+
+//        self.fetchData()
         
         // Do any additional setup after loading the view.
     }
@@ -51,10 +52,16 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! SearchTableViewCell
  
-        cell.customCellView.layer.cornerRadius = 10
+       
         cell.namePlantLabel.text = elements[indexPath.row]
         cell.plantImageView.image = UIImage(named: elements[indexPath.row])
+        
         cell.plantImageView.layer.cornerRadius = 10
+        cell.plantImageView.layer.masksToBounds = true
+        
+        
+        
+        
         
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.clear
@@ -66,15 +73,15 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let selectedIndex = indexPath.row
-        performSegue(withIdentifier: "showDetails", sender: self)
+//        performSegue(withIdentifier: "showDetails", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
 
-//     if let destination = segue.destinison as? DetailsViewController{
-//        destination.elements = elements[(tableView.indexPathForSelectedRow?.row)!]
-//        }
+//            if let destination = segue.destination as? DetailsViewController{
+//                destination.elements = elements[(tableView.indexPathForSelectedRow?.row)!]
+//                }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -89,4 +96,24 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     private func setUpSearchBar(){
         searchBar.delegate = self
     }
+    
+    
+    
+    
+//    func fetchData () {
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//
+//        do{
+//            plantArray = try context.fetch(Plant.fetchRequest())
+//            for item in plantArray {
+//
+//               namePlantLabel.text = item.commonName
+//
+//            }
+//        } catch {
+//            print(error)
+//        }
+//    }
+    
+ 
 }

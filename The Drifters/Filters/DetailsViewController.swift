@@ -15,13 +15,15 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var scientificPlantNameLabel: UILabel!
     @IBOutlet weak var descriptionPlantLabel: UILabel!
     
+    @IBOutlet weak var addToFavouritesBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var addToGardenBarButtonItem: UIBarButtonItem!
     
     let elements = ["001.jpg", "plant2", "plant3", "plant4", "plant5", "plant6", "plant7"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        descriptionLabel.text = elements[IndexPath.row]
+
 
     }
 
@@ -31,6 +33,13 @@ class DetailsViewController: UIViewController {
     }
     
 
+    @IBAction func addToFavouriteList(_ sender: Any) {
+        
+    }
     
 
+    @IBAction func addToGardenList(_ sender: Any) {
+        
+    }
+    
 }
