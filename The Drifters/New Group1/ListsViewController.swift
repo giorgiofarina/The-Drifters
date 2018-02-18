@@ -10,6 +10,8 @@ import UIKit
 
 class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var imageSuggest = UIImageView()
+    
     let buttonBar = UIView()
     class Responder: NSObject {
         @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -22,8 +24,8 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    let imageArrayTest1 = [UIImage(named: "001.jpg"), UIImage(named: "001.jpg"), UIImage(named: "Picture"), UIImage(named: "SecondOnB")]
-    let imageArrayTest2 = [UIImage(named: "Picture"), UIImage(named: "plant-on-a-hand-2"), UIImage(named: "searching-magnifying-glass")]
+    let imageArrayTest1 = [UIImage(named: "imageGardenEmpty")]
+    let imageArrayTest2 = [UIImage(named: "imageFavoriteEmpty")]
     let textArray1 = ["One", "Two", "Three"] //array di prova per le sezioni di garden
     let textArray2 = ["1", "2", "3"] //array di prova per le sezioni di favorite
 
@@ -74,6 +76,10 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        imageSuggest.frame = CGRect(x: 27, y: 280, width: 321, height: 108)
+        imageSuggest.contentMode = .scaleAspectFit
+        imageSuggest.isHidden = true
+        self.view.addSubview(imageSuggest)
 
     }
     
@@ -118,10 +124,22 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //   collection view delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+        func tableView_HiddenWithNoPlantInList(itemInList: Int){
+            if itemInList == 1 {
+                tableView.isHidden = true
+                imageSuggest.isHidden = false
+            } else{
+                tableView.isHidden = false
+                imageSuggest.isHidden = true
+            }
+        }
         if selectedSegment == 1 {
+            imageSuggest.image = #imageLiteral(resourceName: "imageGardenEmpty")
+            tableView_HiddenWithNoPlantInList(itemInList: imageArrayTest1.count)
             return imageArrayTest1.count
         } else {
+            imageSuggest.image = #imageLiteral(resourceName: "imageFavoriteEmpty")
+            tableView_HiddenWithNoPlantInList(itemInList: imageArrayTest2.count)
             return imageArrayTest2.count
         }
     }
@@ -140,10 +158,6 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let destinazioneVC = mainStoryboard.instantiateViewController(withIdentifier: "DatailViewController") as! DatailViewController
-//        destinazioneVC.image = imageArray[indexPath.row]!
-//        self.navigationController?.pushViewController(destinazioneVC, animated: true)
         
         let garderStoryboard: UIStoryboard = UIStoryboard(name: "MyGarden", bundle: nil)
         let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController

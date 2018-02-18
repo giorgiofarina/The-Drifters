@@ -20,7 +20,7 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         destinationImage.image = image
         navigationController?.isNavigationBarHidden = false
-        
+        navigationController?.navigationBar.shadowImage = UIImage()
 
     }
 
