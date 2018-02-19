@@ -295,6 +295,9 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         let searchViewStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
         let destinationView = searchViewStoryboard.instantiateViewController(withIdentifier: "searchInDatabaseID") as! MagnifyingGlassViewController
         
+        
+        
+        
         self.navigationController?.pushViewController(destinationView, animated: true)
         
     }

@@ -32,7 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         var viewController: UIViewController!
         
-       
+        Thread.sleep(forTimeInterval: 1.0)
+        
+        if DataModel.shared.isFirstTime {
+            viewController = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
+        } else {
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        }
+        
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
         
         checkDataStore()
         
