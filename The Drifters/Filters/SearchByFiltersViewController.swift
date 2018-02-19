@@ -270,7 +270,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
                 aggiungiFiltri(nomeFiltro: "dedication", valoreFiltro: dedicationTextField.text!)
             } else if pickerView == plantSizePickerView {
                 plantSizeTextField.text = plantSize[row]
-                aggiungiFiltri(nomeFiltro: "size", valoreFiltro: plantSizeTextField.text!)
+                aggiungiFiltri(nomeFiltro: "#size", valoreFiltro: plantSizeTextField.text!)
             } else if pickerView == categoryPickerView {
                 categoryTextField.text = category[row]
                 aggiungiFiltri(nomeFiltro: "category", valoreFiltro: categoryTextField.text!)
