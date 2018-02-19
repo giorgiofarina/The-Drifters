@@ -43,6 +43,7 @@
 		99DC2E8A20234B0800412EE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */; };
 		99DC2E9520234B0800412EE4 /* The_DriftersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E9420234B0800412EE4 /* The_DriftersTests.swift */; };
 		99DC2EA020234B0800412EE4 /* The_DriftersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E9F20234B0800412EE4 /* The_DriftersUITests.swift */; };
+		99F99B4C203B35CF00EA5426 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F99B4B203B35CF00EA5426 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		99DC2E9B20234B0800412EE4 /* The DriftersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The DriftersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DC2E9F20234B0800412EE4 /* The_DriftersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_DriftersUITests.swift; sourceTree = "<group>"; };
 		99DC2EA120234B0800412EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99F99B4B203B35CF00EA5426 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,12 +220,12 @@
 		99DC2E7B20234B0800412EE4 /* The Drifters */ = {
 			isa = PBXGroup;
 			children = (
+				99F99B4A203B35A500EA5426 /* cameraItem */,
 				4209FED720348DC700C64C7F /* CoreDataClasses */,
 				2280998C202D8F3900C2BCDD /* Onboarding */,
 				9944B6A2203626FA00A46B5D /* MyGarden */,
 				99C23062202F399F0044C561 /* Filters */,
 				4209FEE720349B0F00C64C7F /* data.json */,
-				99DA17C9203ACEAC00A474A6 /* Camera.storyboard */,
 				99DC2E7C20234B0800412EE4 /* AppDelegate.swift */,
 				99DC2E7E20234B0800412EE4 /* ViewController.swift */,
 				99DA17CB203ACF0800A474A6 /* Main.storyboard */,
@@ -254,6 +256,15 @@
 				99DC2EA120234B0800412EE4 /* Info.plist */,
 			);
 			path = "The DriftersUITests";
+			sourceTree = "<group>";
+		};
+		99F99B4A203B35A500EA5426 /* cameraItem */ = {
+			isa = PBXGroup;
+			children = (
+				99DA17C9203ACEAC00A474A6 /* Camera.storyboard */,
+				99F99B4B203B35CF00EA5426 /* CameraViewController.swift */,
+			);
+			path = cameraItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +424,7 @@
 				99AEC4DB2034F69A007358C1 /* DetailsViewController.swift in Sources */,
 				99C23068202F39BD0044C561 /* MagnifyingGlassViewController.swift in Sources */,
 				99C23067202F39BD0044C561 /* SearchTableViewCell.swift in Sources */,
+				99F99B4C203B35CF00EA5426 /* CameraViewController.swift in Sources */,
 				42C34F58203722CD0036EF4F /* CoreDataManager.swift in Sources */,
 				9944B6AC2036273A00A46B5D /* ListsViewController.swift in Sources */,
 				99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */,

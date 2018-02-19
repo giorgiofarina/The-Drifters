@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Camera-->
         <scene sceneID="2VM-zx-Z8e">
             <objects>
                 <viewController id="Idb-17-e2f" customClass="CameraViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="z04-1R-8Ge"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="V0g-Cp-glK"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera" selectedImage="camera" id="V0g-Cp-glK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CameraV" destination="Cfy-Xl-wPW" id="80A-dC-dNI"/>
@@ -38,4 +38,7 @@
             <point key="canvasLocation" x="45.600000000000001" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="30" height="30"/>
+    </resources>
 </document>
