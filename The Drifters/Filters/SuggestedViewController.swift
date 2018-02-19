@@ -19,10 +19,13 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         
         
         self.navigationController?.isNavigationBarHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.red
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         suggestedTableView.delegate = self
         suggestedTableView.dataSource = self
+        
+        
+        self.suggestedTableView.separatorColor = UIColor.clear
         // Do any additional setup after loading the view.
     }
     
@@ -39,20 +42,38 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 200
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = suggestedTableView.dequeueReusableCell(withIdentifier: "customSuggestedCell") as! SuggestedTableViewCell
         
-        cell.suggestedView.layer.cornerRadius = cell.suggestedView.frame.height / 2
-        
+//  fetch dati da mostrare nella cella in base al filtraggio effettuato
         cell.suggestedPlantNameLabel.text = elements[indexPath.row]
         cell.suggestedPlantImageView.image = UIImage(named: elements[indexPath.row])
         
-        cell.suggestedPlantImageView.layer.cornerRadius = cell.suggestedPlantImageView.frame.height / 2
+        
+        
+        
+        
+        
+        cell.suggestedPlantImageView.layer.cornerRadius = 10
+        cell.suggestedPlantImageView.layer.masksToBounds = true
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = backgroundView
         
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        let garderStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
+        let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailsID") as! DetailsViewController
+        
+        destinationView.image = UIImage(named: elements[indexPath.row])!
+        
+        self.navigationController?.pushViewController(destinationView, animated: true)
     }
    
 }

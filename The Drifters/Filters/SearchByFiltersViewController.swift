@@ -7,23 +7,19 @@
 //
 
 import UIKit
-import CoreLocation
 
 class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIScrollViewDelegate {
 
         
         @IBOutlet weak var scrollView: UIScrollView!
-        
-   
-
 
     
         @IBOutlet weak var climateButton: UIButton!
         @IBOutlet weak var dedicationButton: UIButton!
         @IBOutlet weak var plantSizeButton: UIButton!
         @IBOutlet weak var categoryButton: UIButton!
-        @IBOutlet weak var spaceButton: UIButton!
-        @IBOutlet weak var brightnessButton: UIButton!
+        @IBOutlet weak var environmentButton: UIButton!
+        @IBOutlet weak var exposureButton: UIButton!
     
     
     
@@ -33,9 +29,9 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
                 climateTextField.delegate = self
             }
         }
-        @IBOutlet weak var brightnessTextField: UITextField!{
+        @IBOutlet weak var exposureTextField: UITextField!{
             didSet {
-                brightnessTextField.delegate = self
+                exposureTextField.delegate = self
             }
         }
         @IBOutlet weak var dedicationTextField: UITextField!{
@@ -53,40 +49,34 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
                     categoryTextField.delegate = self
                 }
             }
-        @IBOutlet weak var spaceTextField: UITextField!{
+        @IBOutlet weak var environmentTextField: UITextField!{
             didSet {
-                spaceTextField.delegate = self
+                environmentTextField.delegate = self
             }
         }
  
 
     
         let climatePickerView = UIPickerView()
-        let brightnessPickerView = UIPickerView()
+        let exposurePickerView = UIPickerView()
         let dedicationPickerView = UIPickerView()
         let plantSizePickerView = UIPickerView()
         let categoryPickerView = UIPickerView()
-        let spacePickerView = UIPickerView()
+        let environmentPickerView = UIPickerView()
     
     
     
-        let climate = ["Mediterranean", "Tropical", "Polar", "Dry",             "Moderate", "Continental"]
-        let brightness = ["High", "Medium", "Low"]
-        let dedication = ["5min per day",
-                          "15min per day",
-                          "1h per day",
-                          "more than 1h per day", "1h per week"]
-        let plantSize = ["Big",
-                          "Medium",
-                          "Small"]
-        let category = ["Officinal Plants",
-                    "Ornamental Plants",
-                    "Aromatic Plants",
-                    "Vegetables", "Fruit Plants", "Flower Plant"]
-        let space = ["Inside","Outside"]
+        let climate = ["None", "Tropical","Equatorial","Subtropical","Temperate","Wet temperate","Oceanic","Mediterranean",
+                       "Continental","Subarctic","Trans-Siberian","Polar","Glacial" ,"Steppe", "Desert" ,"Monsoon" , "Sinic" ,
+                       "Climate of the savannah","Alpine","Boreal"]
+        let exposure = ["None", "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
+        let dedication = ["None", "Rarely", "Often", "Assiduously"]
+        let plantSize = ["None", "Big","Medium","Small"]
+        let category = ["None", "Aquatic", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"]
+        let environment = ["None", "Indoor","Outdoor"]
     
-    let ScrollingNavigationController = UINavigationController()
-        
+   
+    
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -94,37 +84,34 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             self.navigationController?.isNavigationBarHidden = false
             
-            
-//            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//            
-           self.navigationController?.navigationBar.shadowImage = UIImage()
+            self.navigationController?.navigationBar.shadowImage = UIImage()
             
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
             
+            scrollView.delegate = self
             scrollView.isScrollEnabled = true
            
-            
             
     //SETTING SHAPES OF THE BUTTON
 
             
             climateButton.layer.cornerRadius = 10
             climateButton.layer.masksToBounds = true
-            brightnessButton.layer.cornerRadius = 10
-            brightnessButton.layer.masksToBounds = true
+            exposureButton.layer.cornerRadius = 10
+            exposureButton.layer.masksToBounds = true
             dedicationButton.layer.cornerRadius = 10
             dedicationButton.layer.masksToBounds = true
             plantSizeButton.layer.cornerRadius = 10
             plantSizeButton.layer.masksToBounds = true
             categoryButton.layer.cornerRadius = 10
             categoryButton.layer.masksToBounds = true
-            spaceButton.layer.cornerRadius = 10
-            spaceButton.layer.masksToBounds = true
+            environmentButton.layer.cornerRadius = 10
+            environmentButton.layer.masksToBounds = true
             
  
             
             
-    //SET TOOLBAR
+    //ASSIGN PICKERVIEW TO EACH TEXTFIELD. SET ITS TOOLBAR.
             
             let toolbar = UIToolbar()
             toolbar.sizeToFit()
@@ -132,8 +119,6 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
             let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
             doneButton.tintColor = UIColor.red
-            
-            
            
             toolbar.setItems([flexibleSpace, doneButton], animated: false)
             
@@ -144,11 +129,11 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             climateTextField.inputView = climatePickerView
             
             
-            brightnessTextField.inputAccessoryView = toolbar
-            brightnessPickerView.dataSource = self
-            brightnessPickerView.delegate = self
-            brightnessTextField.tintColor = UIColor.clear
-            brightnessTextField.inputView = brightnessPickerView
+            exposureTextField.inputAccessoryView = toolbar
+            exposurePickerView.dataSource = self
+            exposurePickerView.delegate = self
+            exposureTextField.tintColor = UIColor.clear
+            exposureTextField.inputView = exposurePickerView
             
             
             dedicationTextField.inputAccessoryView = toolbar
@@ -171,29 +156,22 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             categoryTextField.tintColor = UIColor.clear
             categoryTextField.inputView = categoryPickerView
             
-            spaceTextField.inputAccessoryView = toolbar
-            spacePickerView.dataSource = self
-            spacePickerView.delegate = self
-            spaceTextField.tintColor = UIColor.clear
-            spaceTextField.inputView = spacePickerView
+            environmentTextField.inputAccessoryView = toolbar
+            environmentPickerView.dataSource = self
+            environmentPickerView.delegate = self
+            environmentTextField.tintColor = UIColor.clear
+            environmentTextField.inputView = environmentPickerView
             
             
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(sender:)))
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(textFieldShouldReturn(_:)))
             view.addGestureRecognizer(tapGesture)
             view.isUserInteractionEnabled = true
+   
             
         
         }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-       
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-  
+
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
@@ -203,34 +181,39 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
     
-        @objc func viewTapped(sender: UITapGestureRecognizer) {
+        @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             climateTextField.resignFirstResponder()
-            brightnessTextField.resignFirstResponder()
+            exposureTextField.resignFirstResponder()
             dedicationTextField.resignFirstResponder()
             plantSizeTextField.resignFirstResponder()
             categoryTextField.resignFirstResponder()
-            spaceTextField.resignFirstResponder()
-            
-            
+            environmentTextField.resignFirstResponder()
+            return true
         }
     
         func textFieldDidBeginEditing(_ textField: UITextField) {
             if (textField == dedicationTextField || textField == plantSizeTextField ){
             scrollView.setContentOffset(CGPoint(x: 0, y: 180), animated: true)
-            } else if (textField == categoryTextField || textField == spaceTextField ){
+            } else if (textField == categoryTextField || textField == environmentTextField ){
                 scrollView.setContentOffset(CGPoint(x: 0, y: 320), animated: true)
             }
         }
     
         func textFieldDidEndEditing(_ textField: UITextField) {
             if (textField == dedicationTextField || textField == plantSizeTextField ){
-                scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
-            } else if (textField == categoryTextField || textField == spaceTextField ){
+                scrollView.setContentOffset(CGPoint(x: 0, y: 100), animated: true)
+            } else if (textField == categoryTextField || textField == environmentTextField ){
                 scrollView.setContentOffset(CGPoint(x: 0, y: 150), animated: true)
             }
         }
+    
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 
-
+        func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+            view.endEditing(true)
+        }
     
         
     //PICKER
@@ -244,8 +227,8 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
      
             if pickerView == climatePickerView {
                 return climate.count
-            } else if pickerView == brightnessPickerView {
-                return brightness.count
+            } else if pickerView == exposurePickerView {
+                return exposure.count
             } else if pickerView == dedicationPickerView {
                 return dedication.count
             } else if pickerView == plantSizePickerView {
@@ -253,7 +236,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             } else if pickerView == categoryPickerView {
                 return category.count
             } else {
-                return space.count
+                return environment.count
             }
             
         }
@@ -261,8 +244,8 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
             if pickerView == climatePickerView {
                 return climate[row]
-            } else if pickerView == brightnessPickerView {
-                return brightness[row]
+            } else if pickerView == exposurePickerView {
+                return exposure[row]
             } else if pickerView == dedicationPickerView {
                 return dedication[row]
             } else if pickerView == plantSizePickerView {
@@ -270,7 +253,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             } else if pickerView == categoryPickerView {
                 return category[row]
             } else {
-                return space[row]
+                return environment[row]
             }
            
         }
@@ -279,8 +262,8 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             if pickerView == climatePickerView {
                 climateTextField.text = climate[row]
-            } else if pickerView == brightnessPickerView {
-                brightnessTextField.text = brightness[row]
+            } else if pickerView == exposurePickerView {
+                exposureTextField.text = exposure[row]
             } else if pickerView == dedicationPickerView {
                 dedicationTextField.text = dedication[row]
             } else if pickerView == plantSizePickerView {
@@ -288,7 +271,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             } else if pickerView == categoryPickerView {
                 categoryTextField.text = category[row]
             } else {
-                return spaceTextField.text = space[row]
+                return environmentTextField.text = environment[row]
             }
            
 
@@ -297,17 +280,78 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
         @objc func doneClicked() {
             climateTextField.resignFirstResponder()
-            brightnessTextField.resignFirstResponder()
+            exposureTextField.resignFirstResponder()
             dedicationTextField.resignFirstResponder()
             plantSizeTextField.resignFirstResponder()
             categoryTextField.resignFirstResponder()
-            spaceTextField.resignFirstResponder()
+            environmentTextField.resignFirstResponder()
             
             view.endEditing(true)
         }
     
-  
+    
+    @IBAction func researchInDatabaseTapped(_ sender: Any) {
+        
+        let searchViewStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
+        let destinationView = searchViewStoryboard.instantiateViewController(withIdentifier: "searchInDatabaseID") as! MagnifyingGlassViewController
+        
+        self.navigationController?.pushViewController(destinationView, animated: true)
+        
+    }
+    
+    
+    
+    func alertMessage (title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)}))
+        
+        self.present(alert, animated: true , completion: nil)
+
+    }
+    
+
+    
+    @IBAction func matchingButtonTapped(_ sender: Any) {
+        
+        
+        //Check if field is empty
+        if (climateTextField.text == "Climate" && exposureTextField.text! == "Exposure" && dedicationTextField.text! == "Dedication" && plantSizeTextField.text! == "Plant size" && categoryTextField.text! == "Category" && environmentTextField.text! == "Environment")  {
+            alertMessage(title:"Attention", message: "Please, enter at least one filter!" )
+        } else {
+            
+            //SAVING A FILTER DICTIONARY TO MAKE A QUERY TO SELECT PLANTS FROM THE DATABASE
+            
+            
+            //        let newFilter =
+            
+            
+            //        do {
+            //            try context.save()
+            //        } catch {
+            //            print(error)
+            //        }
+            //        _ = navigationController?.popViewController(animated: true)
+            //    }
+            
+            
+            let searchViewStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
+            let destinationView = searchViewStoryboard.instantiateViewController(withIdentifier: "suggestedViewID") as! SuggestedViewController
+            
+        self.navigationController?.pushViewController(destinationView, animated: true)
+        }
+        
+    
+    
+    }
+    
+    
+
+        
+        
+    
+    
+    
 
 }
-
-

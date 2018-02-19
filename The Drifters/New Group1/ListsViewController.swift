@@ -10,6 +10,8 @@ import UIKit
 
 class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var imageSuggest = UIImageView()
+    
     let buttonBar = UIView()
     class Responder: NSObject {
         @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -22,8 +24,8 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    let imageArrayTest1 = [UIImage(named: "currentLocation"), UIImage(named: "Picture"), UIImage(named: "SecondOnB")]
-    let imageArrayTest2 = [UIImage(named: "Picture"), UIImage(named: "plant-on-a-hand-2"), UIImage(named: "searching-magnifying-glass")]
+    let imageArrayTest1 = [UIImage(named: "imageGardenEmpty")]
+    let imageArrayTest2 = [UIImage(named: "imageFavoriteEmpty")]
     let textArray1 = ["One", "Two", "Three"] //array di prova per le sezioni di garden
     let textArray2 = ["1", "2", "3"] //array di prova per le sezioni di favorite
 
@@ -91,6 +93,12 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
 
+//        to delete background in the cell when the cell is selected
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = backgroundView
+        
+//        reload collection view data according to segmented control segment
         cell.clCollectionView.reloadData()
         
         return cell
@@ -112,16 +120,29 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //   collection view delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+        func tableView_HiddenWithNoPlantInList(itemInList: Int){
+            if itemInList == 1 {
+                tableView.isHidden = true
+                imageSuggest.isHidden = false
+            } else{
+                tableView.isHidden = false
+                imageSuggest.isHidden = true
+            }
+        }
         if selectedSegment == 1 {
+            imageSuggest.image = #imageLiteral(resourceName: "imageGardenEmpty")
+            tableView_HiddenWithNoPlantInList(itemInList: imageArrayTest1.count)
             return imageArrayTest1.count
         } else {
+            imageSuggest.image = #imageLiteral(resourceName: "imageFavoriteEmpty")
+            tableView_HiddenWithNoPlantInList(itemInList: imageArrayTest2.count)
             return imageArrayTest2.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InsideCollectionViewCell", for: indexPath) as! InsideCollectionViewCell
+        
         if selectedSegment == 1 {
             cell.imageCell.image = imageArrayTest1[indexPath.row]
         } else {
@@ -133,10 +154,6 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let destinazioneVC = mainStoryboard.instantiateViewController(withIdentifier: "DatailViewController") as! DatailViewController
-//        destinazioneVC.image = imageArray[indexPath.row]!
-//        self.navigationController?.pushViewController(destinazioneVC, animated: true)
         
         let garderStoryboard: UIStoryboard = UIStoryboard(name: "MyGarden", bundle: nil)
         let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
@@ -160,7 +177,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        sectionView.backgroundColor = UIColor(red: 175.0/255.0, green: 65.0/255.0, blue: 55.0/255.0, alpha: 0.30)
         let backgroundImage = UIImageView()
         backgroundImage.image = #imageLiteral(resourceName: "backgroundSection")
-        backgroundImage.frame = CGRect(x: 7, y: 4, width: 361, height: 25)
+        backgroundImage.frame = CGRect(x: 7, y: 6, width: 361, height: 25)
         sectionView.addSubview(backgroundImage)
         let titleSectionLabel = UILabel()
     if selectedSegment == 1 {
@@ -169,7 +186,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     titleSectionLabel.text = textArray2[section]
     }
         sectionView.addSubview(titleSectionLabel)
-        titleSectionLabel.frame = CGRect(x: 30, y: 0, width: 100, height: 35)
+        titleSectionLabel.frame = CGRect(x: 20, y: 1, width: 100, height: 35)
         titleSectionLabel.textColor = .white
         titleSectionLabel.font = UIFont.boldSystemFont(ofSize: 18)
 

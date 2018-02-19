@@ -23,12 +23,12 @@
 		992C76CA203043D000F50966 /* SearchByFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */; };
 		993D6DEF20317E9C00E7EEB4 /* TabBarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */; };
 		9944B6AA2036273A00A46B5D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A32036273900A46B5D /* DetailViewController.swift */; };
-		9944B6AB2036273A00A46B5D /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A42036273900A46B5D /* MainCollectionViewCell.swift */; };
 		9944B6AC2036273A00A46B5D /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A52036273900A46B5D /* ListsViewController.swift */; };
 		9944B6AD2036273A00A46B5D /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A62036273900A46B5D /* MainTableViewCell.swift */; };
 		9944B6AE2036273A00A46B5D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A72036273900A46B5D /* TableViewController.swift */; };
 		9944B6AF2036273A00A46B5D /* InsideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A82036273900A46B5D /* InsideCollectionViewCell.swift */; };
 		9944B6B02036273A00A46B5D /* MyGarden.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944B6A92036273A00A46B5D /* MyGarden.storyboard */; };
+		999928032038B5FF007DCCBC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999928022038B5FF007DCCBC /* DataModel.swift */; };
 		99AEC4D72034E49B007358C1 /* SuggestedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4D62034E49B007358C1 /* SuggestedViewController.swift */; };
 		99AEC4D92034E4D4007358C1 /* SuggestedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4D82034E4D4007358C1 /* SuggestedTableViewCell.swift */; };
 		99AEC4DB2034F69A007358C1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC4DA2034F69A007358C1 /* DetailsViewController.swift */; };
@@ -80,12 +80,12 @@
 		992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByFiltersViewController.swift; sourceTree = "<group>"; };
 		993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainViewController.swift; sourceTree = "<group>"; };
 		9944B6A32036273900A46B5D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		9944B6A42036273900A46B5D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		9944B6A52036273900A46B5D /* ListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		9944B6A62036273900A46B5D /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		9944B6A72036273900A46B5D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9944B6A82036273900A46B5D /* InsideCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsideCollectionViewCell.swift; sourceTree = "<group>"; };
 		9944B6A92036273A00A46B5D /* MyGarden.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyGarden.storyboard; sourceTree = "<group>"; };
+		999928022038B5FF007DCCBC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		99AEC4D62034E49B007358C1 /* SuggestedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedViewController.swift; sourceTree = "<group>"; };
 		99AEC4D82034E4D4007358C1 /* SuggestedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedTableViewCell.swift; sourceTree = "<group>"; };
 		99AEC4DA2034F69A007358C1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +142,7 @@
 				22809991202D9E3700C2BCDD /* FirstViewController.swift */,
 				22809993202D9E4900C2BCDD /* SecondViewController.swift */,
 				22809995202D9E5300C2BCDD /* ThirdViewController.swift */,
+				999928022038B5FF007DCCBC /* DataModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -172,13 +173,30 @@
 				9944B6A32036273900A46B5D /* DetailViewController.swift */,
 				9944B6A82036273900A46B5D /* InsideCollectionViewCell.swift */,
 				9944B6A52036273900A46B5D /* ListsViewController.swift */,
-				9944B6A42036273900A46B5D /* MainCollectionViewCell.swift */,
 				9944B6A62036273900A46B5D /* MainTableViewCell.swift */,
 				9944B6A92036273A00A46B5D /* MyGarden.storyboard */,
 				9944B6A72036273900A46B5D /* TableViewController.swift */,
 			);
 			name = MyGarden;
 			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		999928042038C68D007DCCBC /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				99DC2E8020234B0800412EE4 /* Main.storyboard */,
+				993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		999928052038C730007DCCBC /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				879348192034D0E9001B1E4E /* CameraViewController.swift */,
+				879348172034CF2B001B1E4E /* Camera.storyboard */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		99C23062202F399F0044C561 /* Filters */ = {
@@ -222,20 +240,19 @@
 				4209FEE720349B0F00C64C7F /* data.json */,
 				4209FEE4203498AD00C64C7F /* images */,
 				4209FED720348DC700C64C7F /* CoreDataClasses */,
+				2280998C202D8F3900C2BCDD /* Onboarding */,
+				9944B6A2203626FA00A46B5D /* MyGarden */,
+				99C23062202F399F0044C561 /* Filters */,
+				4209FEE720349B0F00C64C7F /* plants.json */,
 				99DC2E7C20234B0800412EE4 /* AppDelegate.swift */,
 				99DC2E7E20234B0800412EE4 /* ViewController.swift */,
 				99DC2E8020234B0800412EE4 /* Main.storyboard */,
 				42C34F57203722CD0036EF4F /* CoreDataManager.swift */,
 				99DC2E8620234B0800412EE4 /* Assets.xcassets */,
-				879348192034D0E9001B1E4E /* CameraViewController.swift */,
-				879348172034CF2B001B1E4E /* Camera.storyboard */,
 				99DC2E8820234B0800412EE4 /* LaunchScreen.storyboard */,
 				99DC2E8B20234B0800412EE4 /* Info.plist */,
 				99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */,
-				993D6DEE20317E9C00E7EEB4 /* TabBarMainViewController.swift */,
-				2280998C202D8F3900C2BCDD /* Onboarding */,
-				9944B6A2203626FA00A46B5D /* MyGarden */,
-				99C23062202F399F0044C561 /* Filters */,
+				4209FEE4203498AD00C64C7F /* images */,
 			);
 			path = "The Drifters";
 			sourceTree = "<group>";
@@ -403,6 +420,7 @@
 				4209FEE120348E7E00C64C7F /* List+CoreDataProperties.swift in Sources */,
 				9944B6AA2036273A00A46B5D /* DetailViewController.swift in Sources */,
 				22809994202D9E4900C2BCDD /* SecondViewController.swift in Sources */,
+				999928032038B5FF007DCCBC /* DataModel.swift in Sources */,
 				22809992202D9E3700C2BCDD /* FirstViewController.swift in Sources */,
 				99DC2E7F20234B0800412EE4 /* ViewController.swift in Sources */,
 				22809996202D9E5300C2BCDD /* ThirdViewController.swift in Sources */,
@@ -418,7 +436,6 @@
 				99C23067202F39BD0044C561 /* SearchTableViewCell.swift in Sources */,
 				42C34F58203722CD0036EF4F /* CoreDataManager.swift in Sources */,
 				9944B6AC2036273A00A46B5D /* ListsViewController.swift in Sources */,
-				9944B6AB2036273A00A46B5D /* MainCollectionViewCell.swift in Sources */,
 				99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */,
 				9944B6AF2036273A00A46B5D /* InsideCollectionViewCell.swift in Sources */,
 				22809990202D900C00C2BCDD /* PageViewController.swift in Sources */,
