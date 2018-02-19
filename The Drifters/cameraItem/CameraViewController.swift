@@ -108,14 +108,16 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //            guard let firstObservation = results.first else {return}
 //
 //            DispatchQueue.main.async(execute: {
-//                self.label.text = "\(firstObservation.identifier) \(firstObersvation.confidence)"
+//                self.label.text = "\(firstObservation.identifier) \(firstObservation.confidence)"
 //            })
 //
+//            
 //            print(firstObservation.identifier, firstObservation.confidence)
+//            sleep(3)
 //        }
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //    }
-    
+//    
     func getDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         let devices: NSArray = AVCaptureDevice.devices() as NSArray;
         for de in devices {
