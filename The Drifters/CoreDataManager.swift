@@ -121,3 +121,50 @@ func ricercaPerFiltri(arrayFiltri: [String: String]) -> [Plant] {
     }
 }
 
+// 10) classificaCategorie: riceve array di piante in ingresso e ritorna array senza ripetizioni delle categorie corrispondenti
+
+func classificaCategorie(arrayPiante: [Plant]) -> [String] {
+    var arrayCategorie = [String]()
+   
+    var arrayCategorieFinale = [String]()
+    var differenze: Int = 0
+        
+        // Creo un array che contenga tutte le categorie
+        for pianta in arrayPiante {
+            arrayCategorie.append(pianta.category!)
+        }
+        
+        // Creo l'array senza ripetizioni di categorie
+        for categoria in arrayCategorie {
+            
+            if arrayCategorieFinale.isEmpty {
+                arrayCategorieFinale.append(categoria)
+            } else {
+                for categoriaFinale in arrayCategorieFinale {
+                    if categoria != categoriaFinale {
+                        differenze = differenze + 1
+                    }
+                }
+                // se la categoria è diversa da tutte quelle nell'array finale
+                if differenze == arrayCategorieFinale.count {
+                    arrayCategorieFinale.append(categoria)
+                }
+                differenze = 0
+            }
+        }
+        return arrayCategorieFinale
+}
+
+// 11) piantePerCategoria: riceve in ingresso una categoria e le piante associate a una lista e restituisce un array di piante di quella lista con tale categoria
+
+func piantePerCategoria(arrayPiante: [Plant], categoria: String) -> [Plant] {
+    var arrayFiltrato = [Plant]()
+    
+    for pianta in arrayPiante {
+        if pianta.category! == categoria {
+            arrayFiltrato.append(pianta)
+        }
+    }
+    
+    return arrayFiltrato
+}
