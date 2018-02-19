@@ -13,13 +13,6 @@ final class DataModel {
     
     private let userDefaults = UserDefaults.standard
     
-        
-        // *** GARDEN LIST
-        let gardenList = ritornaLista(nomeLista: "Garden")
-        
-        // *** WISHLIST LIST
-        let wishList = ritornaLista(nomeLista: "Wishlist")
-    
     
     
     

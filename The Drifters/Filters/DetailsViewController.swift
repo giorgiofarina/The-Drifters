@@ -31,6 +31,9 @@ class DetailsViewController: UIViewController {
         plantImageView.image = image
         commonPlantNameLabel.text = commonName
         
+        plantImageView.layer.cornerRadius = 10
+        plantImageView.layer.masksToBounds = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,9 +57,11 @@ class DetailsViewController: UIViewController {
     @IBAction func addToFavouriteList(_ sender: Any) {
         
 //        alertMessage(title:"Attention", message: "Are you sure to add this plant to your wishlist?" )
-
-       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.wishList)
-        print("added")
+       
+        let wishList = ritornaLista(nomeLista: "Wishlist")
+        
+       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: wishList)
+      
         
     }
     
@@ -64,7 +69,11 @@ class DetailsViewController: UIViewController {
     @IBAction func addToGardenList(_ sender: Any) {
         
 //        alertMessage(title:"Attention", message: "Are you sure to add this plant to your garden?" )
-       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.gardenList)
+        
+        
+        let gardenList = ritornaLista(nomeLista: "Garden")
+        
+       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: gardenList)
     
     }
     

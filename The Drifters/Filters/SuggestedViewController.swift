@@ -29,12 +29,10 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         
         
         plantArray = ricercaPerFiltri(arrayFiltri: filtri)
-        print ("ricerca effettuata")
         for each in plantArray{
-            plantImage.append(generaImmagine(istanzaPianta: each))
-            
+            plantImage.append(generaImmagine(istanzaPianta: each))   
         }
-        print ("for array")
+       
         
         svuotaFiltri()
         
