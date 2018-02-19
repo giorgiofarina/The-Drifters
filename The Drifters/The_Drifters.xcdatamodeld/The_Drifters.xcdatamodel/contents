@@ -5,13 +5,30 @@
         <relationship name="plants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plant" inverseName="list" inverseEntity="Plant" syncable="YES"/>
     </entity>
     <entity name="Plant" representedClassName=".Plant" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="climate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="commonName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dedication" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="environment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="exposure" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fertilization" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="flowering" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="generalDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="illnesses" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="img1" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="irrigation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="origins" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="propagation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pruning" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pruningDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="repotting" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repottingDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="scientificName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="plants" inverseEntity="List" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Plant" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="List" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Plant" positionX="-63" positionY="-18" width="128" height="360"/>
     </elements>
 </model>

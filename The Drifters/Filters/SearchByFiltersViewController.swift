@@ -21,8 +21,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         @IBOutlet weak var environmentButton: UIButton!
         @IBOutlet weak var exposureButton: UIButton!
     
-    
-    
+
     
         @IBOutlet weak var climateTextField: UITextField!{
             didSet {
@@ -262,18 +261,24 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             if pickerView == climatePickerView {
                 climateTextField.text = climate[row]
+                aggiungiFiltri(nomeFiltro: "climate", valoreFiltro: climateTextField.text!)
             } else if pickerView == exposurePickerView {
                 exposureTextField.text = exposure[row]
+                aggiungiFiltri(nomeFiltro: "exposure", valoreFiltro: exposureTextField.text!)
             } else if pickerView == dedicationPickerView {
                 dedicationTextField.text = dedication[row]
+                aggiungiFiltri(nomeFiltro: "dedication", valoreFiltro: dedicationTextField.text!)
             } else if pickerView == plantSizePickerView {
                 plantSizeTextField.text = plantSize[row]
+                aggiungiFiltri(nomeFiltro: "size", valoreFiltro: plantSizeTextField.text!)
             } else if pickerView == categoryPickerView {
                 categoryTextField.text = category[row]
+                aggiungiFiltri(nomeFiltro: "category", valoreFiltro: categoryTextField.text!)
             } else {
-                return environmentTextField.text = environment[row]
+                environmentTextField.text = environment[row]
+                aggiungiFiltri(nomeFiltro: "environment", valoreFiltro: environmentTextField.text!)
             }
-           
+        
 
         }
     
@@ -323,24 +328,14 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         if (climateTextField.text == "Climate" && exposureTextField.text! == "Exposure" && dedicationTextField.text! == "Dedication" && plantSizeTextField.text! == "Plant size" && categoryTextField.text! == "Category" && environmentTextField.text! == "Environment")  {
             alertMessage(title:"Attention", message: "Please, enter at least one filter!" )
         } else {
-            
-            //SAVING A FILTER DICTIONARY TO MAKE A QUERY TO SELECT PLANTS FROM THE DATABASE
-            
-            
-            //        let newFilter =
-            
-            
-            //        do {
-            //            try context.save()
-            //        } catch {
-            //            print(error)
-            //        }
-            //        _ = navigationController?.popViewController(animated: true)
-            //    }
-            
+        
+
             
             let searchViewStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
             let destinationView = searchViewStoryboard.instantiateViewController(withIdentifier: "suggestedViewID") as! SuggestedViewController
+            
+         
+            
             
         self.navigationController?.pushViewController(destinationView, animated: true)
         }

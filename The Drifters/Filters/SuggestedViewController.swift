@@ -11,8 +11,10 @@ import UIKit
 class SuggestedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var suggestedTableView: UITableView!
+
     
-    let elements = ["001.jpg", "plant2", "plant3", "plant4", "plant5", "plant6", "plant7"]
+    var plantArray: [Plant] = []
+    var plantImage: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,17 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         suggestedTableView.delegate = self
         suggestedTableView.dataSource = self
         
+        
+        
+        plantArray = ricercaPerFiltri(arrayFiltri: filtri)
+        print ("ricerca effettuata")
+        for each in plantArray{
+            plantImage.append(generaImmagine(istanzaPianta: each))
+            
+        }
+        print ("for array")
+        
+        svuotaFiltri()
         
         self.suggestedTableView.separatorColor = UIColor.clear
         // Do any additional setup after loading the view.
@@ -38,7 +51,7 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return elements.count
+        return plantArray.count
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -46,15 +59,12 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = suggestedTableView.dequeueReusableCell(withIdentifier: "customSuggestedCell") as! SuggestedTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customSuggestedCell") as! SuggestedTableViewCell
         
-//  fetch dati da mostrare nella cella in base al filtraggio effettuato
-        cell.suggestedPlantNameLabel.text = elements[indexPath.row]
-        cell.suggestedPlantImageView.image = UIImage(named: elements[indexPath.row])
+        cell.suggestedPlantNameLabel.text = plantArray[indexPath.row].commonName
         
-        
-        
-        
+        cell.suggestedPlantImageView.image = plantImage[indexPath.row]
+    
         
         
         cell.suggestedPlantImageView.layer.cornerRadius = 10
@@ -71,7 +81,9 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         let garderStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
         let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailsID") as! DetailsViewController
         
-        destinationView.image = UIImage(named: elements[indexPath.row])!
+        destinationView.image = plantImage[indexPath.row]
+        destinationView.commonName = plantArray[indexPath.row].commonName!
+        destinationView.plantObject = plantArray[indexPath.row]
         
         self.navigationController?.pushViewController(destinationView, animated: true)
     }

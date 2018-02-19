@@ -13,9 +13,7 @@
 		22809994202D9E4900C2BCDD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22809993202D9E4900C2BCDD /* SecondViewController.swift */; };
 		22809996202D9E5300C2BCDD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22809995202D9E5300C2BCDD /* ThirdViewController.swift */; };
 		4209FEE020348E7E00C64C7F /* List+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209FEDC20348E7E00C64C7F /* List+CoreDataClass.swift */; };
-		4209FEE120348E7E00C64C7F /* List+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209FEDD20348E7E00C64C7F /* List+CoreDataProperties.swift */; };
 		4209FEE220348E7E00C64C7F /* Plant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209FEDE20348E7E00C64C7F /* Plant+CoreDataClass.swift */; };
-		4209FEE320348E7E00C64C7F /* Plant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209FEDF20348E7E00C64C7F /* Plant+CoreDataProperties.swift */; };
 		4209FEE6203498D500C64C7F /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4209FEE5203498D500C64C7F /* 001.jpg */; };
 		4209FEE820349B0F00C64C7F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4209FEE720349B0F00C64C7F /* data.json */; };
 		42C34F58203722CD0036EF4F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34F57203722CD0036EF4F /* CoreDataManager.swift */; };
@@ -36,6 +34,8 @@
 		99DA17C8203ACE9C00A474A6 /* TabBarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA17C7203ACE9B00A474A6 /* TabBarMainViewController.swift */; };
 		99DA17CA203ACEAC00A474A6 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DA17C9203ACEAC00A474A6 /* Camera.storyboard */; };
 		99DA17CC203ACF0800A474A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DA17CB203ACF0800A474A6 /* Main.storyboard */; };
+		99DA17CF203AF42400A474A6 /* Plant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA17CD203AF42400A474A6 /* Plant+CoreDataProperties.swift */; };
+		99DA17D0203AF42400A474A6 /* List+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA17CE203AF42400A474A6 /* List+CoreDataProperties.swift */; };
 		99DC2E7D20234B0800412EE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E7C20234B0800412EE4 /* AppDelegate.swift */; };
 		99DC2E7F20234B0800412EE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E7E20234B0800412EE4 /* ViewController.swift */; };
 		99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E8320234B0800412EE4 /* The_Drifters.xcdatamodeld */; };
@@ -69,9 +69,7 @@
 		22809993202D9E4900C2BCDD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		22809995202D9E5300C2BCDD /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		4209FEDC20348E7E00C64C7F /* List+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4209FEDD20348E7E00C64C7F /* List+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4209FEDE20348E7E00C64C7F /* Plant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4209FEDF20348E7E00C64C7F /* Plant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4209FEE5203498D500C64C7F /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
 		4209FEE720349B0F00C64C7F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		42C34F57203722CD0036EF4F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -93,6 +91,8 @@
 		99DA17C7203ACE9B00A474A6 /* TabBarMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarMainViewController.swift; sourceTree = "<group>"; };
 		99DA17C9203ACEAC00A474A6 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		99DA17CB203ACF0800A474A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		99DA17CD203AF42400A474A6 /* Plant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Plant+CoreDataProperties.swift"; path = "../../Plant+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99DA17CE203AF42400A474A6 /* List+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "List+CoreDataProperties.swift"; path = "../../List+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		99DC2E7920234B0800412EE4 /* The Drifters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Drifters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DC2E7C20234B0800412EE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99DC2E7E20234B0800412EE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,10 +149,10 @@
 		4209FED720348DC700C64C7F /* CoreDataClasses */ = {
 			isa = PBXGroup;
 			children = (
+				99DA17CD203AF42400A474A6 /* Plant+CoreDataProperties.swift */,
+				99DA17CE203AF42400A474A6 /* List+CoreDataProperties.swift */,
 				4209FEDC20348E7E00C64C7F /* List+CoreDataClass.swift */,
-				4209FEDD20348E7E00C64C7F /* List+CoreDataProperties.swift */,
 				4209FEDE20348E7E00C64C7F /* Plant+CoreDataClass.swift */,
-				4209FEDF20348E7E00C64C7F /* Plant+CoreDataProperties.swift */,
 			);
 			name = CoreDataClasses;
 			path = "New Group";
@@ -397,8 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9944B6AD2036273A00A46B5D /* MainTableViewCell.swift in Sources */,
-				4209FEE320348E7E00C64C7F /* Plant+CoreDataProperties.swift in Sources */,
-				4209FEE120348E7E00C64C7F /* List+CoreDataProperties.swift in Sources */,
+				99DA17CF203AF42400A474A6 /* Plant+CoreDataProperties.swift in Sources */,
 				9944B6AA2036273A00A46B5D /* DetailViewController.swift in Sources */,
 				22809994202D9E4900C2BCDD /* SecondViewController.swift in Sources */,
 				999928032038B5FF007DCCBC /* DataModel.swift in Sources */,
@@ -417,6 +416,7 @@
 				42C34F58203722CD0036EF4F /* CoreDataManager.swift in Sources */,
 				9944B6AC2036273A00A46B5D /* ListsViewController.swift in Sources */,
 				99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */,
+				99DA17D0203AF42400A474A6 /* List+CoreDataProperties.swift in Sources */,
 				9944B6AF2036273A00A46B5D /* InsideCollectionViewCell.swift in Sources */,
 				22809990202D900C00C2BCDD /* PageViewController.swift in Sources */,
 				9944B6AE2036273A00A46B5D /* TableViewController.swift in Sources */,

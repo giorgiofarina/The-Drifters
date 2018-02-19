@@ -14,11 +14,11 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
 
+   
     var plantArray: [Plant] = []
-  
+    var plantImage: [UIImage] = []
     
-    var elements = ["001.jpg", "plant2", "plant3"]
- 
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,35 +34,35 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         searchBar.delegate = self
         setUpSearchBar()
         
-//        self.fetchData()
-        
+        plantArray = ricercaPerFiltri(arrayFiltri: filtri)
+        for each in plantArray{
+        plantImage.append(generaImmagine(istanzaPianta: each))
+        }
+
+
         // Do any additional setup after loading the view.
     }
-
-
     
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return elements.count
+        return plantArray.count
     }
     
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! SearchTableViewCell
  
   
+    
+        cell.namePlantLabel.text = plantArray[indexPath.row].commonName
         
-//fetch per riempire le celle con info dal database in base alle keyword inserite nella barra di ricerca
-        cell.namePlantLabel.text = elements[indexPath.row]
-        cell.plantImageView.image = UIImage(named: elements[indexPath.row])
-        
-        
-        
-        
-        
+        cell.plantImageView.image = plantImage[indexPath.row]
+
         
         cell.plantImageView.layer.cornerRadius = 10
         cell.plantImageView.layer.masksToBounds = true
@@ -80,25 +80,30 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         let garderStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
         let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailsID") as! DetailsViewController
         
-        destinationView.image = UIImage(named: elements[indexPath.row])!
-        
+       
+        destinationView.image = plantImage[indexPath.row]
+        destinationView.commonName = plantArray[indexPath.row].commonName!
+        destinationView.plantObject = plantArray[indexPath.row]
         self.navigationController?.pushViewController(destinationView, animated: true)
     }
     
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         if searchText.isEmpty {
-//            array per generare tutte le piante nel database
+            self.tableView.reloadData()
+        } else {
+            aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: searchText)
+            plantArray = ricercaPerFiltri(arrayFiltri: filtri)
+            
+            svuotaFiltri()
+            
             self.tableView.reloadData()
         }
-//            funzione di filtraggio in base al nome comune
+
         
     }
-    
-    func filterTableView (text: String){
-        
-    }
-    
+ 
 
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         searchBar.resignFirstResponder()
@@ -112,21 +117,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
     
     
-    
-//    func fetchData () {
-//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//
-//        do{
-//            plantArray = try context.fetch(Plant.fetchRequest())
-//            for item in plantArray {
-//
-//               namePlantLabel.text = item.commonName
-//
-//            }
-//        } catch {
-//            print(error)
-//        }
-//    }
+
     
  
 }

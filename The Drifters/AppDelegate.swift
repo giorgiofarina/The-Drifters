@@ -13,10 +13,14 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let context = appDelegate.persistentContainer.viewContext
 
 // *** DIZIONARIO DI FILTRI
-var filtri = [String: Any]()
+var filtri = [String: String]()
+
 
 // *** DISPATCH GROUP per il caricamento asincrono dei dati
 let group = DispatchGroup()
+
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
 
     //TUTORIAL FUNCTION. MAKE IT APPEAR ONLY AT THE FIRST ACCESS
         
@@ -160,32 +165,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let data = try Data.init(contentsOf: url!)
             let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: Any]
-            
+
             // * Nome array "---" in .json
             let jsonPlantArray = jsonResult["plant"] as? [[String: AnyObject]]
             let jsonListArray = jsonResult["list"] as? [[String: AnyObject]]
-            
+
             for json in jsonPlantArray! {
                 let plant = NSEntityDescription.insertNewObject(forEntityName: "Plant", into: context) as! Plant
-                
+
                 // * campo CoreData uguagliato a campo di ogni elemento in .json
                 plant.commonName = json["commonName"] as? String
                 plant.scientificName = json["scientificName"] as? String
-                
+                plant.climate = json["climate"] as? String
+                plant.category = json["category"] as? String
+                plant.size = json["size"] as? String
+                plant.dedication = json["dedication"] as? String
+                plant.environment = json["environment"] as? String
+                plant.flowering = json["flowering"] as? String
+                plant.exposure = json["exposure"] as? String
+                plant.generalDescription = json["generalDescription"]
+                    as? String
+                plant.irrigation = json["irrigation"] as? String
+                plant.fertilization = json["fertilization"] as? String
+                plant.pruning = json["pruning"] as? String
+                plant.pruningDate = json["pruningDate"]  as? NSDate
+                plant.repotting = json["repotting"] as? String
+                plant.repottingDate = json["repottingDate"] as? NSDate
+                plant.propagation = json["propagation"] as? String
+                plant.illnesses = json["illnesses"] as? String
+                plant.origins = json["origins"] as? String
+
+
                 // * immagine
                 let imageName = json["img1"] as? String
                 let image = UIImage(named: imageName!)
                 let imageData = UIImageJPEGRepresentation(image!, 1.0)
                 plant.img1 = imageData as NSData?
             }
-            
+
             for json in jsonListArray! {
                 let list = NSEntityDescription.insertNewObject(forEntityName: "List", into: context) as! List
                 list.listName = json["listName"] as? String
             }
-            
+
             appDelegate.saveContext()
-            
+
             let plantRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
             let listRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "List")
             do {

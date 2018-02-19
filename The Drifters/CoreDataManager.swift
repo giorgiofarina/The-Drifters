@@ -53,7 +53,7 @@ func mostraLista(istanzaLista: List) -> [Plant] {
     let request: NSFetchRequest<List> = List.fetchRequest()
     let pred = NSPredicate(format: "listName == %@", istanzaLista.listName!)
     request.predicate = pred
-    
+
     let list = try? context.fetch(request)
     if list == nil {
         print("Nessuna lista trovata")
@@ -65,7 +65,7 @@ func mostraLista(istanzaLista: List) -> [Plant] {
 // da chiamare ogni volta che si è settato un valore per un filtro
 // *** ATTENZIONE *** il nome del filtro deve essere uguale al campo del CoreData Model!!!
 
-func aggiungiFiltri(nomeFiltro: String, valoreFiltro: Any) {
+func aggiungiFiltri(nomeFiltro: String, valoreFiltro: String) {
     filtri["\(nomeFiltro) == %@"] = valoreFiltro
 }
 
@@ -85,7 +85,7 @@ func svuotaFiltri() {
 
 // 9) ricercaPerFiltri: riceve array di filtri in ingresso e ritorna array di piante in uscita
 
-func ricercaPerFiltri(arrayFiltri: [String: Any]) -> [Plant] {
+func ricercaPerFiltri(arrayFiltri: [String: String]) -> [Plant] {
     let request: NSFetchRequest<Plant> = Plant.fetchRequest()
     
     if filtri.count == 0 {
@@ -105,7 +105,7 @@ func ricercaPerFiltri(arrayFiltri: [String: Any]) -> [Plant] {
         var predicates = [NSPredicate]()
         
         for ogniFiltro in filtri {
-            let newPredicate = NSPredicate(format: ogniFiltro.key, ogniFiltro.value as! CVarArg)
+            let newPredicate = NSPredicate(format: ogniFiltro.key, ogniFiltro.value as CVarArg)
             predicates.append(newPredicate)
         }
         

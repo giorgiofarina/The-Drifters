@@ -76,7 +76,10 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.delegate = self
         self.tableView.dataSource = self
        
-        
+        imageSuggest.frame = CGRect(x: 27, y: 280, width: 321, height: 108)
+        imageSuggest.contentMode = .scaleAspectFit
+        imageSuggest.isHidden = true
+        self.view.addSubview(imageSuggest)
     }
     
     //  override function viewWillAppear to hidden FOREVER navigationBar in Lists view

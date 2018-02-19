@@ -18,16 +18,19 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var addToFavouritesBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var addToGardenBarButtonItem: UIBarButtonItem!
     
-    let elements = ["001.jpg", "plant2", "plant3", "plant4", "plant5", "plant6", "plant7"]
     
+    var commonName: String = ""
     var image = UIImage()
     
+    var plantObject = Plant()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-
+        plantImageView.image = image
+        commonPlantNameLabel.text = commonName
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,17 +38,30 @@ class DetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//fetch dati da database della pianta selezionata e popolamento campi descrittivi di ciascuna pianta
-    
+    func alertMessage (title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)}))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)}))
+        
+        self.present(alert, animated: true , completion: nil)
+        
+    }
     
 
     @IBAction func addToFavouriteList(_ sender: Any) {
+        
 
+       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.wishList)
+        
     }
     
 
     @IBAction func addToGardenList(_ sender: Any) {
-        
+       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.gardenList)
+    
     }
     
 }
