@@ -12,7 +12,11 @@ import CoreData
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let context = appDelegate.persistentContainer.viewContext
 
+// *** DIZIONARIO DI FILTRI
+var filtri = [String: Any]()
 
+// *** DISPATCH GROUP per il caricamento asincrono dei dati
+let group = DispatchGroup()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,16 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        
         
-        Thread.sleep(forTimeInterval: 1.0)
-       
-        if DataModel.shared.isFirstTime {
-            viewController = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
-        } else {
-            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-        }
-        
-        self.window?.rootViewController = viewController
-        self.window?.makeKeyAndVisible()
+        checkDataStore()
         
         return true
     }
@@ -120,13 +115,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Check if there are already stored data
     
     func checkDataStore(){
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
+        let plantRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
+        let listRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "List")
         do {
-            let plantCount = try context.count(for: request)
-            print("Total plant count: \(plantCount)")
-            if plantCount == 0 {
-                uploadPlantsData()
+            let plantCount = try context.count(for: plantRequest)
+            let listCount = try context.count(for: listRequest)
+            print("Piante già presenti: \(plantCount)")
+            print("Liste già presenti: \(listCount)")
+            
+            if plantCount == 0 && listCount == 0{
+                
+                group.enter()
+                DispatchQueue.main.async {
+                    self.uploadData()
+                    group.leave()
+                }
             }
+            
         }
         catch {
             print(error)
@@ -135,9 +140,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Upload data from .json file
     
-    func uploadPlantsData() {
+    func uploadData() {
         // * Nome file .json
-        let resource = "plants"
+        let resource = "data"
         
         let resourceExtension = "json"
         let url = Bundle.main.url(forResource: resource, withExtension: resourceExtension)
@@ -146,33 +151,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let data = try Data.init(contentsOf: url!)
             let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: Any]
-
-            // * Nome array "plant" in .json
-            let jsonArray = jsonResult["plant"] as? [[String: AnyObject]]
-
-            for json in jsonArray! {
+            
+            // * Nome array "---" in .json
+            let jsonPlantArray = jsonResult["plant"] as? [[String: AnyObject]]
+            let jsonListArray = jsonResult["list"] as? [[String: AnyObject]]
+            
+            for json in jsonPlantArray! {
                 let plant = NSEntityDescription.insertNewObject(forEntityName: "Plant", into: context) as! Plant
-
-              // * campo CoreData uguagliato a campo di ogni elemento in .json
-              plant.commonName = json["commonName"] as? String
-
-              // * immagine
-              let imageName = json["img1"] as? String
-              let image = UIImage(named: imageName!)
-              let imageData = UIImageJPEGRepresentation(image!, 1.0)
-              plant.img1 = imageData as NSData?
-                }
+                
+                // * campo CoreData uguagliato a campo di ogni elemento in .json
+                plant.commonName = json["commonName"] as? String
+                plant.scientificName = json["scientificName"] as? String
+                
+                // * immagine
+                let imageName = json["img1"] as? String
+                let image = UIImage(named: imageName!)
+                let imageData = UIImageJPEGRepresentation(image!, 1.0)
+                plant.img1 = imageData as NSData?
+            }
+            
+            for json in jsonListArray! {
+                let list = NSEntityDescription.insertNewObject(forEntityName: "List", into: context) as! List
+                list.listName = json["listName"] as? String
+            }
             
             appDelegate.saveContext()
-
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
-            let plantCount = try context.count(for: request)
-            print("Total plant count after uploading: \(plantCount)")
+            
+            let plantRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Plant")
+            let listRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "List")
+            do {
+                let plantCount = try context.count(for: plantRequest)
+                let listCount = try context.count(for: listRequest)
+                print("Piante caricate: \(plantCount)")
+                print("Liste caricate: \(listCount)")
+            }
+            catch {
+                print("Errore nel conteggio dopo il caricamento!")
+            }
         }
         catch {
-            fatalError("Error in uploading data")
+            print("Errore nel caricamento dei dati")
         }
     }
+
+
     
     
     
