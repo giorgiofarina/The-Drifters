@@ -53,6 +53,7 @@ class DetailsViewController: UIViewController {
 
     @IBAction func addToFavouriteList(_ sender: Any) {
         
+//        alertMessage(title:"Attention", message: "Are you sure to add this plant to your wishlist?" )
 
 //       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.wishList)
         
@@ -60,6 +61,8 @@ class DetailsViewController: UIViewController {
     
 
     @IBAction func addToGardenList(_ sender: Any) {
+        
+//        alertMessage(title:"Attention", message: "Are you sure to add this plant to your garden?" )
 //       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.gardenList)
     
     }
