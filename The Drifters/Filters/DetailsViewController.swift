@@ -54,13 +54,13 @@ class DetailsViewController: UIViewController {
     @IBAction func addToFavouriteList(_ sender: Any) {
         
 
-       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.wishList)
+//       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.wishList)
         
     }
     
 
     @IBAction func addToGardenList(_ sender: Any) {
-       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.gardenList)
+//       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: DataModel.shared.gardenList)
     
     }
     
