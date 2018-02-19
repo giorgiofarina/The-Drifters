@@ -172,10 +172,16 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
 
         
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        climateTextField.text = "Climate"
+        exposureTextField.text! = "Exposure"
+        dedicationTextField.text! = "Dedication"
+        plantSizeTextField.text! = "Plant size"
+        categoryTextField.text! = "Category"
+        environmentTextField.text! = "Environment"
+        svuotaFiltri()
+        
+    }
     
     
     

@@ -58,7 +58,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 250
     }
     
     
@@ -105,6 +105,8 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
             svuotaFiltri()
             self.tableView.reloadData()
         } else {
+            
+            
             aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: searchText)
             plantArray = ricercaPerFiltri(arrayFiltri: filtri)
             

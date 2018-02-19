@@ -23,7 +23,9 @@ class DetailsViewController: UIViewController {
     var image = UIImage()
     
     var plantObject = Plant()
-
+    var list: [Plant] = []
+    var list2: [Plant] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,50 +33,78 @@ class DetailsViewController: UIViewController {
         plantImageView.image = image
         commonPlantNameLabel.text = commonName
         
+        
         plantImageView.layer.cornerRadius = 10
         plantImageView.layer.masksToBounds = true
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    func alertMessage (title: String, message: String) {
+    
+    func alertMessageForWishlist (title: String, message: String) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in alert.dismiss(animated: true, completion: nil)}))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            
+            let wishList = ritornaLista(nomeLista: "Wishlist")
+            
+            aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: wishList)
+            
+            print("pianta aggiunta alla wishlist")
+            self.list = mostraLista(istanzaLista: wishList)
+            print("\(self.list[0])")
+        }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            
+            alert.dismiss(animated: true, completion: nil)
+            print("pianta non aggiunta")
+        }))
         
         self.present(alert, animated: true , completion: nil)
         
     }
+
     
 
     @IBAction func addToFavouriteList(_ sender: Any) {
-        
-//        alertMessage(title:"Attention", message: "Are you sure to add this plant to your wishlist?" )
-       
-        let wishList = ritornaLista(nomeLista: "Wishlist")
-        
-       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: wishList)
-      
+
+        alertMessageForWishlist(title:"Attention", message: "Are you sure you want to add this plant to your wishlist?" )
         
     }
     
+    
+    func alertMessageForGarden (title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            
+            let gardenList = ritornaLista(nomeLista: "Garden")
+            
+            aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
+            
+            print("pianta aggiunta al garden")
+            self.list2 = mostraLista(istanzaLista: gardenList)
+            print("\(self.list[0])")
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            
+            alert.dismiss(animated: true, completion: nil)
+            print("pianta non aggiunta")
+        }))
+        
+        self.present(alert, animated: true , completion: nil)
+        
+    }
+
 
     @IBAction func addToGardenList(_ sender: Any) {
         
-//        alertMessage(title:"Attention", message: "Are you sure to add this plant to your garden?" )
-        
-        
-        let gardenList = ritornaLista(nomeLista: "Garden")
-        
-       aggiungiPianta(istanzaPianta: plantObject, istanzaLista: gardenList)
-    
+        alertMessageForGarden(title:"Attention", message: "Are you sure you want to add this plant to your garden?" )
     }
     
 }
