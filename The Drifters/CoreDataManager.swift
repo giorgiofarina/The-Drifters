@@ -154,3 +154,17 @@ func classificaCategorie(arrayPiante: [Plant]) -> [String] {
         }
         return arrayCategorieFinale
 }
+
+// 11) piantePerCategoria: riceve in ingresso una categoria e le piante associate a una lista e restituisce un array di piante di quella lista con tale categoria
+
+func piantePerCategoria(arrayPiante: [Plant], categoria: String) -> [Plant] {
+    var arrayFiltrato = [Plant]()
+    
+    for pianta in arrayPiante {
+        if pianta.category! == categoria {
+            arrayFiltrato.append(pianta)
+        }
+    }
+    
+    return arrayFiltrato
+}
