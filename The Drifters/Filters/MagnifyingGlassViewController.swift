@@ -87,10 +87,15 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard !searchText.isEmpty else {
-            return
+        if searchText.isEmpty {
+//            array per generare tutte le piante nel database
+            self.tableView.reloadData()
         }
-            print(searchText)
+//            funzione di filtraggio in base al nome comune
+        
+    }
+    
+    func filterTableView (text: String){
         
     }
     

@@ -290,7 +290,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PHc-ri-9PC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Suggested" largeTitleDisplayMode="always" id="BHP-KM-MDU"/>
+                    <navigationItem key="navigationItem" title="Suggested" id="BHP-KM-MDU"/>
                     <connections>
                         <outlet property="suggestedTableView" destination="rbg-MA-1cW" id="YQ1-tK-f4Z"/>
                     </connections>
@@ -396,17 +396,6 @@
                                                 <rect key="frame" x="14" y="67" width="346" height="232"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundPlantName" translatesAutoresizingMaskIntoConstraints="NO" id="cXt-65-Feu">
-                                                <rect key="frame" x="14" y="19" width="346" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="commonName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9X-4y-5XF">
-                                                <rect key="frame" x="27" y="24" width="333" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="scientificName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20t-Y7-DGC">
                                                 <rect key="frame" x="14" y="307" width="346" height="51"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -463,6 +452,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundPlantName" translatesAutoresizingMaskIntoConstraints="NO" id="cXt-65-Feu">
+                                                <rect key="frame" x="14" y="34" width="346" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="commonName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9X-4y-5XF">
+                                                <rect key="frame" x="25" y="34" width="335" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -488,7 +488,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iSn-z7-fvi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="qhi-e9-61Z">
+                    <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="always" id="qhi-e9-61Z">
                         <rightBarButtonItems>
                             <barButtonItem image="listsIcon" id="1m8-9N-oDw">
                                 <connections>
