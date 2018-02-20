@@ -64,8 +64,10 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func SelectSegmentedControll(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             selectedSegment = 1
+            DataModel.shared.originView = true
         } else {
             selectedSegment = 2
+            DataModel.shared.originView = false
         }
         
         self.tableView.reloadData()
@@ -228,7 +230,6 @@ print("\(textArray2.count)")
             
             destinationView.image = generaImmagine(istanzaPianta: pianteCategoria[indexPath.row])
             destinationView.namePlant.text = pianteCategoria[indexPath.row].commonName!
-
         } else {
             let categorie = classificaCategorie(arrayPiante: pianteWishList)
             pianteCategoria = piantePerCategoria(arrayPiante: pianteWishList, categoria: categorie[collectionView.tag])

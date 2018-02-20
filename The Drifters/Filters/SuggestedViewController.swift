@@ -15,7 +15,7 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var plantArray: [Plant] = []
     var plantImage: [UIImage] = []
-    
+    var imageNoResult = UIImageView()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +29,9 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         
         
         plantArray = ricercaPerFiltri(arrayFiltri: filtri)
+        if plantArray.isEmpty{
+            
+        }
         for each in plantArray{
             plantImage.append(generaImmagine(istanzaPianta: each))   
         }
@@ -38,6 +41,12 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         
         self.suggestedTableView.separatorColor = UIColor.clear
         // Do any additional setup after loading the view.
+        
+        imageNoResult.frame = CGRect(x: 116, y: 307, width: 140, height: 26)
+        imageNoResult.contentMode = .scaleAspectFit
+        imageNoResult.image = #imageLiteral(resourceName: "imageNoResultFound")
+        imageNoResult.isHidden = true
+        self.view.addSubview(imageNoResult)
     }
     
     
@@ -49,6 +58,13 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if plantArray.isEmpty {
+            tableView.isHidden = true
+            imageNoResult.isHidden = false
+        } else{
+            tableView.isHidden = false
+            imageNoResult.isHidden = true
+        }
         return plantArray.count
     }
     

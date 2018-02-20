@@ -17,7 +17,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
    
     var plantArray: [Plant] = []
     var plantImage: [UIImage] = []
-    
+    var imageNoResult = UIImageView()
     
     
     var resultSearchController = UISearchController()
@@ -47,6 +47,12 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         
         searchBar.autocapitalizationType = .none
         self.hideKeyboardWhenTappedAround()
+        
+        imageNoResult.frame = CGRect(x: 116, y: 307, width: 140, height: 26)
+        imageNoResult.contentMode = .scaleAspectFit
+        imageNoResult.image = #imageLiteral(resourceName: "imageNoResultFound")
+        imageNoResult.isHidden = true
+        self.view.addSubview(imageNoResult)
 
        
     }
@@ -59,6 +65,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return plantArray.count
     }
     
@@ -144,7 +151,16 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         view.endEditing(true)
     }
 
-    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        
+        if plantArray.isEmpty {
+            tableView.isHidden = true
+            imageNoResult.isHidden = false
+        } else{
+            tableView.isHidden = false
+            imageNoResult.isHidden = true
+        }
+    }
  
 }
 

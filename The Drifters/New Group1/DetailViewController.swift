@@ -13,7 +13,9 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var destinationImage: UIImageView!
     @IBOutlet weak var destinationName: UILabel!
+    @IBOutlet weak var buttonIcon: UIBarButtonItem!
     
+    var imageEmpty = UIImage()
     var image = UIImage()
     var namePlant = UILabel()
     override func viewDidLoad() {
@@ -25,6 +27,11 @@ class DetailViewController: UIViewController {
         
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.shadowImage = UIImage()
+        
+        if DataModel.shared.originView{
+            buttonIcon.isEnabled = true
+            buttonIcon.image = imageEmpty
+        }
 
     }
 

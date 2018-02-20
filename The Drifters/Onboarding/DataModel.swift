@@ -13,8 +13,8 @@ final class DataModel {
     
     private let userDefaults = UserDefaults.standard
     
-    
-    
+//    originView true -> Garden, false -> wishList
+    var originView: Bool = true
     
     
     // *** CHECK VARIABLE FOR FIRST ACCESS
