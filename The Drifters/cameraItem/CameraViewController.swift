@@ -23,11 +23,23 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     let label: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
         label.center = CGPoint(x: 170, y: 570)
-        label.textColor = UIColor.white
+        label.textColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+       
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.textAlignment = .center
-        label.text = "I am a test label"
+        label.text = " "
         return label
+    }()
+    
+    let label2: UILabel = {
+        let label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+        label2.center = CGPoint(x: 170, y: 50)
+        label2.textColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+
+        label2.font = UIFont.boldSystemFont(ofSize: 20.0)
+        label2.textAlignment = .center
+        label2.text = " "
+        return label2
     }()
     
 //    let button: UIButton = {
@@ -55,7 +67,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
       
         
         self.view.addSubview(label)
-        
+        self.view.addSubview(label2)
         
         //Initialize session an output variables this is necessary
         let session = AVCaptureSession()
@@ -108,7 +120,21 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //            guard let firstObservation = results.first else {return}
 //
 //            DispatchQueue.main.async(execute: {
+//                
 //                self.label.text = "\(firstObservation.identifier) \(firstObservation.confidence)"
+//                self.label.backgroundColor = .white
+//                
+//               aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
+//                let pianta = ricercaPerFiltri(arrayFiltri: filtri)
+//               svuotaFiltri()
+//                if(pianta.count != 0){
+//                self.label2.text = "\(String(describing: pianta[0].generalDescription!))"
+//                    self.label2.backgroundColor = .white
+//                }
+//                else{
+//                    self.label2.text = " "
+//                    self.label2.backgroundColor = .clear
+//                }
 //            })
 //
 //            
@@ -117,7 +143,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //        }
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //    }
-//    
+    
     func getDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         let devices: NSArray = AVCaptureDevice.devices() as NSArray;
         for de in devices {
