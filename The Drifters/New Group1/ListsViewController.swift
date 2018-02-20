@@ -108,50 +108,11 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        
+        // return objects.count
         if selectedSegment == 1 {
-            
-            let garden = ritornaLista(nomeLista: "Garden")
-            let pianteGiardino = mostraLista(istanzaLista: garden)
-            print("\nIl giardino ha \(pianteGiardino.count) piante:")
-            for each in pianteGiardino {
-                print("- \(each.commonName!)")
-            }
-            
-            if pianteGiardino.count == 0 {
-                print("\nNessuna pianta aggiunta al giardino")
-                return 0
-            } else {
-                let categoriePiante = classificaCategorie(arrayPiante: pianteGiardino)
-                
-                print("\nCi sono \(categoriePiante.count) categorie:")
-                for each in categoriePiante {
-                    print("- \(each)")
-                }
-                return categoriePiante.count
-            }
-            
+                return textArray1.count
         } else {
-            
-            let wishlist = ritornaLista(nomeLista: "Wishlist")
-            let pianteWishlist = mostraLista(istanzaLista: wishlist)
-            print("\nLa wishlist ha \(pianteWishlist.count) piante:")
-            for each in pianteWishlist {
-                print("- \(each.commonName!)")
-            }
-            
-            if pianteWishlist.count == 0 {
-                print("\nNessuna pianta aggiunta alla wishlist")
-                return 0
-            } else {
-                let categoriePiante = classificaCategorie(arrayPiante: pianteWishlist)
-                
-                print("\nCi sono \(categoriePiante.count) categorie:")
-                for each in categoriePiante {
-                    print("- \(each)")
-                }
-                return categoriePiante.count
-            }
+                return textArray2.count
         }
         
     }
