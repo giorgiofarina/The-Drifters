@@ -45,7 +45,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         plantImage.append(generaImmagine(istanzaPianta: each))
         }
         
-        
+        searchBar.autocapitalizationType = .none
         self.hideKeyboardWhenTappedAround()
 
        
@@ -113,18 +113,17 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
             self.tableView.reloadData()
         } else {
             
-            
             aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: searchText)
             plantArray = ricercaPerFiltri(arrayFiltri: filtri)
-            
+            svuotaFiltri()
             
             self.tableView.reloadData()
            
         }
-
-        
     }
  
+    
+
 
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         searchBar.resignFirstResponder()
@@ -134,6 +133,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
     
     private func setUpSearchBar(){
+        
         searchBar.delegate = self
         self.tableView.tableHeaderView = searchBar
     }

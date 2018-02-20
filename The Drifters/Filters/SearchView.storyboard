@@ -392,50 +392,52 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onm-oE-Spl">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="brief description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtP-Sb-IL3">
-                                                <rect key="frame" x="14" y="328" width="346" height="229"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scientificName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20t-Y7-DGC">
+                                                <rect key="frame" x="14" y="290" width="346" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="20t-Y7-DGC" secondAttribute="height" multiplier="173:15" id="q3T-kQ-al4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CultivationMethods" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25Z-Re-fQh">
-                                                <rect key="frame" x="14" y="669" width="346" height="51"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="brief description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtP-Sb-IL3">
+                                                <rect key="frame" x="14" y="328" width="346" height="229"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Characteristics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25Z-Re-fQh">
+                                                <rect key="frame" x="14" y="565" width="346" height="51"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cultivationdetails" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XC-tb-R3H">
-                                                <rect key="frame" x="14" y="728" width="346" height="295"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="filters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XC-tb-R3H">
+                                                <rect key="frame" x="14" y="624" width="346" height="295"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flowering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2V-rK-Xw7">
-                                                <rect key="frame" x="14" y="1031" width="346" height="51"/>
+                                                <rect key="frame" x="14" y="927" width="346" height="51"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8W-jQ-OaJ">
-                                                <rect key="frame" x="14" y="1393" width="346" height="51"/>
+                                                <rect key="frame" x="14" y="1289" width="346" height="51"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="watering details, tips, grafts, repottings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVi-XE-uzg">
-                                                <rect key="frame" x="14" y="1452" width="346" height="295"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="flowering details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfx-mH-qu7">
-                                                <rect key="frame" x="14" y="1090" width="346" height="295"/>
+                                                <rect key="frame" x="14" y="986" width="346" height="295"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -459,12 +461,10 @@
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scientificName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20t-Y7-DGC">
-                                                <rect key="frame" x="14" y="290" width="346" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="20t-Y7-DGC" secondAttribute="height" multiplier="173:15" id="q3T-kQ-al4"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="watering details, tips, grafts, repottings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVi-XE-uzg">
+                                                <rect key="frame" x="14" y="1348" width="346" height="295"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -514,7 +514,7 @@
                                     <action selector="addToGardenList:" destination="IDT-O3-u7N" id="6da-AT-ogb"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="starNavBar" id="xOu-Ic-oJ9">
+                            <barButtonItem image="starButton" id="xOu-Ic-oJ9">
                                 <inset key="imageInsets" minX="49" minY="-2" maxX="-5" maxY="0.0"/>
                                 <connections>
                                     <action selector="addToFavouriteList:" destination="IDT-O3-u7N" id="T6b-Bt-vw2"/>
@@ -526,8 +526,10 @@
                     <connections>
                         <outlet property="addToFavouritesBarButtonItem" destination="xOu-Ic-oJ9" id="PTY-Wl-UOk"/>
                         <outlet property="addToGardenBarButtonItem" destination="1m8-9N-oDw" id="CXa-NI-f1V"/>
+                        <outlet property="characteristicsTitleLabel" destination="25Z-Re-fQh" id="Gnr-kK-qV5"/>
                         <outlet property="commonPlantNameLabel" destination="Z9X-4y-5XF" id="Z5X-z7-y2H"/>
                         <outlet property="descriptionPlantLabel" destination="mtP-Sb-IL3" id="w9d-2s-fgd"/>
+                        <outlet property="filtersInformationLabel" destination="8XC-tb-R3H" id="Xbw-Ui-LGr"/>
                         <outlet property="plantImageView" destination="HwP-SB-opN" id="NNM-RT-dGd"/>
                         <outlet property="scientificPlantNameLabel" destination="20t-Y7-DGC" id="nWA-SG-7Ft"/>
                     </connections>
@@ -548,6 +550,6 @@
         <image name="matchingButton" width="216" height="96"/>
         <image name="nil" width="16" height="16"/>
         <image name="pot" width="81" height="70"/>
-        <image name="starNavBar" width="60" height="60"/>
+        <image name="starButton" width="60" height="60"/>
     </resources>
 </document>
