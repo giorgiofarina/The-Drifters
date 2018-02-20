@@ -19,7 +19,6 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var filtersInformationLabel: UILabel!
     
     @IBOutlet weak var addToFavouritesBarButtonItem: UIBarButtonItem!
-    @IBOutlet weak var addToGardenBarButtonItem: UIBarButtonItem!
     
     
     var commonName: String = ""
@@ -40,11 +39,7 @@ class DetailsViewController: UIViewController {
         commonPlantNameLabel.text = commonName
         scientificPlantNameLabel.text = plantObject.scientificName
         descriptionPlantLabel.text = plantObject.generalDescription
-        filtersInformationLabel.text = plantObject.climate
-        
-        
-        
-        
+        filtersInformationLabel.text = ("Category: \(String(describing: plantObject.category!))\nClimate: \(String(describing: plantObject.climate!))\nExposure: \(String(describing: plantObject.exposure!))\nDedication: \(String(describing: plantObject.dedication!))\nPlant size: \(String(describing: plantObject.size!))\nEnvironment: \(String(describing: plantObject.environment!))")
         
         
         
@@ -87,38 +82,5 @@ class DetailsViewController: UIViewController {
         alertMessageForWishlist(title:"Attention", message: "Are you sure you want to add this plant to your wishlist?" )
         
     }
-    
-    
-    func alertMessageForGarden (title: String, message: String) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-            
-            let gardenList = ritornaLista(nomeLista: "Garden")
-            
-            aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
-            
-            print("pianta aggiunta al garden")
-            self.list2 = mostraLista(istanzaLista: gardenList)
-            print("\(self.list2[0])")
-            
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-            
-            alert.dismiss(animated: true, completion: nil)
-            print("pianta non aggiunta")
-        }))
-        
-        self.present(alert, animated: true , completion: nil)
-        
-    }
 
-
-    @IBAction func addToGardenList(_ sender: Any) {
-        
-        alertMessageForGarden(title:"Attention", message: "Are you sure you want to add this plant to your garden?" )
-    }
-    
 }

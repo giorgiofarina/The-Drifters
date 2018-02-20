@@ -16,6 +16,8 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
     var plantArray: [Plant] = []
     var plantImage: [UIImage] = []
     var imageNoResult = UIImageView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,9 +31,7 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         
         
         plantArray = ricercaPerFiltri(arrayFiltri: filtri)
-        if plantArray.isEmpty{
-            
-        }
+    
         for each in plantArray{
             plantImage.append(generaImmagine(istanzaPianta: each))   
         }

@@ -14,10 +14,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var destinationImage: UIImageView!
     @IBOutlet weak var destinationName: UILabel!
     @IBOutlet weak var buttonIcon: UIBarButtonItem!
+    @IBOutlet weak var trashButtonIcon: UIBarButtonItem!
     
     var imageEmpty = UIImage()
     var image = UIImage()
     var namePlant = UILabel()
+    var plantObject = Plant()
+    var list: [Plant] = []
+    var list2: [Plant] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,15 +46,84 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//
+//
+//    func alertMessageForGarden (title: String, message: String) {
+//
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//
+//        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+//            let wishList = ritornaLista(nomeLista: "Wishlist")
+//            let gardenList = ritornaLista(nomeLista: "Garden")
+//
+//            rimuoviPianta(istanzaPianta: self.plantObject, istanzaLista: wishList)
+//            aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
+//            print("pianta aggiunta al garden")
+//            self.list = mostraLista(istanzaLista: gardenList)
+//            print("\(self.list[0])")
+//
+//        }))
+//
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+//
+//            alert.dismiss(animated: true, completion: nil)
+//            print("pianta non aggiunta")
+//        }))
+//
+//        self.present(alert, animated: true , completion: nil)
+//
+//    }
+//
+//
+//    @IBAction func addToGardenList(_ sender: Any) {
+//
+//        alertMessageForGarden(title:"Attention", message: "Are you sure you want to add this plant to your garden?" )
+//    }
+    
+    
+    func alertMessageToRemovePlantFromList (title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            
+//            let gardenList = ritornaLista(nomeLista: "Garden")
+            let wishList = ritornaLista(nomeLista: "Wishlist")
+            
+//            if DataModel.shared.originView {
+//
+//                rimuoviPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
+//                print("pianta rimossa dal garden")
+//                self.list = mostraLista(istanzaLista: gardenList)
+//                print("\(self.list[0]) list")
+//            } else {
+//
+//                rimuoviPianta(istanzaPianta: self.plantObject, istanzaLista: wishList)
+//                print("pianta rimossa da wishList")
+//                self.list2 = mostraLista(istanzaLista: wishList)
+//                print("\(String(describing: self.list2[0].commonName)) list2")
+//            }
+//            appDelegate.saveContext()
+            
+            rimuoviPianta(istanzaPianta: self.plantObject, istanzaLista: wishList)
+            self.list = mostraLista(istanzaLista: wishList)
+            print("\(String(describing: self.list[0].commonName)) list")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            
+            alert.dismiss(animated: true, completion: nil)
+            print("pianta non eliminata")
+        }))
+        
+        self.present(alert, animated: true , completion: nil)
+        
     }
-    */
-
+    
+    
+    @IBAction func removeFromList(_ sender: Any) {
+        alertMessageToRemovePlantFromList(title: "Attention", message: "Are you sure you want remove this plant from your list?")
+    }
+    
+    
 }

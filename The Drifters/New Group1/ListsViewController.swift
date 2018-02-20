@@ -109,13 +109,17 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         imageSuggest.isHidden = true
         self.view.addSubview(imageSuggest)
         
-        
+        self.tableView.reloadData()
     }
     
     //  override function viewWillAppear to hidden FOREVER navigationBar in Lists view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        self.tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
     
@@ -215,6 +219,8 @@ print("\(textArray2.count)")
         
 //        return cell.imageCell.image = imageArrayTest2[indexPath.row]
         cell.imageCell.image = generaImmagine(istanzaPianta: pianteCategoria[indexPath.row])
+        cell.imageCell.layer.cornerRadius = 10
+        cell.imageCell.layer.masksToBounds = true
         return cell
     }
     

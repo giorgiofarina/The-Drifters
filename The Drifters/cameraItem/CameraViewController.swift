@@ -21,19 +21,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var output = AVCaptureStillImageOutput()
     var previewLayer: AVCaptureVideoPreviewLayer?
     
-    let label: UILabel = {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
-        label.center = CGPoint(x: 170, y: 570)
-        label.textColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-        label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 2
-        label.font = UIFont.boldSystemFont(ofSize: 20.0)
-        label.textAlignment = .center
-        label.text = " "
-        label.layer.cornerRadius = 10.0
-        label.clipsToBounds = true
-        return label
-    }()
     
     let label2: UILabel = {
         let label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 270, height: 37))
@@ -50,33 +37,16 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         return label2
     }()
     
-    let button: UIButton = {
-        let image = UIImage(named: "listsIcon") as UIImage?
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 37))
-        button.center = CGPoint(x: 310, y: 50)
-        button.tintColor = UIColor.white
-//        button.font = UIFont.boldSystemFont(ofSize: 20.0)
-        button.contentVerticalAlignment = .center
-        button.setImage(image, for: [])
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 10.0
-        button.clipsToBounds = true
-//        button.setTitle("+", for: .normal)
-        return button
-    }()
-    
     let button2: UIButton = {
-        let image = UIImage(named: "starButton") as UIImage?
+        let image = UIImage(named: "iconPlus") as UIImage?
         let button2 = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 37))
         button2.center = CGPoint(x: 350, y: 50)
         button2.tintColor = UIColor.white
-        //        button.font = UIFont.boldSystemFont(ofSize: 20.0)
         button2.contentVerticalAlignment = .center
         button2.setImage(image, for: [])
         button2.backgroundColor = .white
         button2.layer.cornerRadius = 10.0
         button2.clipsToBounds = true
-        //        button.setTitle("+", for: .normal)
         return button2
     }()
 
@@ -92,15 +62,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         print("\(self.list[0])")
     }
     
-    @objc func bottone (){
-        let gardenList = ritornaLista(nomeLista: "Garden")
-        aggiungiPianta(istanzaPianta: pianta[0], istanzaLista: gardenList)
-        print("pianta aggiunta al garden")
-        self.list = mostraLista(istanzaLista: gardenList)
-        print("\(self.list[0])")
-    }
-    
-    
     
     override func viewDidLoad() {
         
@@ -109,12 +70,9 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
       
         
-        self.view.addSubview(label)
         self.view.addSubview(label2)
-        self.view.addSubview(button)
         self.view.addSubview(button2)
         
-        button.addTarget(self, action:#selector(self.bottone), for: .touchUpInside)
         button2.addTarget(self, action:#selector(self.bottone2), for: .touchUpInside)
         
         //Initialize session an output variables this is necessary

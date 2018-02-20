@@ -153,14 +153,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="1fl-Bc-8tU">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="trash" id="q8A-oy-gHx"/>
-                            <barButtonItem title="gardenButton" image="listsIcon" id="QFh-3H-zT3"/>
+                            <barButtonItem systemItem="trash" id="q8A-oy-gHx">
+                                <connections>
+                                    <action selector="removeFromList:" destination="Ukr-o3-N2M" id="ape-tO-9z1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="QFh-3H-zT3">
+                                <connections>
+                                    <action selector="addToGardenList:" destination="Ukr-o3-N2M" id="nZC-ua-V59"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="buttonIcon" destination="QFh-3H-zT3" id="jn5-Fu-BK1"/>
                         <outlet property="destinationImage" destination="1WW-5h-MCr" id="gE6-pU-alY"/>
                         <outlet property="destinationName" destination="EG7-Ma-lEl" id="nUf-8g-pTg"/>
+                        <outlet property="trashButtonIcon" destination="q8A-oy-gHx" id="G7r-mS-iCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDl-R6-JHY" userLabel="First Responder" sceneMemberID="firstResponder"/>

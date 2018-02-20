@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -508,24 +507,16 @@
                         <viewLayoutGuide key="safeArea" id="iSn-z7-fvi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="always" id="qhi-e9-61Z">
-                        <rightBarButtonItems>
-                            <barButtonItem image="listsIcon" id="1m8-9N-oDw">
-                                <connections>
-                                    <action selector="addToGardenList:" destination="IDT-O3-u7N" id="6da-AT-ogb"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem image="starButton" id="xOu-Ic-oJ9">
-                                <inset key="imageInsets" minX="49" minY="-2" maxX="-5" maxY="0.0"/>
-                                <connections>
-                                    <action selector="addToFavouriteList:" destination="IDT-O3-u7N" id="T6b-Bt-vw2"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xOu-Ic-oJ9">
+                            <inset key="imageInsets" minX="49" minY="-2" maxX="-5" maxY="0.0"/>
+                            <connections>
+                                <action selector="addToFavouriteList:" destination="IDT-O3-u7N" id="T6b-Bt-vw2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
                         <outlet property="addToFavouritesBarButtonItem" destination="xOu-Ic-oJ9" id="PTY-Wl-UOk"/>
-                        <outlet property="addToGardenBarButtonItem" destination="1m8-9N-oDw" id="CXa-NI-f1V"/>
                         <outlet property="characteristicsTitleLabel" destination="25Z-Re-fQh" id="Gnr-kK-qV5"/>
                         <outlet property="commonPlantNameLabel" destination="Z9X-4y-5XF" id="Z5X-z7-y2H"/>
                         <outlet property="descriptionPlantLabel" destination="mtP-Sb-IL3" id="w9d-2s-fgd"/>
@@ -546,10 +537,8 @@
         <image name="PlantSize" width="160" height="166"/>
         <image name="TypePlant" width="178" height="150"/>
         <image name="backgroundPlantName" width="730" height="68"/>
-        <image name="listsIcon" width="31" height="30"/>
         <image name="matchingButton" width="216" height="96"/>
         <image name="nil" width="16" height="16"/>
         <image name="pot" width="81" height="70"/>
-        <image name="starButton" width="60" height="60"/>
     </resources>
 </document>
