@@ -10,31 +10,9 @@ import UIKit
 
 class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var pianteGiardino = mostraLista(istanzaLista: ritornaLista(nomeLista: "Garden"))
-    var pianteWishList = mostraLista(istanzaLista: ritornaLista(nomeLista: "Wishlist"))
     
-    
-//    func searchCategoryInList(lista: [Plant]) -> [String] {
-//
-//        if lista.count == 0 {
-//            return []
-//        }
-//        var categoryList: [String] = []
-//        if categoryList.isEmpty {
-//        categoryList.append(lista[0].category!)
-//        } else {
-//        for i in lista {
-//            for categoria in categoryList {
-//                if i.category != categoria {
-//                    categoryList.append(i.category!)
-//                }
-//            }
-//        }
-//        }
-//        print("\(categoryList)")
-//        return categoryList
-//    }
-    
+    var pianteGiardino: [Plant] = []
+    var pianteWishList: [Plant] = []
     var imageArrayTest1: [UIImage] = []     //array di immagini garden
     var imageArrayTest2: [UIImage] = []     //array immagini favorite
     var textArray1: [String] = []       //array di prova per le sezioni di garden
@@ -44,6 +22,8 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var imageSuggest = UIImageView()
     
     let buttonBar = UIView()
+    
+    
     class Responder: NSObject {
         @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         }
@@ -94,12 +74,13 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         view.addSubview(buttonBar)
         buttonBar.topAnchor.constraint(equalTo: segmentedControll.bottomAnchor).isActive = true
         buttonBar.heightAnchor.constraint(equalToConstant: 2).isActive = true
-        // Constrain the button bar to the left side of the segmented control
+        // Constraint the button bar to the left side of the segmented control
         buttonBar.leftAnchor.constraint(equalTo: segmentedControll.leftAnchor).isActive = true
-        // Constrain the button bar to the width of the segmented control divided by the number of segments
+        // Constraint the button bar to the width of the segmented control divided by the number of segments
         buttonBar.widthAnchor.constraint(equalTo: segmentedControll.widthAnchor, multiplier: 1 / CGFloat(segmentedControll.numberOfSegments)).isActive = true
         
         segmentedControll.addTarget(responder, action: #selector(responder.segmentedControlValueChanged(_:)), for: UIControlEvents.valueChanged)
+        self.segmentedControll.reloadInputViews()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -140,8 +121,8 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.clCollectionView.reloadData()
         cell.clCollectionView.tag = indexPath.section
         
-//        pianteGiardino = mostraLista(istanzaLista: ritornaLista(nomeLista: "Garden"))
-//        pianteWishList = mostraLista(istanzaLista: ritornaLista(nomeLista: "Wishlist"))
+        pianteGiardino = mostraLista(istanzaLista: ritornaLista(nomeLista: "Garden"))
+        pianteWishList = mostraLista(istanzaLista: ritornaLista(nomeLista: "Wishlist"))
         return cell
     }
     
@@ -236,12 +217,14 @@ print("\(textArray2.count)")
             
             destinationView.image = generaImmagine(istanzaPianta: pianteCategoria[indexPath.row])
             destinationView.namePlant.text = pianteCategoria[indexPath.row].commonName!
+            destinationView.plantObject = pianteCategoria[indexPath.row]
         } else {
             let categorie = classificaCategorie(arrayPiante: pianteWishList)
             pianteCategoria = piantePerCategoria(arrayPiante: pianteWishList, categoria: categorie[collectionView.tag])
             
             destinationView.image = generaImmagine(istanzaPianta: pianteCategoria[indexPath.row])
             destinationView.namePlant.text = pianteCategoria[indexPath.row].commonName!
+            destinationView.plantObject = pianteCategoria[indexPath.row]
         }
         self.navigationController?.pushViewController(destinationView, animated: true)
     }
