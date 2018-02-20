@@ -248,6 +248,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         
         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
             if pickerView == climatePickerView {
+            
                 return climate[row]
             } else if pickerView == exposurePickerView {
                 return exposure[row]
@@ -290,6 +291,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
         @objc func doneClicked() {
+            
             climateTextField.resignFirstResponder()
             exposureTextField.resignFirstResponder()
             dedicationTextField.resignFirstResponder()
@@ -302,6 +304,8 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
     @IBAction func researchInDatabaseTapped(_ sender: Any) {
+        
+        svuotaFiltri()
         
         let searchViewStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
         let destinationView = searchViewStoryboard.instantiateViewController(withIdentifier: "searchInDatabaseID") as! MagnifyingGlassViewController

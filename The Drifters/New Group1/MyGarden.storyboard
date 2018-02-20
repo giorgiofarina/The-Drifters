@@ -154,7 +154,7 @@
                     <navigationItem key="navigationItem" id="1fl-Bc-8tU">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="trash" id="q8A-oy-gHx"/>
-                            <barButtonItem title="Item" image="listsIcon" id="QFh-3H-zT3"/>
+                            <barButtonItem image="listsIcon" id="QFh-3H-zT3"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>

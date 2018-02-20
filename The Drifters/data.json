@@ -45,8 +45,8 @@
               },
               {
               "commonName": "abete",
-              "scientificName": "Rosmarinus officinali",
-              "img1": "001.jpg",
+              "scientificName": "Abetarius",
+              "img1": "abete.jpg",
               "generalDescription":"",
               "climate": "Subtropical",
               "exposure": "Filtered light",
@@ -88,10 +88,10 @@
               "category": "Aquatic"
               },
               {
-              "commonName": "carota",
-              "scientificName": "Rosmarinus officinali",
-              "img1": "001.jpg",
-              "generalDescription":"",
+              "commonName": "sweet pea",
+              "scientificName": "carotus",
+              "img1": "carote.jpg",
+              "generalDescription":"jnejdjenfkmaskfjeiwknkfsdnekahjrkensfedn",
               "exposure": "Shadow",
               "dedication": "Rarely",
               "size": "Big",

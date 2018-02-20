@@ -14,6 +14,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var plantImageView: UIImageView!
     @IBOutlet weak var scientificPlantNameLabel: UILabel!
     @IBOutlet weak var descriptionPlantLabel: UILabel!
+    @IBOutlet weak var characteristicsTitleLabel: UILabel!
+    
+    @IBOutlet weak var filtersInformationLabel: UILabel!
     
     @IBOutlet weak var addToFavouritesBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var addToGardenBarButtonItem: UIBarButtonItem!
@@ -21,6 +24,9 @@ class DetailsViewController: UIViewController {
     
     var commonName: String = ""
     var image = UIImage()
+    var scientificName: String = ""
+    var filtersLabel: String = ""
+    
     
     var plantObject = Plant()
     var list: [Plant] = []
@@ -32,6 +38,14 @@ class DetailsViewController: UIViewController {
         
         plantImageView.image = image
         commonPlantNameLabel.text = commonName
+        scientificPlantNameLabel.text = plantObject.scientificName
+        descriptionPlantLabel.text = plantObject.generalDescription
+        filtersInformationLabel.text = plantObject.climate
+        
+        
+        
+        
+        
         
         
         plantImageView.layer.cornerRadius = 10
@@ -87,7 +101,7 @@ class DetailsViewController: UIViewController {
             
             print("pianta aggiunta al garden")
             self.list2 = mostraLista(istanzaLista: gardenList)
-            print("\(self.list[0])")
+            print("\(self.list2[0])")
             
         }))
         
