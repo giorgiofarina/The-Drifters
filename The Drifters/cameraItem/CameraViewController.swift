@@ -168,17 +168,17 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //            guard let firstObservation = results.first else {return}
 //
 //            DispatchQueue.main.async(execute: {
-//                
+//
 //                self.label2.text = "\(firstObservation.identifier) \(firstObservation.confidence)"
 //                self.label2.backgroundColor = .white
-//                
+//
 ////                controllo tra nome del modello al nome dal database
 //               aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
 //                self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
 //               svuotaFiltri()
 //                if(self.pianta.count != 0){
 //                    self.label.text = "\(String(describing: self.pianta[0].generalDescription!))"
-//                  
+//
 //                    self.label.backgroundColor = .white
 //                }
 //                else{
@@ -187,13 +187,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //                }
 //            })
 //
-//            
+//
 //            print(firstObservation.identifier, firstObservation.confidence)
 //            sleep(1)
 //        }
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //    }
-//    
+//
     func getDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         let devices: NSArray = AVCaptureDevice.devices() as NSArray;
         for de in devices {
