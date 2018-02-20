@@ -12,13 +12,17 @@ class DetailViewController: UIViewController {
 
     
     @IBOutlet weak var destinationImage: UIImageView!
-    var image = UIImage()
+    @IBOutlet weak var destinationName: UILabel!
     
+    var image = UIImage()
+    var namePlant = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         destinationImage.image = image
+        destinationName.text = namePlant.text
+        
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.shadowImage = UIImage()
 

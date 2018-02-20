@@ -121,7 +121,7 @@ func ricercaPerFiltri(arrayFiltri: [String: String]) -> [Plant] {
     }
 }
 
-/*
+
 // 10) classificaCategorie: riceve array di piante in ingresso e ritorna array senza ripetizioni delle categorie corrispondenti
 
 func classificaCategorie(arrayPiante: [Plant]) -> [String] {
@@ -154,7 +154,7 @@ func classificaCategorie(arrayPiante: [Plant]) -> [String] {
             }
         }
         return arrayCategorieFinale
-} */
+} 
 
 // 11) piantePerCategoria: riceve in ingresso una categoria e le piante associate a una lista e restituisce un array di piante di quella lista con tale categoria
 
