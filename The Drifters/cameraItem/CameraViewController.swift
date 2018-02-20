@@ -66,7 +66,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }()
     
     let button2: UIButton = {
-        let image = UIImage(named: "starNavBar") as UIImage?
+        let image = UIImage(named: "starButton") as UIImage?
         let button2 = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 37))
         button2.center = CGPoint(x: 350, y: 50)
         button2.tintColor = UIColor.white
@@ -189,7 +189,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //
 //
 //            print(firstObservation.identifier, firstObservation.confidence)
-//            sleep(1)
+//            sleep(3)
 //        }
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //    }
