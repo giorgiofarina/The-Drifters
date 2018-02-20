@@ -114,7 +114,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
                 return textArray2.count
         }
-        
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

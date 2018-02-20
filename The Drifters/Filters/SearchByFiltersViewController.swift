@@ -65,14 +65,14 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
     
-        let climate = ["None", "Tropical","Equatorial","Subtropical","Temperate","Wet temperate","Oceanic","Mediterranean",
+        let climate = [ "Tropical","Equatorial","Subtropical","Temperate","Wet temperate","Oceanic","Mediterranean",
                        "Continental","Subarctic","Trans-Siberian","Polar","Glacial" ,"Steppe", "Desert" ,"Monsoon" , "Sinic" ,
                        "Climate of the savannah","Alpine","Boreal"]
-        let exposure = ["None", "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
-        let dedication = ["None", "Rarely", "Often", "Assiduously"]
-        let plantSize = ["None", "Big","Medium","Small"]
-        let category = ["None", "Aquatic", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"]
-        let environment = ["None", "Indoor","Outdoor"]
+        let exposure = [ "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
+        let dedication = [ "Rarely", "Often", "Assiduously"]
+        let plantSize = [ "Big","Medium","Small"]
+        let category = [ "Aquatic", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"]
+        let environment = ["Indoor","Outdoor"]
     
    
     
@@ -166,16 +166,22 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             view.addGestureRecognizer(tapGesture)
             view.isUserInteractionEnabled = true
    
-            
+            self.hideKeyboardWhenTappedAround()
         
         }
     
 
         
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        climateTextField.text = "Climate"
+        exposureTextField.text! = "Exposure"
+        dedicationTextField.text! = "Dedication"
+        plantSizeTextField.text! = "Plant size"
+        categoryTextField.text! = "Category"
+        environmentTextField.text! = "Environment"
+        svuotaFiltri()
+        
+    }
     
     
     

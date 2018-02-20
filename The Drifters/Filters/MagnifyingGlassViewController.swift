@@ -38,10 +38,18 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         for each in plantArray{
         plantImage.append(generaImmagine(istanzaPianta: each))
         }
+        
+        
+        self.hideKeyboardWhenTappedAround()
 
-
-        // Do any additional setup after loading the view.
+        
     }
+    
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        self.hideKeyboardWhenTappedAround()
+    }
+    
     
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,7 +58,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 250
     }
     
     
@@ -91,8 +99,14 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchText.isEmpty {
+            
+            plantArray = ricercaPerFiltri(arrayFiltri: filtri)
+            
+            svuotaFiltri()
             self.tableView.reloadData()
         } else {
+            
+            
             aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: searchText)
             plantArray = ricercaPerFiltri(arrayFiltri: filtri)
             
