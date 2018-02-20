@@ -18,6 +18,10 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     var plantArray: [Plant] = []
     var plantImage: [UIImage] = []
     
+    
+    
+    var resultSearchController = UISearchController()
+    
 
     
     override func viewDidLoad() {
@@ -31,6 +35,8 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         tableView.dataSource = self
         self.tableView.separatorColor = UIColor.clear
         
+         resultSearchController.searchBar.delegate = self
+        
         searchBar.delegate = self
         setUpSearchBar()
         
@@ -42,12 +48,12 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         
         self.hideKeyboardWhenTappedAround()
 
-        
+       
     }
     
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        self.hideKeyboardWhenTappedAround()
+        view.endEditing(true)
     }
     
     
@@ -69,7 +75,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     
         cell.namePlantLabel.text = plantArray[indexPath.row].commonName
         
-        cell.plantImageView.image = plantImage[indexPath.row]
+        cell.plantImageView.image = generaImmagine(istanzaPianta: plantArray[indexPath.row]) 
 
         
         cell.plantImageView.layer.cornerRadius = 10
@@ -89,7 +95,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailsID") as! DetailsViewController
         
        
-        destinationView.image = plantImage[indexPath.row]
+        destinationView.image = generaImmagine(istanzaPianta: plantArray[indexPath.row]) 
         destinationView.commonName = plantArray[indexPath.row].commonName!
         destinationView.plantObject = plantArray[indexPath.row]
         self.navigationController?.pushViewController(destinationView, animated: true)
@@ -103,6 +109,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
             plantArray = ricercaPerFiltri(arrayFiltri: filtri)
             
             svuotaFiltri()
+            
             self.tableView.reloadData()
         } else {
             
@@ -110,9 +117,9 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
             aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: searchText)
             plantArray = ricercaPerFiltri(arrayFiltri: filtri)
             
-            svuotaFiltri()
             
             self.tableView.reloadData()
+           
         }
 
         
@@ -121,8 +128,10 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
 
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         searchBar.resignFirstResponder()
+        self.hideKeyboardWhenTappedAround()
         return true
     }
+    
     
     private func setUpSearchBar(){
         searchBar.delegate = self
@@ -130,8 +139,13 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
     }
     
     
-    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        view.endEditing(true)
+    }
 
     
  
 }
+
+

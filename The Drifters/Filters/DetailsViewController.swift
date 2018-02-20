@@ -21,6 +21,8 @@ class DetailsViewController: UIViewController {
     
     var commonName: String = ""
     var image = UIImage()
+    var scientificName: String = ""
+    
     
     var plantObject = Plant()
     var list: [Plant] = []
@@ -32,6 +34,8 @@ class DetailsViewController: UIViewController {
         
         plantImageView.image = image
         commonPlantNameLabel.text = commonName
+        scientificPlantNameLabel.text = plantObject.scientificName
+        descriptionPlantLabel.text = plantObject.generalDescription
         
         
         plantImageView.layer.cornerRadius = 10
@@ -87,7 +91,7 @@ class DetailsViewController: UIViewController {
             
             print("pianta aggiunta al garden")
             self.list2 = mostraLista(istanzaLista: gardenList)
-            print("\(self.list[0])")
+            print("\(self.list2[0])")
             
         }))
         
