@@ -23,6 +23,34 @@
 		4227D6A2203D9BE700E7806F /* sweet pea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D69D203D9BE700E7806F /* sweet pea.jpg */; };
 		4227D6A6203DA06E00E7806F /* rose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6A5203DA06E00E7806F /* rose.jpg */; };
 		4227D6A8203DB5D300E7806F /* sunflower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6A7203DB5D300E7806F /* sunflower.jpg */; };
+		4227D6C5203DFAD200E7806F /* string bean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6A9203DFACF00E7806F /* string bean.jpg */; };
+		4227D6C6203DFAD200E7806F /* begonia coccinea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6AA203DFACF00E7806F /* begonia coccinea.jpg */; };
+		4227D6C7203DFAD200E7806F /* bougainvillea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6AB203DFAD000E7806F /* bougainvillea.jpg */; };
+		4227D6C8203DFAD200E7806F /* happiness.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6AC203DFAD000E7806F /* happiness.jpg */; };
+		4227D6C9203DFAD200E7806F /* blueberry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6AD203DFAD000E7806F /* blueberry.jpg */; };
+		4227D6CA203DFAD200E7806F /* dill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6AE203DFAD000E7806F /* dill.jpg */; };
+		4227D6CB203DFAD200E7806F /* ivy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6AF203DFAD000E7806F /* ivy.jpg */; };
+		4227D6CC203DFAD200E7806F /* potato.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B0203DFAD000E7806F /* potato.jpg */; };
+		4227D6CD203DFAD200E7806F /* caffe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B1203DFAD000E7806F /* caffe.jpg */; };
+		4227D6CE203DFAD200E7806F /* onion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B2203DFAD000E7806F /* onion.jpg */; };
+		4227D6CF203DFAD200E7806F /* sofora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B3203DFAD000E7806F /* sofora.jpg */; };
+		4227D6D0203DFAD200E7806F /* american agave.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B4203DFAD000E7806F /* american agave.jpg */; };
+		4227D6D1203DFAD200E7806F /* adenium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B5203DFAD000E7806F /* adenium.jpg */; };
+		4227D6D2203DFAD200E7806F /* basil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B6203DFAD000E7806F /* basil.jpg */; };
+		4227D6D3203DFAD200E7806F /* lotus flower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B7203DFAD100E7806F /* lotus flower.jpg */; };
+		4227D6D4203DFAD200E7806F /* afelandra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B8203DFAD100E7806F /* afelandra.jpg */; };
+		4227D6D5203DFAD200E7806F /* laurel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6B9203DFAD100E7806F /* laurel.jpg */; };
+		4227D6D7203DFAD200E7806F /* euphorbia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6BB203DFAD100E7806F /* euphorbia.jpg */; };
+		4227D6D8203DFAD200E7806F /* arancio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6BC203DFAD100E7806F /* arancio.jpg */; };
+		4227D6D9203DFAD200E7806F /* camassia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6BD203DFAD100E7806F /* camassia.jpg */; };
+		4227D6DA203DFAD200E7806F /* ciliegio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6BE203DFAD100E7806F /* ciliegio.jpg */; };
+		4227D6DB203DFAD200E7806F /* geranium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6BF203DFAD100E7806F /* geranium.jpg */; };
+		4227D6DC203DFAD200E7806F /* cedronella.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6C0203DFAD100E7806F /* cedronella.jpg */; };
+		4227D6DD203DFAD200E7806F /* lemon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6C1203DFAD100E7806F /* lemon.jpg */; };
+		4227D6DE203DFAD200E7806F /* watercress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6C2203DFAD100E7806F /* watercress.jpg */; };
+		4227D6DF203DFAD200E7806F /* berberis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6C3203DFAD200E7806F /* berberis.jpg */; };
+		4227D6E0203DFAD200E7806F /* rosemary.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6C4203DFAD200E7806F /* rosemary.jpg */; };
+		4227D6E2203E014500E7806F /* water hyacint.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6E1203E014500E7806F /* water hyacint.jpg */; };
 		42C34F58203722CD0036EF4F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34F57203722CD0036EF4F /* CoreDataManager.swift */; };
 		992C76CA203043D000F50966 /* SearchByFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */; };
 		9944B6AA2036273A00A46B5D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A32036273900A46B5D /* DetailViewController.swift */; };
@@ -87,6 +115,34 @@
 		4227D69D203D9BE700E7806F /* sweet pea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sweet pea.jpg"; sourceTree = "<group>"; };
 		4227D6A5203DA06E00E7806F /* rose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rose.jpg; sourceTree = "<group>"; };
 		4227D6A7203DB5D300E7806F /* sunflower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sunflower.jpg; path = ../../../../../Desktop/images/sunflower.jpg; sourceTree = "<group>"; };
+		4227D6A9203DFACF00E7806F /* string bean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "string bean.jpg"; sourceTree = "<group>"; };
+		4227D6AA203DFACF00E7806F /* begonia coccinea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "begonia coccinea.jpg"; sourceTree = "<group>"; };
+		4227D6AB203DFAD000E7806F /* bougainvillea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bougainvillea.jpg; sourceTree = "<group>"; };
+		4227D6AC203DFAD000E7806F /* happiness.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = happiness.jpg; sourceTree = "<group>"; };
+		4227D6AD203DFAD000E7806F /* blueberry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blueberry.jpg; sourceTree = "<group>"; };
+		4227D6AE203DFAD000E7806F /* dill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dill.jpg; sourceTree = "<group>"; };
+		4227D6AF203DFAD000E7806F /* ivy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ivy.jpg; sourceTree = "<group>"; };
+		4227D6B0203DFAD000E7806F /* potato.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = potato.jpg; sourceTree = "<group>"; };
+		4227D6B1203DFAD000E7806F /* caffe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = caffe.jpg; sourceTree = "<group>"; };
+		4227D6B2203DFAD000E7806F /* onion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = onion.jpg; sourceTree = "<group>"; };
+		4227D6B3203DFAD000E7806F /* sofora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sofora.jpg; sourceTree = "<group>"; };
+		4227D6B4203DFAD000E7806F /* american agave.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "american agave.jpg"; sourceTree = "<group>"; };
+		4227D6B5203DFAD000E7806F /* adenium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adenium.jpg; sourceTree = "<group>"; };
+		4227D6B6203DFAD000E7806F /* basil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = basil.jpg; sourceTree = "<group>"; };
+		4227D6B7203DFAD100E7806F /* lotus flower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lotus flower.jpg"; sourceTree = "<group>"; };
+		4227D6B8203DFAD100E7806F /* afelandra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = afelandra.jpg; sourceTree = "<group>"; };
+		4227D6B9203DFAD100E7806F /* laurel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laurel.jpg; sourceTree = "<group>"; };
+		4227D6BB203DFAD100E7806F /* euphorbia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = euphorbia.jpg; sourceTree = "<group>"; };
+		4227D6BC203DFAD100E7806F /* arancio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arancio.jpg; sourceTree = "<group>"; };
+		4227D6BD203DFAD100E7806F /* camassia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camassia.jpg; sourceTree = "<group>"; };
+		4227D6BE203DFAD100E7806F /* ciliegio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ciliegio.jpg; sourceTree = "<group>"; };
+		4227D6BF203DFAD100E7806F /* geranium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = geranium.jpg; sourceTree = "<group>"; };
+		4227D6C0203DFAD100E7806F /* cedronella.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cedronella.jpg; sourceTree = "<group>"; };
+		4227D6C1203DFAD100E7806F /* lemon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lemon.jpg; sourceTree = "<group>"; };
+		4227D6C2203DFAD100E7806F /* watercress.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = watercress.jpg; sourceTree = "<group>"; };
+		4227D6C3203DFAD200E7806F /* berberis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = berberis.jpg; sourceTree = "<group>"; };
+		4227D6C4203DFAD200E7806F /* rosemary.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rosemary.jpg; sourceTree = "<group>"; };
+		4227D6E1203E014500E7806F /* water hyacint.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "water hyacint.jpg"; sourceTree = "<group>"; };
 		42C34F57203722CD0036EF4F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByFiltersViewController.swift; sourceTree = "<group>"; };
 		9944B6A32036273900A46B5D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +234,34 @@
 		4209FEE4203498AD00C64C7F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4227D6B5203DFAD000E7806F /* adenium.jpg */,
+				4227D6B8203DFAD100E7806F /* afelandra.jpg */,
+				4227D6B4203DFAD000E7806F /* american agave.jpg */,
+				4227D6BC203DFAD100E7806F /* arancio.jpg */,
+				4227D6B6203DFAD000E7806F /* basil.jpg */,
+				4227D6AA203DFACF00E7806F /* begonia coccinea.jpg */,
+				4227D6C3203DFAD200E7806F /* berberis.jpg */,
+				4227D6AD203DFAD000E7806F /* blueberry.jpg */,
+				4227D6AB203DFAD000E7806F /* bougainvillea.jpg */,
+				4227D6B1203DFAD000E7806F /* caffe.jpg */,
+				4227D6E1203E014500E7806F /* water hyacint.jpg */,
+				4227D6BD203DFAD100E7806F /* camassia.jpg */,
+				4227D6C0203DFAD100E7806F /* cedronella.jpg */,
+				4227D6BE203DFAD100E7806F /* ciliegio.jpg */,
+				4227D6AE203DFAD000E7806F /* dill.jpg */,
+				4227D6BB203DFAD100E7806F /* euphorbia.jpg */,
+				4227D6BF203DFAD100E7806F /* geranium.jpg */,
+				4227D6AC203DFAD000E7806F /* happiness.jpg */,
+				4227D6AF203DFAD000E7806F /* ivy.jpg */,
+				4227D6B9203DFAD100E7806F /* laurel.jpg */,
+				4227D6C1203DFAD100E7806F /* lemon.jpg */,
+				4227D6B7203DFAD100E7806F /* lotus flower.jpg */,
+				4227D6B2203DFAD000E7806F /* onion.jpg */,
+				4227D6B0203DFAD000E7806F /* potato.jpg */,
+				4227D6C4203DFAD200E7806F /* rosemary.jpg */,
+				4227D6B3203DFAD000E7806F /* sofora.jpg */,
+				4227D6A9203DFACF00E7806F /* string bean.jpg */,
+				4227D6C2203DFAD100E7806F /* watercress.jpg */,
 				4227D6A5203DA06E00E7806F /* rose.jpg */,
 				4227D69A203D9BE700E7806F /* azalea.jpg */,
 				4227D699203D9BE700E7806F /* ipomomea.jpg */,
@@ -396,19 +480,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				4227D6A1203D9BE700E7806F /* petunia.jpg in Resources */,
+				4227D6D1203DFAD200E7806F /* adenium.jpg in Resources */,
 				4227D6A6203DA06E00E7806F /* rose.jpg in Resources */,
 				99DC2E8A20234B0800412EE4 /* LaunchScreen.storyboard in Resources */,
 				4227D69F203D9BE700E7806F /* azalea.jpg in Resources */,
+				4227D6C7203DFAD200E7806F /* bougainvillea.jpg in Resources */,
 				4227D6A2203D9BE700E7806F /* sweet pea.jpg in Resources */,
+				4227D6E0203DFAD200E7806F /* rosemary.jpg in Resources */,
+				4227D6D8203DFAD200E7806F /* arancio.jpg in Resources */,
 				99DA17CC203ACF0800A474A6 /* Main.storyboard in Resources */,
+				4227D6CA203DFAD200E7806F /* dill.jpg in Resources */,
+				4227D6D2203DFAD200E7806F /* basil.jpg in Resources */,
+				4227D6E2203E014500E7806F /* water hyacint.jpg in Resources */,
+				4227D6CB203DFAD200E7806F /* ivy.jpg in Resources */,
+				4227D6D9203DFAD200E7806F /* camassia.jpg in Resources */,
 				2280998E202D8F9900C2BCDD /* Onboarding.storyboard in Resources */,
+				4227D6C9203DFAD200E7806F /* blueberry.jpg in Resources */,
 				9944B6B02036273A00A46B5D /* MyGarden.storyboard in Resources */,
+				4227D6CE203DFAD200E7806F /* onion.jpg in Resources */,
 				4227D69E203D9BE700E7806F /* ipomomea.jpg in Resources */,
+				4227D6CD203DFAD200E7806F /* caffe.jpg in Resources */,
+				4227D6D3203DFAD200E7806F /* lotus flower.jpg in Resources */,
+				4227D6DB203DFAD200E7806F /* geranium.jpg in Resources */,
+				4227D6DC203DFAD200E7806F /* cedronella.jpg in Resources */,
+				4227D6D7203DFAD200E7806F /* euphorbia.jpg in Resources */,
+				4227D6D4203DFAD200E7806F /* afelandra.jpg in Resources */,
+				4227D6DF203DFAD200E7806F /* berberis.jpg in Resources */,
+				4227D6CF203DFAD200E7806F /* sofora.jpg in Resources */,
 				99C23069202F39BD0044C561 /* SearchView.storyboard in Resources */,
+				4227D6DD203DFAD200E7806F /* lemon.jpg in Resources */,
+				4227D6D0203DFAD200E7806F /* american agave.jpg in Resources */,
 				99DC2E8720234B0800412EE4 /* Assets.xcassets in Resources */,
+				4227D6C5203DFAD200E7806F /* string bean.jpg in Resources */,
+				4227D6C6203DFAD200E7806F /* begonia coccinea.jpg in Resources */,
 				4209FEE820349B0F00C64C7F /* data.json in Resources */,
 				4227D6A0203D9BE700E7806F /* malva.jpg in Resources */,
+				4227D6DE203DFAD200E7806F /* watercress.jpg in Resources */,
 				4227D6A8203DB5D300E7806F /* sunflower.jpg in Resources */,
+				4227D6C8203DFAD200E7806F /* happiness.jpg in Resources */,
+				4227D6DA203DFAD200E7806F /* ciliegio.jpg in Resources */,
+				4227D6CC203DFAD200E7806F /* potato.jpg in Resources */,
+				4227D6D5203DFAD200E7806F /* laurel.jpg in Resources */,
 				99DA17CA203ACEAC00A474A6 /* Camera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
