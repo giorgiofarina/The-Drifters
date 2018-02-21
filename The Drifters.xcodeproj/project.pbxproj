@@ -21,7 +21,6 @@
 		4227D6A0203D9BE700E7806F /* malva.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D69B203D9BE700E7806F /* malva.jpg */; };
 		4227D6A1203D9BE700E7806F /* petunia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D69C203D9BE700E7806F /* petunia.jpg */; };
 		4227D6A2203D9BE700E7806F /* sweet pea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D69D203D9BE700E7806F /* sweet pea.jpg */; };
-		4227D6A4203D9F6600E7806F /* sunflower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6A3203D9F6600E7806F /* sunflower.jpg */; };
 		4227D6A6203DA06E00E7806F /* rose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6A5203DA06E00E7806F /* rose.jpg */; };
 		42C34F58203722CD0036EF4F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34F57203722CD0036EF4F /* CoreDataManager.swift */; };
 		992C76CA203043D000F50966 /* SearchByFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */; };
@@ -51,6 +50,7 @@
 		99DC2E9520234B0800412EE4 /* The_DriftersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E9420234B0800412EE4 /* The_DriftersTests.swift */; };
 		99DC2EA020234B0800412EE4 /* The_DriftersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC2E9F20234B0800412EE4 /* The_DriftersUITests.swift */; };
 		99F99B4C203B35CF00EA5426 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F99B4B203B35CF00EA5426 /* CameraViewController.swift */; };
+		FA3FCC37203DBE00000D7CB5 /* sunflower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA3FCC36203DBE00000D7CB5 /* sunflower.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,6 @@
 		4227D69B203D9BE700E7806F /* malva.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = malva.jpg; sourceTree = "<group>"; };
 		4227D69C203D9BE700E7806F /* petunia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petunia.jpg; sourceTree = "<group>"; };
 		4227D69D203D9BE700E7806F /* sweet pea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sweet pea.jpg"; sourceTree = "<group>"; };
-		4227D6A3203D9F6600E7806F /* sunflower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sunflower.jpg; path = ../../../../../Desktop/images/sunflower.jpg; sourceTree = "<group>"; };
 		4227D6A5203DA06E00E7806F /* rose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rose.jpg; sourceTree = "<group>"; };
 		42C34F57203722CD0036EF4F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByFiltersViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		99DC2E9F20234B0800412EE4 /* The_DriftersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_DriftersUITests.swift; sourceTree = "<group>"; };
 		99DC2EA120234B0800412EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99F99B4B203B35CF00EA5426 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		FA3FCC36203DBE00000D7CB5 /* sunflower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sunflower.jpg; path = ../../../../../../Downloads/sunflower.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,10 +181,10 @@
 				4227D6A5203DA06E00E7806F /* rose.jpg */,
 				4227D69A203D9BE700E7806F /* azalea.jpg */,
 				4227D699203D9BE700E7806F /* ipomomea.jpg */,
+				FA3FCC36203DBE00000D7CB5 /* sunflower.jpg */,
 				4227D69B203D9BE700E7806F /* malva.jpg */,
 				4227D69C203D9BE700E7806F /* petunia.jpg */,
 				4227D69D203D9BE700E7806F /* sweet pea.jpg */,
-				4227D6A3203D9F6600E7806F /* sunflower.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -405,10 +405,10 @@
 				9944B6B02036273A00A46B5D /* MyGarden.storyboard in Resources */,
 				4227D69E203D9BE700E7806F /* ipomomea.jpg in Resources */,
 				99C23069202F39BD0044C561 /* SearchView.storyboard in Resources */,
-				4227D6A4203D9F6600E7806F /* sunflower.jpg in Resources */,
 				99DC2E8720234B0800412EE4 /* Assets.xcassets in Resources */,
 				4209FEE820349B0F00C64C7F /* data.json in Resources */,
 				4227D6A0203D9BE700E7806F /* malva.jpg in Resources */,
+				FA3FCC37203DBE00000D7CB5 /* sunflower.jpg in Resources */,
 				99DA17CA203ACEAC00A474A6 /* Camera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,7 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC89RN7CV7;
+				DEVELOPMENT_TEAM = 7Y75XWN7VZ;
 				INFOPLIST_FILE = "The Drifters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-Drifters";
@@ -634,7 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MC89RN7CV7;
+				DEVELOPMENT_TEAM = 7Y75XWN7VZ;
 				INFOPLIST_FILE = "The Drifters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iosda.The-Drifters";
