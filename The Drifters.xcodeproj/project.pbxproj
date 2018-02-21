@@ -25,6 +25,7 @@
 		9944B6AE2036273A00A46B5D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A72036273900A46B5D /* TableViewController.swift */; };
 		9944B6AF2036273A00A46B5D /* InsideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A82036273900A46B5D /* InsideCollectionViewCell.swift */; };
 		9944B6B02036273A00A46B5D /* MyGarden.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944B6A92036273A00A46B5D /* MyGarden.storyboard */; };
+		997DC1D4203D798300B9E0E3 /* sunflower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 997DC1D3203D798200B9E0E3 /* sunflower.jpg */; };
 		999202F3203C3A28005812CE /* carote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 999202F2203C3A28005812CE /* carote.jpg */; };
 		999202F5203C3A3A005812CE /* abete.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 999202F4203C3A3A005812CE /* abete.jpg */; };
 		999928032038B5FF007DCCBC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999928022038B5FF007DCCBC /* DataModel.swift */; };
@@ -85,6 +86,7 @@
 		9944B6A72036273900A46B5D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9944B6A82036273900A46B5D /* InsideCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsideCollectionViewCell.swift; sourceTree = "<group>"; };
 		9944B6A92036273A00A46B5D /* MyGarden.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyGarden.storyboard; sourceTree = "<group>"; };
+		997DC1D3203D798200B9E0E3 /* sunflower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunflower.jpg; sourceTree = "<group>"; };
 		999202F2203C3A28005812CE /* carote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carote.jpg; sourceTree = "<group>"; };
 		999202F4203C3A3A005812CE /* abete.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = abete.jpg; sourceTree = "<group>"; };
 		999928022038B5FF007DCCBC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		4209FEE4203498AD00C64C7F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				997DC1D3203D798200B9E0E3 /* sunflower.jpg */,
 				999202F2203C3A28005812CE /* carote.jpg */,
 				999202F4203C3A3A005812CE /* abete.jpg */,
 				4209FEE5203498D500C64C7F /* 001.jpg */,
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99DC2E8A20234B0800412EE4 /* LaunchScreen.storyboard in Resources */,
+				997DC1D4203D798300B9E0E3 /* sunflower.jpg in Resources */,
 				99DA17CC203ACF0800A474A6 /* Main.storyboard in Resources */,
 				4209FEE6203498D500C64C7F /* 001.jpg in Resources */,
 				999202F3203C3A28005812CE /* carote.jpg in Resources */,

@@ -88,6 +88,28 @@
               "category": "Aquatic"
               },
               {
+              "commonName": "sunflower",
+              "scientificName": "Helianthus annuus",
+              "img1": "sunflower.jpg",
+              "generalDescription":"Flowering plant, it can be annual or perennial according to the species. Cultivable outdoors or in pot without particular difficulties. The species Helianthus annuus or Girasole is the most widespread, has an erect stem and can reach 3 meters in height; only rarely is it branched into the upper part. The leaves are pedunculated, roped and irregularly serrated. The flowers are large flower heads (calatids) reclined with brown central disc and yellow ligule. The fruits follow the flowering.",
+              "climate": "Wet temperate",
+              "exposure": "Full sun",
+              "dedication": "Often",
+              "size": "Medium",
+              "repottingDate": "",
+              "pruningDate": "",
+              "repotting": "It depends on the type of species cultivated",
+              "pruning": "Eliminate damaged parts and withered flowers",
+              "propagation": "By subdivision of the tufts at the end of spring or for sowing in April. Sow directly to a dwelling in a substrate that guarantees excellent drainage.",
+              "origins": "North America",
+              "irrigation": "Do not go wet often, allow the soil to dry slightly between one watering and another. Absolutely avoid water stagnation. They can also endure a short period of drought.",
+              "illnesses": "It is important to protect the plant from the slime using products based on metaldehyde. The most common fungal diseases are gray mold and the rind to be treated with specific fungicidal products.",
+              "flowering": "Only summer flowering, from August to October.",
+              "fertilization": "The need for special fertilizers is not to be reported",
+              "environment": "Outdoor",
+              "category": "Erected"
+              },
+              {
               "commonName": "sweet pea",
               "scientificName": "carotus",
               "img1": "carote.jpg",

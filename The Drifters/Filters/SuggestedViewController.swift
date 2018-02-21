@@ -37,8 +37,6 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         }
        
         
-        svuotaFiltri()
-        
         self.suggestedTableView.separatorColor = UIColor.clear
         // Do any additional setup after loading the view.
         
