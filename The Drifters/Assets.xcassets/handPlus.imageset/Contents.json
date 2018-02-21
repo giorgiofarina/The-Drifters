@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "plant-on-a-hand-2.png",
+      "filename" : "handPlus.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "plant-on-a-hand-2@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "plant-on-a-hand-2@3x.png",
       "scale" : "3x"
     }
   ],

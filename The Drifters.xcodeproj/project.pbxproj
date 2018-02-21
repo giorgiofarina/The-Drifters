@@ -12,6 +12,7 @@
 		22809992202D9E3700C2BCDD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22809991202D9E3700C2BCDD /* FirstViewController.swift */; };
 		22809994202D9E4900C2BCDD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22809993202D9E4900C2BCDD /* SecondViewController.swift */; };
 		22809996202D9E5300C2BCDD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22809995202D9E5300C2BCDD /* ThirdViewController.swift */; };
+		229F59F5203D7D8100092E8B /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F59F4203D7D8100092E8B /* FourthViewController.swift */; };
 		4209FEE020348E7E00C64C7F /* List+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209FEDC20348E7E00C64C7F /* List+CoreDataClass.swift */; };
 		4209FEE220348E7E00C64C7F /* Plant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209FEDE20348E7E00C64C7F /* Plant+CoreDataClass.swift */; };
 		4209FEE820349B0F00C64C7F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4209FEE720349B0F00C64C7F /* data.json */; };
@@ -73,6 +74,7 @@
 		22809991202D9E3700C2BCDD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		22809993202D9E4900C2BCDD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		22809995202D9E5300C2BCDD /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		229F59F4203D7D8100092E8B /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		4209FEDC20348E7E00C64C7F /* List+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4209FEDE20348E7E00C64C7F /* Plant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4209FEE720349B0F00C64C7F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				22809991202D9E3700C2BCDD /* FirstViewController.swift */,
 				22809993202D9E4900C2BCDD /* SecondViewController.swift */,
 				22809995202D9E5300C2BCDD /* ThirdViewController.swift */,
+				229F59F4203D7D8100092E8B /* FourthViewController.swift */,
 				999928022038B5FF007DCCBC /* DataModel.swift */,
 			);
 			path = Onboarding;
@@ -426,6 +429,7 @@
 				9944B6AD2036273A00A46B5D /* MainTableViewCell.swift in Sources */,
 				99DA17CF203AF42400A474A6 /* Plant+CoreDataProperties.swift in Sources */,
 				9944B6AA2036273A00A46B5D /* DetailViewController.swift in Sources */,
+				229F59F5203D7D8100092E8B /* FourthViewController.swift in Sources */,
 				22809994202D9E4900C2BCDD /* SecondViewController.swift in Sources */,
 				999928032038B5FF007DCCBC /* DataModel.swift in Sources */,
 				22809992202D9E3700C2BCDD /* FirstViewController.swift in Sources */,

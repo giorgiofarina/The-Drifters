@@ -11,7 +11,7 @@ import UIKit
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "Welcome"), self.newVc(viewController: "Garden"), self.newVc(viewController: "Recognition")]
+        return [self.newVc(viewController: "Welcome"), self.newVc(viewController: "Filter"), self.newVc(viewController: "Garden"), self.newVc(viewController: "Recognition")]
     } ()
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -83,11 +83,11 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         
         pageControl.numberOfPages = orderedViewControllers.count
         pageControl.currentPage = 0
-        pageControl.tintColor = UIColor(red:2.55, green:0.59, blue:0.48, alpha:1.0)
+        pageControl.tintColor = UIColor(red: 155/255.0, green: 19/255.0, blue:0.00/255.0, alpha:1.0)
         //Not Selected
-        pageControl.pageIndicatorTintColor = UIColor(red:2.55, green:0.59, blue:0.48, alpha:1.0)
+        pageControl.pageIndicatorTintColor = UIColor(red: 203/255.0, green: 43/255.0, blue:0/255.0, alpha:0.5)
         //Selected
-        pageControl.currentPageIndicatorTintColor = UIColor(red:1.89, green:0.39, blue:0.30, alpha:1.0)
+        pageControl.currentPageIndicatorTintColor = UIColor(red: 155/255.0, green: 19/255.0, blue:0.00/255.0, alpha:1.0)
         self.view.addSubview(pageControl)
     }
     
