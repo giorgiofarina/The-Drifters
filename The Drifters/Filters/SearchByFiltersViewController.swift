@@ -65,7 +65,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
     
     
     
-        let climate = [ "Tropical","Equatorial","Subtropical","Temperate","Wet temperate","Oceanic","Mediterranean",
+        let climate = ["Tropical","Equatorial","Subtropical","Temperate","Wet temperate","Oceanic","Mediterranean",
                        "Continental","Subarctic","Trans-Siberian","Polar","Glacial" ,"Steppe", "Desert" ,"Monsoon" , "Sinic" ,
                        "Climate of the savannah","Alpine","Boreal"]
         let exposure = [ "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
@@ -202,7 +202,29 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             } else if (textField == categoryTextField || textField == environmentTextField ){
                 scrollView.setContentOffset(CGPoint(x: 0, y: 320), animated: true)
             }
+            
+            if textField == climateTextField {
+                self.climatePickerView.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(climatePickerView, didSelectRow: 0, inComponent: 0)
+            } else if textField == exposureTextField {
+                self.exposurePickerView.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(exposurePickerView, didSelectRow: 0, inComponent: 0)
+            } else if textField == dedicationTextField {
+                self.dedicationPickerView.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(dedicationPickerView, didSelectRow: 0, inComponent: 0)
+            }else if textField == plantSizeTextField {
+                self.plantSizePickerView.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(plantSizePickerView, didSelectRow: 0, inComponent: 0)
+            }else if textField == categoryTextField {
+                self.categoryPickerView.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(categoryPickerView, didSelectRow: 0, inComponent: 0)
+            }else if textField == environmentTextField {
+                self.environmentPickerView.selectRow(0, inComponent: 0, animated: true)
+                self.pickerView(environmentPickerView, didSelectRow: 0, inComponent: 0)
+            }
+            
         }
+    
     
         func textFieldDidEndEditing(_ textField: UITextField) {
             if (textField == dedicationTextField || textField == plantSizeTextField ){
@@ -301,6 +323,8 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
             
             view.endEditing(true)
         }
+    
+    
     
     
     @IBAction func researchInDatabaseTapped(_ sender: Any) {

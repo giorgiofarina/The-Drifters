@@ -98,7 +98,7 @@
                                 <rect key="frame" x="0.0" y="78" width="375" height="29"/>
                                 <segments>
                                     <segment title="Garden"/>
-                                    <segment title="Favorite"/>
+                                    <segment title="Wishlist"/>
                                 </segments>
                                 <connections>
                                     <action selector="SelectSegmentedControll:" destination="vfZ-Ct-cj1" eventType="valueChanged" id="DgM-TU-nWI"/>

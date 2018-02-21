@@ -101,9 +101,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
         let garderStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
         let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailsID") as! DetailsViewController
         
-       
-        destinationView.image = generaImmagine(istanzaPianta: plantArray[indexPath.row]) 
-        destinationView.commonName = plantArray[indexPath.row].commonName!
+    
         destinationView.plantObject = plantArray[indexPath.row]
         self.navigationController?.pushViewController(destinationView, animated: true)
     }

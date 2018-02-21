@@ -14,17 +14,13 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var plantImageView: UIImageView!
     @IBOutlet weak var scientificPlantNameLabel: UILabel!
     @IBOutlet weak var descriptionPlantLabel: UILabel!
-    @IBOutlet weak var characteristicsTitleLabel: UILabel!
-    
     @IBOutlet weak var filtersInformationLabel: UILabel!
+    @IBOutlet weak var cultivationMethodsLabel: UILabel!
+    @IBOutlet weak var propagationLabel: UILabel!
+    @IBOutlet weak var illnessesLabel: UILabel! 
     
     @IBOutlet weak var addToFavouritesBarButtonItem: UIBarButtonItem!
     
-    
-    var commonName: String = ""
-    var image = UIImage()
-    var scientificName: String = ""
-    var filtersLabel: String = ""
     
     
     var plantObject = Plant()
@@ -35,40 +31,55 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        plantImageView.image = image
-        commonPlantNameLabel.text = commonName
+        plantImageView.image = generaImmagine(istanzaPianta: plantObject)
+        commonPlantNameLabel.text = plantObject.commonName
         scientificPlantNameLabel.text = plantObject.scientificName
         descriptionPlantLabel.text = plantObject.generalDescription
-        filtersInformationLabel.text = ("Category: \(String(describing: plantObject.category!))\nClimate: \(String(describing: plantObject.climate!))\nExposure: \(String(describing: plantObject.exposure!))\nDedication: \(String(describing: plantObject.dedication!))\nPlant size: \(String(describing: plantObject.size!))\nEnvironment: \(String(describing: plantObject.environment!))")
+        filtersInformationLabel.text = ("Origins: \(String(describing: plantObject.origins!))\nCategory: \(String(describing: plantObject.category!))\nClimate: \(String(describing: plantObject.climate!))\nExposure: \(String(describing: plantObject.exposure!))\nDedication: \(String(describing: plantObject.dedication!))\nPlant size: \(String(describing: plantObject.size!))\nEnvironment: \(String(describing: plantObject.environment!))\nFlowering: \(String(describing: plantObject.flowering!))")
+        cultivationMethodsLabel.text = ("Fertilization: \(String(describing: plantObject.fertilization!))\nPruning: \(String(describing: plantObject.pruning!))\nRepotting: \(String(describing: plantObject.repotting!))")
+        propagationLabel.text = plantObject.propagation
+        illnessesLabel.text = plantObject.illnesses
         
+    
         
         
         plantImageView.layer.cornerRadius = 10
         plantImageView.layer.masksToBounds = true
+        
+        
         
     }
 
     
     
     func alertMessageForWishlist (title: String, message: String) {
+  
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-            
+      
+        alert.view.tintColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        
+        alert.addAction(UIAlertAction(title: "Add to Wishlist", style: .default, handler: { (action: UIAlertAction!) in
+
             let wishList = ritornaLista(nomeLista: "Wishlist")
             
             aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: wishList)
             
-            print("pianta aggiunta alla wishlist")
-            self.list = mostraLista(istanzaLista: wishList)
-            print("\(self.list[0])")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Add to Garden", style: .default, handler: { (action: UIAlertAction!) in
+            
+            let gardenList = ritornaLista(nomeLista: "Garden")
+            
+            aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
+
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
             
             alert.dismiss(animated: true, completion: nil)
-            print("pianta non aggiunta")
+         
         }))
         
         self.present(alert, animated: true , completion: nil)
@@ -79,7 +90,7 @@ class DetailsViewController: UIViewController {
 
     @IBAction func addToFavouriteList(_ sender: Any) {
 
-        alertMessageForWishlist(title:"Attention", message: "Are you sure you want to add this plant to your wishlist?" )
+        alertMessageForWishlist(title:"Attention", message: "\nAre you sure you want to add this plant to your wishlist?" )
         
     }
 

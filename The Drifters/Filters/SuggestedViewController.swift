@@ -95,8 +95,7 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
         let garderStoryboard: UIStoryboard = UIStoryboard(name: "SearchView", bundle: nil)
         let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailsID") as! DetailsViewController
         
-        destinationView.image = plantImage[indexPath.row]
-        destinationView.commonName = plantArray[indexPath.row].commonName!
+    
         destinationView.plantObject = plantArray[indexPath.row]
         
         self.navigationController?.pushViewController(destinationView, animated: true)

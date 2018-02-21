@@ -247,7 +247,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEZ-d5-n2b">
                                                     <rect key="frame" x="15" y="40" width="346" height="200"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundPlantName" translatesAutoresizingMaskIntoConstraints="NO" id="bFv-4u-dnp">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bFv-4u-dnp">
                                                     <rect key="frame" x="14" y="7" width="346" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="bFv-4u-dnp" secondAttribute="height" multiplier="346:25" id="ciN-UJ-2tj"/>
@@ -322,7 +322,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundPlantName" translatesAutoresizingMaskIntoConstraints="NO" id="X7b-HK-PVo">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundTitle" translatesAutoresizingMaskIntoConstraints="NO" id="X7b-HK-PVo">
                                                     <rect key="frame" x="15" y="10" width="346" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="X7b-HK-PVo" secondAttribute="height" multiplier="346:35" constant="98.857142857142833" id="xkN-8E-W7e"/>
@@ -414,29 +414,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="filters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XC-tb-R3H">
-                                                <rect key="frame" x="14" y="624" width="346" height="295"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flowering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2V-rK-Xw7">
-                                                <rect key="frame" x="14" y="927" width="346" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8W-jQ-OaJ">
-                                                <rect key="frame" x="14" y="1289" width="346" height="51"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="flowering details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfx-mH-qu7">
-                                                <rect key="frame" x="14" y="986" width="346" height="295"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="filters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XC-tb-R3H">
+                                                <rect key="frame" x="14" y="624" width="346" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -448,7 +427,7 @@
                                                     <constraint firstAttribute="width" secondItem="HwP-SB-opN" secondAttribute="height" multiplier="173:116" id="zQp-dt-ZFU"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundPlantName" translatesAutoresizingMaskIntoConstraints="NO" id="cXt-65-Feu">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cXt-65-Feu">
                                                 <rect key="frame" x="14" y="8" width="346" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="cXt-65-Feu" secondAttribute="height" multiplier="346:25" id="SxK-Oj-f3s"/>
@@ -460,8 +439,43 @@
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="watering details, tips, grafts, repottings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVi-XE-uzg">
-                                                <rect key="frame" x="14" y="1348" width="346" height="295"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cultivation Methods" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2V-rK-Xw7">
+                                                <rect key="frame" x="14" y="1194" width="346" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Illnesses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8W-jQ-OaJ">
+                                                <rect key="frame" x="14" y="1556" width="346" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cultivation details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfx-mH-qu7">
+                                                <rect key="frame" x="14" y="1253" width="346" height="295"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="illnesses" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVi-XE-uzg">
+                                                <rect key="frame" x="14" y="1615" width="346" height="252"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Propagation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-tc-CoH">
+                                                <rect key="frame" x="14" y="832" width="346" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="prop" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niv-h2-n7m">
+                                                <rect key="frame" x="14" y="891" width="346" height="295"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -517,11 +531,13 @@
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
                         <outlet property="addToFavouritesBarButtonItem" destination="xOu-Ic-oJ9" id="PTY-Wl-UOk"/>
-                        <outlet property="characteristicsTitleLabel" destination="25Z-Re-fQh" id="Gnr-kK-qV5"/>
                         <outlet property="commonPlantNameLabel" destination="Z9X-4y-5XF" id="Z5X-z7-y2H"/>
+                        <outlet property="cultivationMethodsLabel" destination="Qfx-mH-qu7" id="gOK-Ub-rsh"/>
                         <outlet property="descriptionPlantLabel" destination="mtP-Sb-IL3" id="w9d-2s-fgd"/>
                         <outlet property="filtersInformationLabel" destination="8XC-tb-R3H" id="Xbw-Ui-LGr"/>
+                        <outlet property="illnessesLabel" destination="uVi-XE-uzg" id="kV2-sl-TKl"/>
                         <outlet property="plantImageView" destination="HwP-SB-opN" id="NNM-RT-dGd"/>
+                        <outlet property="propagationLabel" destination="niv-h2-n7m" id="dOU-6M-dsq"/>
                         <outlet property="scientificPlantNameLabel" destination="20t-Y7-DGC" id="nWA-SG-7Ft"/>
                     </connections>
                 </viewController>
@@ -536,7 +552,7 @@
         <image name="Dedication" width="214" height="158"/>
         <image name="PlantSize" width="160" height="166"/>
         <image name="TypePlant" width="178" height="150"/>
-        <image name="backgroundPlantName" width="730" height="68"/>
+        <image name="backgroundTitle" width="730" height="68"/>
         <image name="matchingButton" width="216" height="96"/>
         <image name="nil" width="16" height="16"/>
         <image name="pot" width="81" height="70"/>
