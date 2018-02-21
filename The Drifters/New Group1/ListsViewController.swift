@@ -11,6 +11,8 @@ import UIKit
 class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var pianteGiardino: [Plant] = []
     var pianteWishList: [Plant] = []
     var imageArrayTest1: [UIImage] = []     //array di immagini garden
@@ -20,7 +22,6 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     var imageSuggest = UIImageView()
-    
     let buttonBar = UIView()
     
     
@@ -29,17 +30,18 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    
+    @IBOutlet weak var segmentedControll: UISegmentedControl!
+    var selectedSegment = 1
+    
+    
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         UIView.animate(withDuration: 0.3) {
             self.buttonBar.frame.origin.x = (self.segmentedControll.frame.width / CGFloat(self.segmentedControll.numberOfSegments)) * CGFloat(self.segmentedControll.selectedSegmentIndex)
         }
     }
     
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var segmentedControll: UISegmentedControl!
-    var selectedSegment = 1
+
     
     @IBAction func SelectSegmentedControll(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -143,14 +145,14 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             pianteGiardino = mostraLista(istanzaLista: ritornaLista(nomeLista: "Garden"))
             textArray1 = classificaCategorie(arrayPiante: pianteGiardino)
             tableView_HiddenWithNoPlantInList(itemInList: pianteGiardino.count)
-print("\(textArray1.count)")
+
             return textArray1.count
         } else {
             imageSuggest.image = #imageLiteral(resourceName: "imageFavoriteEmpty")
             pianteWishList = mostraLista(istanzaLista: ritornaLista(nomeLista: "Wishlist"))
             textArray2 = classificaCategorie(arrayPiante: pianteWishList)
             tableView_HiddenWithNoPlantInList(itemInList: pianteWishList.count)
-print("\(textArray2.count)")
+
             return textArray2.count
         }
         
@@ -165,20 +167,19 @@ print("\(textArray2.count)")
         //
         var pianteUNAcategoria: [Plant] = []
         if selectedSegment == 1 {
-            
-//            var pianteUNAcategoria: [Plant] = []
+
             let categorie = classificaCategorie(arrayPiante: pianteGiardino)
             
                 pianteUNAcategoria = piantePerCategoria(arrayPiante: pianteGiardino, categoria: categorie[collectionView.tag])
-                print("\(pianteUNAcategoria.count)")
-//                return pianteUNAcategoria.count
+            
+
         } else {
-//            var pianteUNAcategoria: [Plant] = []
+
             let categorie = classificaCategorie(arrayPiante: pianteWishList)
             pianteUNAcategoria = piantePerCategoria(arrayPiante: pianteWishList, categoria: categorie[collectionView.tag])
-            print("\(pianteUNAcategoria.count)")
+          
             
-//            return pianteUNAcategoria.count
+
         }
         return pianteUNAcategoria.count
     }
@@ -198,7 +199,7 @@ print("\(textArray2.count)")
         }
         //        impostazioni per la struttura grafica delle immagini delle collectionView
         
-//        return cell.imageCell.image = imageArrayTest2[indexPath.row]
+
         cell.imageCell.image = generaImmagine(istanzaPianta: pianteCategoria[indexPath.row])
         cell.imageCell.layer.cornerRadius = 10
         cell.imageCell.layer.masksToBounds = true
@@ -208,24 +209,23 @@ print("\(textArray2.count)")
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let garderStoryboard: UIStoryboard = UIStoryboard(name: "MyGarden", bundle: nil)
-        let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
         
          var pianteCategoria: [Plant] = []
         if selectedSegment == 1 {
             let categorie = classificaCategorie(arrayPiante: pianteGiardino)
             pianteCategoria = piantePerCategoria(arrayPiante: pianteGiardino, categoria: categorie[collectionView.tag])
             
-            destinationView.image = generaImmagine(istanzaPianta: pianteCategoria[indexPath.row])
-            destinationView.namePlant.text = pianteCategoria[indexPath.row].commonName!
+
             destinationView.plantObject = pianteCategoria[indexPath.row]
         } else {
             let categorie = classificaCategorie(arrayPiante: pianteWishList)
             pianteCategoria = piantePerCategoria(arrayPiante: pianteWishList, categoria: categorie[collectionView.tag])
             
-            destinationView.image = generaImmagine(istanzaPianta: pianteCategoria[indexPath.row])
-            destinationView.namePlant.text = pianteCategoria[indexPath.row].commonName!
+    
             destinationView.plantObject = pianteCategoria[indexPath.row]
         }
+        
         self.navigationController?.pushViewController(destinationView, animated: true)
     }
     
@@ -238,7 +238,7 @@ print("\(textArray2.count)")
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionView = UIView()
-        //        sectionView.backgroundColor = UIColor(red: 175.0/255.0, green: 65.0/255.0, blue: 55.0/255.0, alpha: 0.30)
+        
         let backgroundImage = UIImageView()
         backgroundImage.image = #imageLiteral(resourceName: "backgroundTitle")
         backgroundImage.frame = CGRect(x: 7, y: 6, width: 361, height: 25)

@@ -68,10 +68,10 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         let climate = ["Tropical","Equatorial","Subtropical","Temperate","Wet temperate","Oceanic","Mediterranean",
                        "Continental","Subarctic","Trans-Siberian","Polar","Glacial" ,"Steppe", "Desert" ,"Monsoon" , "Sinic" ,
                        "Climate of the savannah","Alpine","Boreal"]
-        let exposure = [ "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
-        let dedication = [ "Rarely", "Often", "Assiduously"]
-        let plantSize = [ "Big","Medium","Small"]
-        let category = [ "Aquatic","Erected", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"]
+        let exposure = ["Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
+        let dedication = ["Rarely", "Often", "Assiduously"]
+        let plantSize = ["Big","Medium","Small"]
+        let category = ["Aquatic","Erected", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"]
         let environment = ["Indoor","Outdoor"]
     
    

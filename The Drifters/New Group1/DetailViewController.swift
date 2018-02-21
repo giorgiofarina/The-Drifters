@@ -10,14 +10,22 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+
+
+    @IBOutlet weak var removeBarButtonItem: UIBarButtonItem!
+    @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
     
-    @IBOutlet weak var destinationImage: UIImageView!
-    @IBOutlet weak var destinationName: UILabel!
-    @IBOutlet weak var buttonIcon: UIBarButtonItem!
-    @IBOutlet weak var trashButtonIcon: UIBarButtonItem!
+    @IBOutlet weak var commonPlantNameLabel: UILabel!
+    @IBOutlet weak var plantImageView: UIImageView!
+    @IBOutlet weak var scientificPlantNameLabel: UILabel!
+    @IBOutlet weak var descriptionPlantLabel: UILabel!
+    @IBOutlet weak var filtersInformationLabel: UILabel!
+    @IBOutlet weak var propagationLabel: UILabel!
+    @IBOutlet weak var cultivationMethodsLabel: UILabel!
+    @IBOutlet weak var illnessesLabel: UILabel!
     
-    var image = UIImage()
-    var namePlant = UILabel()
+
+
     var plantObject = Plant()
     var list: [Plant] = []
     var list2: [Plant] = []
@@ -26,24 +34,29 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        destinationImage.image = image
-        destinationName.text = namePlant.text
+        plantImageView.image = generaImmagine(istanzaPianta: plantObject)
+        commonPlantNameLabel.text = plantObject.commonName
+        scientificPlantNameLabel.text = plantObject.scientificName
+        descriptionPlantLabel.text = plantObject.generalDescription
+        filtersInformationLabel.text = ("Origins: \(String(describing: plantObject.origins!))\nCategory: \(String(describing: plantObject.category!))\nClimate: \(String(describing: plantObject.climate!))\nExposure: \(String(describing: plantObject.exposure!))\nDedication: \(String(describing: plantObject.dedication!))\nPlant size: \(String(describing: plantObject.size!))\nEnvironment: \(String(describing: plantObject.environment!))\nFlowering: \(String(describing: plantObject.flowering!))")
+        cultivationMethodsLabel.text = ("Fertilization: \(String(describing: plantObject.fertilization!))\nPruning: \(String(describing: plantObject.pruning!))\nRepotting: \(String(describing: plantObject.repotting!))\nIrrigation: \(String(describing: plantObject.irrigation!))")
+        propagationLabel.text = plantObject.propagation
+        illnessesLabel.text = plantObject.illnesses
+        
+        
+        plantImageView.layer.cornerRadius = 10
+        plantImageView.layer.masksToBounds = true
         
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.shadowImage = UIImage()
         
         if DataModel.shared.originView{
-            buttonIcon.isEnabled = false
-            buttonIcon.tintColor = .clear
+            addBarButtonItem.isEnabled = false
+            addBarButtonItem.tintColor = .clear
         }
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
 
@@ -56,19 +69,15 @@ class DetailViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
 
             let gardenList = ritornaLista(nomeLista: "Garden")
-
-
             aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
-            print("pianta aggiunta al garden")
-            self.list = mostraLista(istanzaLista: gardenList)
-            print("\(self.list[0])")
+            
 
         }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
 
             alert.dismiss(animated: true, completion: nil)
-            print("pianta non aggiunta")
+           
         }))
 
         self.present(alert, animated: true , completion: nil)
@@ -96,13 +105,12 @@ class DetailViewController: UIViewController {
             if DataModel.shared.originView {
 
                 rimuoviPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
-                print("pianta rimossa dal garden")
+                
                 self.list = mostraLista(istanzaLista: gardenList)
             } else {
 
                 rimuoviPianta(istanzaPianta: self.plantObject, istanzaLista: wishList)
-                print("pianta rimossa da wishList")
-                self.list2 = mostraLista(istanzaLista: wishList)
+              
             }
             appDelegate.saveContext()
             
@@ -111,7 +119,7 @@ class DetailViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
             
             alert.dismiss(animated: true, completion: nil)
-            print("pianta non eliminata")
+           
         }))
         
         self.present(alert, animated: true , completion: nil)
@@ -120,7 +128,7 @@ class DetailViewController: UIViewController {
     
     
     @IBAction func removeFromList(_ sender: Any) {
-        alertMessageToRemovePlantFromList(title: "Attention", message: "Are you sure you want remove this plant from this list?")
+        alertMessageToRemovePlantFromList(title: "Attention", message: "Are you sure you want remove the plant from this list?")
     }
     
     
