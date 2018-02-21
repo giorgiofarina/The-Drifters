@@ -134,6 +134,15 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //               aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
 //                self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
 //               svuotaFiltri()
+//                if(self.pianta.count != 0){
+//                    self.label2.text = "\(String(describing: self.pianta[0].generalDescription!))"
+//
+//                    self.label2.backgroundColor = .white
+//                }
+//                else{
+//                    self.label2.text = " "
+//                    self.label2.backgroundColor = .clear
+//                }
 //            })
 //
 //
