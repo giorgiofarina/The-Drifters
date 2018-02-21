@@ -21,6 +21,7 @@
 		4227D6A0203D9BE700E7806F /* malva.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D69B203D9BE700E7806F /* malva.jpg */; };
 		4227D6A1203D9BE700E7806F /* petunia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D69C203D9BE700E7806F /* petunia.jpg */; };
 		4227D6A2203D9BE700E7806F /* sweet pea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D69D203D9BE700E7806F /* sweet pea.jpg */; };
+		4227D6A4203D9F6600E7806F /* sunflower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4227D6A3203D9F6600E7806F /* sunflower.jpg */; };
 		42C34F58203722CD0036EF4F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34F57203722CD0036EF4F /* CoreDataManager.swift */; };
 		992C76CA203043D000F50966 /* SearchByFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */; };
 		9944B6AA2036273A00A46B5D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944B6A32036273900A46B5D /* DetailViewController.swift */; };
@@ -83,6 +84,7 @@
 		4227D69B203D9BE700E7806F /* malva.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = malva.jpg; sourceTree = "<group>"; };
 		4227D69C203D9BE700E7806F /* petunia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petunia.jpg; sourceTree = "<group>"; };
 		4227D69D203D9BE700E7806F /* sweet pea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sweet pea.jpg"; sourceTree = "<group>"; };
+		4227D6A3203D9F6600E7806F /* sunflower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sunflower.jpg; path = ../../../../../Desktop/images/sunflower.jpg; sourceTree = "<group>"; };
 		42C34F57203722CD0036EF4F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		992C76C9203043D000F50966 /* SearchByFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByFiltersViewController.swift; sourceTree = "<group>"; };
 		9944B6A32036273900A46B5D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				4227D69B203D9BE700E7806F /* malva.jpg */,
 				4227D69C203D9BE700E7806F /* petunia.jpg */,
 				4227D69D203D9BE700E7806F /* sweet pea.jpg */,
+				4227D6A3203D9F6600E7806F /* sunflower.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				9944B6B02036273A00A46B5D /* MyGarden.storyboard in Resources */,
 				4227D69E203D9BE700E7806F /* ipomomea.jpg in Resources */,
 				99C23069202F39BD0044C561 /* SearchView.storyboard in Resources */,
+				4227D6A4203D9F6600E7806F /* sunflower.jpg in Resources */,
 				99DC2E8720234B0800412EE4 /* Assets.xcassets in Resources */,
 				4209FEE820349B0F00C64C7F /* data.json in Resources */,
 				4227D6A0203D9BE700E7806F /* malva.jpg in Resources */,
