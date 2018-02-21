@@ -21,17 +21,18 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var output = AVCaptureStillImageOutput()
     var previewLayer: AVCaptureVideoPreviewLayer?
     
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
-    let label2: UILabel = {
-        let label2 = UILabel(frame: CGRect(x: 0, y: 0, width: 270, height: 37))
-        label2.center = CGPoint(x: 150, y: 50)
-        label2.textColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-        label2.font = UIFont.boldSystemFont(ofSize: 20.0)
-        label2.textAlignment = .center
-        label2.text = " "
-        label2.layer.cornerRadius = 10.0
-        label2.clipsToBounds = true
-        return label2
+    var label2 = UILabel()
+    
+    var waitlabel: UILabel = {
+        let waitLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 270, height: 37))
+        waitLabel.center = CGPoint(x: 180, y: 280)
+        waitLabel.textColor = UIColor.white
+        waitLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
+        waitLabel.textAlignment = .center
+        waitLabel.text = "Processing..."
+        return waitLabel
     }()
     
     let button2: UIButton = {
@@ -60,7 +61,22 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
         
+        
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 80 , height: 80)
+        let transform: CGAffineTransform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        activityIndicator.transform = transform
+        activityIndicator.center = self.view.center
+        self.activityIndicator.startAnimating()
+        
+        self.view.addSubview(waitlabel)
+        
+        view.addSubview(activityIndicator)
         
         //        self.view.addSubview(button2)
         //        button2.addTarget(self, action:#selector(self.bottone2), for: .touchUpInside)
@@ -124,13 +140,12 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //                svuotaFiltri()
 //
 //                if(self.pianta.count != 0){
-//                    //                    self.Alert(Title: "\(self.label2.text!)")
-//                    self.showActionSheet(Title: "\(self.label2.text!)")
+//                
+//                    self.showActionSheet(Message: "You've found" ,Title: "\(self.label2.text!)")
 //                    self.tabBarController?.tabBar.isHidden = true
-//
-//                }
-//                else{
-//
+//                        self.activityIndicator.stopAnimating()
+//                        self.waitlabel.text = " "
+//                        print("\(self.waitlabel.text)")
 //                }
 //            })
 //
@@ -141,18 +156,26 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //    }
     
-    func showActionSheet(Title: String){
+    func showActionSheet(Message: String, Title: String){
         
-        let titleAlert = NSAttributedString(string: Title, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold) , NSAttributedStringKey.foregroundColor: UIColor.gray])
+        let messageAlert = NSAttributedString(string: Message, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.light) , NSAttributedStringKey.foregroundColor: UIColor.gray])
         
-        let actionSheet = UIAlertController(title: Title, message: nil, preferredStyle: .actionSheet)
-        actionSheet.setValue(titleAlert, forKey: "attributedTitle")
+        let titleAlert = NSAttributedString(string: Title, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 28, weight: UIFont.Weight.semibold) , NSAttributedStringKey.foregroundColor: UIColor.gray])
+        
+        let actionSheet = UIAlertController(title: Message, message: Title, preferredStyle: .actionSheet)
+       
+        actionSheet.setValue(messageAlert, forKey: "attributedTitle")
+        actionSheet.setValue(titleAlert, forKey: "attributedMessage")
+        
         
         actionSheet.view.tintColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { action in
             self.tabBarController?.tabBar.isHidden = false
-            self.tabBarController?.tabBar.layer.zPosition = 0
+           
+            self.activityIndicator.startAnimating()
+            self.waitlabel.text = "Processing..."
+            print("\(String(describing: self.waitlabel.text))")
         }
         
         let add = UIAlertAction(title: "Add to Wishilist", style: .default) { action in
@@ -160,7 +183,9 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             let wishList = ritornaLista(nomeLista: "Wishlist")
             aggiungiPianta(istanzaPianta: self.pianta[0], istanzaLista: wishList)
             self.tabBarController?.tabBar.isHidden = false
-            
+            self.activityIndicator.startAnimating()
+            self.waitlabel.text = "Processing..."
+            print("\(String(describing: self.waitlabel.text))")
             
         }
         actionSheet.addAction(add)
@@ -169,33 +194,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         present(actionSheet, animated: true, completion: nil)
         
     }
-    
-    
-    
-    func Alert(Title: String) {
-        
-        //        let TitleString = NSAttributedString(string: Title, attributes: [NSAttributedStringKey.font : UIFont(name: "Helvetica-Bold", size: 15.0)!, NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-        let TitleString = NSAttributedString(string: Title, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 34, weight: UIFont.Weight.heavy) , NSAttributedStringKey.foregroundColor: UIColor.white])
-        
-        let alertController = UIAlertController(title: Title, message: nil, preferredStyle: .alert)
-        
-        alertController.setValue(TitleString, forKey: "attributedTitle")
-        
-        
-        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-            
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelAction)
-        
-        
-        present(alertController, animated: true, completion: nil)
-    }
-    
     
     
     func getDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {

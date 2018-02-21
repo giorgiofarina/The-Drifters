@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cfy-Xl-wPW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -28,6 +28,7 @@
                         <viewLayoutGuide key="safeArea" id="z04-1R-8Ge"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="cameraIcon" selectedImage="cameraIcon" id="V0g-Cp-glK"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qoz-EY-99E"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CameraV" destination="Cfy-Xl-wPW" id="80A-dC-dNI"/>
