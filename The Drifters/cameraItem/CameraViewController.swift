@@ -135,13 +135,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //                self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
 //               svuotaFiltri()
 //                if(self.pianta.count != 0){
-//                    self.label.text = "\(String(describing: self.pianta[0].generalDescription!))"
+//                    self.label2.text = "\(String(describing: self.pianta[0].generalDescription!))"
 //
-//                    self.label.backgroundColor = .white
+//                    self.label2.backgroundColor = .white
 //                }
 //                else{
-//                    self.label.text = " "
-//                    self.label.backgroundColor = .clear
+//                    self.label2.text = " "
+//                    self.label2.backgroundColor = .clear
 //                }
 //            })
 //
@@ -151,7 +151,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //        }
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //    }
-//
+
     func getDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         let devices: NSArray = AVCaptureDevice.devices() as NSArray;
         for de in devices {
