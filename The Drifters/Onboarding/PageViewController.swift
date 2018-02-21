@@ -11,7 +11,7 @@ import UIKit
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "Welcome"), self.newVc(viewController: "Garden"), self.newVc(viewController: "Recognition")]
+        return [self.newVc(viewController: "Welcome"), self.newVc(viewController: "Filter"), self.newVc(viewController: "Garden"), self.newVc(viewController: "Recognition")]
     } ()
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
