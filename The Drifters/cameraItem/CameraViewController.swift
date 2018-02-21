@@ -109,49 +109,40 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
     
-//    //        per coreml
-//    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-//
-//
-//
-//
-//
-//        let pixelBuffer : CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-//
-//        let model = try? VNCoreMLModel(for: Oxford102().model)
-//        let request = VNCoreMLRequest(model: model!){ (finishedReq, err) in
-//
-//            //            print(finishedReq.results)
-//            guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
-//            guard let firstObservation = results.first else {return}
-//
-//            DispatchQueue.main.async(execute: {
-//
-//                self.label2.text = "\(firstObservation.identifier) \(firstObservation.confidence)"
-//                self.label2.backgroundColor = .white
-//
-////                controllo tra nome del modello al nome dal database
-//               aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
-//                self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
-//               svuotaFiltri()
-//                if(self.pianta.count != 0){
-//                    self.label.text = "\(String(describing: self.pianta[0].generalDescription!))"
-//
-//                    self.label.backgroundColor = .white
-//                }
-//                else{
-//                    self.label.text = " "
-//                    self.label.backgroundColor = .clear
-//                }
-//            })
-//
-//
-//            print(firstObservation.identifier, firstObservation.confidence)
-//            sleep(3)
-//        }
-//        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
-//    }
-//
+    //        per coreml
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+
+
+
+
+
+        let pixelBuffer : CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+
+        let model = try? VNCoreMLModel(for: Oxford102().model)
+        let request = VNCoreMLRequest(model: model!){ (finishedReq, err) in
+
+            //            print(finishedReq.results)
+            guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
+            guard let firstObservation = results.first else {return}
+
+            DispatchQueue.main.async(execute: {
+
+                self.label2.text = "\(firstObservation.identifier) \(firstObservation.confidence)"
+                self.label2.backgroundColor = .white
+
+//                controllo tra nome del modello al nome dal database
+               aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
+                self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
+               svuotaFiltri()
+            })
+
+
+            print(firstObservation.identifier, firstObservation.confidence)
+            sleep(3)
+        }
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+    }
+
     func getDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         let devices: NSArray = AVCaptureDevice.devices() as NSArray;
         for de in devices {

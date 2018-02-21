@@ -51,11 +51,13 @@ class DetailViewController: UIViewController {
 
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
+         alert.view.tintColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-//            let wishList = ritornaLista(nomeLista: "Wishlist")
+
             let gardenList = ritornaLista(nomeLista: "Garden")
 
-//            rimuoviPianta(istanzaPianta: self.plantObject, istanzaLista: wishList)
+
             aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
             print("pianta aggiunta al garden")
             self.list = mostraLista(istanzaLista: gardenList)
@@ -83,6 +85,8 @@ class DetailViewController: UIViewController {
     func alertMessageToRemovePlantFromList (title: String, message: String) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+         alert.view.tintColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
         
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
             
@@ -116,7 +120,7 @@ class DetailViewController: UIViewController {
     
     
     @IBAction func removeFromList(_ sender: Any) {
-        alertMessageToRemovePlantFromList(title: "Attention", message: "Are you sure you want remove this plant from your list?")
+        alertMessageToRemovePlantFromList(title: "Attention", message: "Are you sure you want remove this plant from this list?")
     }
     
     

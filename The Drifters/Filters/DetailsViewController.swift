@@ -36,7 +36,7 @@ class DetailsViewController: UIViewController {
         scientificPlantNameLabel.text = plantObject.scientificName
         descriptionPlantLabel.text = plantObject.generalDescription
         filtersInformationLabel.text = ("Origins: \(String(describing: plantObject.origins!))\nCategory: \(String(describing: plantObject.category!))\nClimate: \(String(describing: plantObject.climate!))\nExposure: \(String(describing: plantObject.exposure!))\nDedication: \(String(describing: plantObject.dedication!))\nPlant size: \(String(describing: plantObject.size!))\nEnvironment: \(String(describing: plantObject.environment!))\nFlowering: \(String(describing: plantObject.flowering!))")
-        cultivationMethodsLabel.text = ("Fertilization: \(String(describing: plantObject.fertilization!))\nPruning: \(String(describing: plantObject.pruning!))\nRepotting: \(String(describing: plantObject.repotting!))")
+        cultivationMethodsLabel.text = ("Fertilization: \(String(describing: plantObject.fertilization!))\nPruning: \(String(describing: plantObject.pruning!))\nRepotting: \(String(describing: plantObject.repotting!))\nIrrigation: \(String(describing: plantObject.irrigation!))")
         propagationLabel.text = plantObject.propagation
         illnessesLabel.text = plantObject.illnesses
         
@@ -90,7 +90,7 @@ class DetailsViewController: UIViewController {
 
     @IBAction func addToFavouriteList(_ sender: Any) {
 
-        alertMessageForWishlist(title:"Attention", message: "\nAre you sure you want to add this plant to your wishlist?" )
+        alertMessageForWishlist(title:"Attention", message: "\nAre you sure you want to add this plant to your list?" )
         
     }
 

@@ -71,7 +71,7 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         let exposure = [ "Filtered light", "Bright light", "Average light", "Shadow", "Dim light", "Full sun"]
         let dedication = [ "Rarely", "Often", "Assiduously"]
         let plantSize = [ "Big","Medium","Small"]
-        let category = [ "Aquatic", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"]
+        let category = [ "Aquatic","Erected", "Shrubby" ,"Bulbous" , "Creeper", "Officinal", "Herbaceous", "Bushy", "Fruit Plant"]
         let environment = ["Indoor","Outdoor"]
     
    
@@ -170,18 +170,6 @@ class SearchByFiltersViewController:  UIViewController, UIPickerViewDelegate, UI
         
         }
     
-
-        
-    override func viewWillAppear(_ animated: Bool) {
-        climateTextField.text = "Climate"
-        exposureTextField.text! = "Exposure"
-        dedicationTextField.text! = "Dedication"
-        plantSizeTextField.text! = "Plant size"
-        categoryTextField.text! = "Category"
-        environmentTextField.text! = "Environment"
-        svuotaFiltri()
-        
-    }
     
     
     
