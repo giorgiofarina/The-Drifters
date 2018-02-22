@@ -151,17 +151,17 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //
 //                aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
 //                self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
-//                
+//
 //                self.session?.stopRunning()
 //
 //                if(self.pianta.count != 0){
 //                    self.appoggio = self.pianta[0]
-//                    
+//
 //                    self.showActionSheet(Message: "You've found" ,Title: "\(self.appoggio.commonName!)")
 //                    self.tabBarController?.tabBar.isHidden = true
 //                        self.activityIndicator.stopAnimating()
 //                        self.waitlabel.text = " "
-//                    
+//
 //                }else {
 //                    svuotaFiltri()
 //                }
