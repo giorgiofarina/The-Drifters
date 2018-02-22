@@ -39,7 +39,7 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconEden" translatesAutoresizingMaskIntoConstraints="NO" id="Csk-2P-VqF">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Csk-2P-VqF">
                                         <rect key="frame" x="5.5" y="77.5" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="DgJ-DG-5cS"/>
@@ -220,14 +220,16 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="39y-lo-wDa"/>
                                     <constraint firstAttribute="height" constant="229" id="8Of-yk-gkh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="229" id="sst-b5-5gZ"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBN-E9-WWG">
-                                <rect key="frame" x="111" y="570" width="164" height="48"/>
+                                <rect key="frame" x="111" y="532" width="164" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="4Rg-UN-len"/>
-                                    <constraint firstAttribute="width" constant="164" id="BBu-Lg-79c"/>
+                                    <constraint firstAttribute="height" constant="48" id="TL6-cD-A6F"/>
+                                    <constraint firstAttribute="width" constant="164" id="ZNC-Pz-037"/>
                                 </constraints>
                                 <state key="normal" image="buttonGetStarted"/>
                                 <connections>
@@ -237,14 +239,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fB8-IX-gZl" firstAttribute="trailing" secondItem="Ik0-aq-j1f" secondAttribute="trailing" constant="78" id="50O-BM-ctj"/>
-                            <constraint firstItem="fB8-IX-gZl" firstAttribute="trailing" secondItem="iBN-E9-WWG" secondAttribute="trailing" constant="100" id="Aox-We-eah"/>
-                            <constraint firstItem="Ik0-aq-j1f" firstAttribute="leading" secondItem="fB8-IX-gZl" secondAttribute="leading" constant="89" id="BWa-EF-0f9"/>
-                            <constraint firstItem="Ik0-aq-j1f" firstAttribute="top" secondItem="fB8-IX-gZl" secondAttribute="top" constant="209" id="EYM-6i-tSn"/>
-                            <constraint firstItem="fB8-IX-gZl" firstAttribute="bottom" secondItem="iBN-E9-WWG" secondAttribute="bottom" constant="49" id="cgt-M7-hxP"/>
-                            <constraint firstItem="iBN-E9-WWG" firstAttribute="top" secondItem="Ik0-aq-j1f" secondAttribute="bottom" constant="112" id="fXg-8h-1zp"/>
-                            <constraint firstItem="iBN-E9-WWG" firstAttribute="top" secondItem="Ik0-aq-j1f" secondAttribute="bottom" constant="112" id="gKH-K6-sI8"/>
-                            <constraint firstItem="iBN-E9-WWG" firstAttribute="leading" secondItem="fB8-IX-gZl" secondAttribute="leading" constant="111" id="rJf-gc-87w"/>
+                            <constraint firstItem="Ik0-aq-j1f" firstAttribute="leading" secondItem="fB8-IX-gZl" secondAttribute="leading" constant="89" id="5ql-vE-RlE"/>
+                            <constraint firstItem="fB8-IX-gZl" firstAttribute="bottom" secondItem="iBN-E9-WWG" secondAttribute="bottom" constant="87" id="9g0-dj-JtM"/>
+                            <constraint firstItem="iBN-E9-WWG" firstAttribute="leading" secondItem="fB8-IX-gZl" secondAttribute="leading" constant="111" id="LKH-aO-ZAA"/>
+                            <constraint firstItem="iBN-E9-WWG" firstAttribute="top" secondItem="Ik0-aq-j1f" secondAttribute="bottom" constant="74" id="TIN-ep-UkI"/>
+                            <constraint firstItem="fB8-IX-gZl" firstAttribute="trailing" secondItem="Ik0-aq-j1f" secondAttribute="trailing" constant="78" id="VqI-nf-KaD"/>
+                            <constraint firstItem="fB8-IX-gZl" firstAttribute="trailing" secondItem="iBN-E9-WWG" secondAttribute="trailing" constant="100" id="W26-k0-hjM"/>
+                            <constraint firstItem="iBN-E9-WWG" firstAttribute="top" secondItem="Ik0-aq-j1f" secondAttribute="bottom" constant="74" id="ae8-As-OyO"/>
+                            <constraint firstItem="Ik0-aq-j1f" firstAttribute="top" secondItem="fB8-IX-gZl" secondAttribute="top" constant="209" id="cnE-Dm-1cU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fB8-IX-gZl"/>
                     </view>
@@ -264,9 +266,9 @@
     </scenes>
     <resources>
         <image name="buttonGetStarted" width="324" height="96"/>
+        <image name="edenIcon" width="248" height="294"/>
         <image name="filterImage" width="379" height="639"/>
         <image name="findIcon-1" width="167" height="187"/>
         <image name="handPlus" width="121" height="220"/>
-        <image name="iconEden" width="323" height="349"/>
     </resources>
 </document>

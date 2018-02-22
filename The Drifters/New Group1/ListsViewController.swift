@@ -245,12 +245,12 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         sectionView.addSubview(backgroundImage)
         let titleSectionLabel = UILabel()
         if selectedSegment == 1 {
-            titleSectionLabel.text = textArray1[section]
+            titleSectionLabel.text = (textArray1[section]).firstUppercased
         } else {
-            titleSectionLabel.text = textArray2[section]
+            titleSectionLabel.text = (textArray2[section]).firstUppercased
         }
         sectionView.addSubview(titleSectionLabel)
-        titleSectionLabel.frame = CGRect(x: 20, y: 1, width: 100, height: 35)
+        titleSectionLabel.frame = CGRect(x: 20, y: 1, width: 346, height: 35)
         titleSectionLabel.textColor = .white
         titleSectionLabel.font = UIFont.boldSystemFont(ofSize: 18)
         

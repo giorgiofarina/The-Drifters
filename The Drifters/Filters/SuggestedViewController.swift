@@ -73,7 +73,7 @@ class SuggestedViewController: UIViewController, UITableViewDelegate, UITableVie
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customSuggestedCell") as! SuggestedTableViewCell
         
-        cell.suggestedPlantNameLabel.text = plantArray[indexPath.row].commonName
+        cell.suggestedPlantNameLabel.text = (plantArray[indexPath.row].commonName)?.firstUppercased
         
         cell.suggestedPlantImageView.image = plantImage[indexPath.row]
     

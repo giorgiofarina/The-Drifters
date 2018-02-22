@@ -80,7 +80,7 @@ class MagnifyingGlassViewController: UIViewController, UISearchBarDelegate, UITa
  
   
     
-        cell.namePlantLabel.text = plantArray[indexPath.row].commonName
+        cell.namePlantLabel.text = (plantArray[indexPath.row].commonName)?.firstUppercased
         
         cell.plantImageView.image = generaImmagine(istanzaPianta: plantArray[indexPath.row]) 
 

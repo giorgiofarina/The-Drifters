@@ -11,11 +11,12 @@ import AVKit
 import Vision
 import CoreML
 
+
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate{
     
     var madeL = UILabel()
     var pianta : [Plant] = []
-    
+
     var session: AVCaptureSession?
     var input: AVCaptureDeviceInput?
     var output = AVCaptureStillImageOutput()
@@ -63,8 +64,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.navigationBar.isHidden = true
-        
-        
+
         
         activityIndicator.hidesWhenStopped = true
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
@@ -111,10 +111,14 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "Eden"))
             session.addOutput(dataOutput)
         }
-        
     }
     
     
+    
+    
+    var appoggio = Plant()
+    
+//    
 //    //        per coreml
 //
 //    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -137,15 +141,19 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //
 //                aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
 //                self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
-//                svuotaFiltri()
+//                
+//                self.session?.stopRunning()
 //
 //                if(self.pianta.count != 0){
-//                
-//                    self.showActionSheet(Message: "You've found" ,Title: "\(self.label2.text!)")
+//                    self.appoggio = self.pianta[0]
+//                    
+//                    self.showActionSheet(Message: "You've found" ,Title: "\(self.appoggio.commonName!)")
 //                    self.tabBarController?.tabBar.isHidden = true
 //                        self.activityIndicator.stopAnimating()
 //                        self.waitlabel.text = " "
-//                        print("\(self.waitlabel.text)")
+//                    
+//                }else {
+//                    svuotaFiltri()
 //                }
 //            })
 //
@@ -155,7 +163,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //        }
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //    }
-    
+//    
     func showActionSheet(Message: String, Title: String){
         
         let messageAlert = NSAttributedString(string: Message, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.light) , NSAttributedStringKey.foregroundColor: UIColor.gray])
@@ -175,18 +183,19 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
            
             self.activityIndicator.startAnimating()
             self.waitlabel.text = "Processing..."
-            print("\(String(describing: self.waitlabel.text))")
+            self.session?.startRunning()
+            svuotaFiltri()
         }
         
         let add = UIAlertAction(title: "Add to Wishilist", style: .default) { action in
             
             let wishList = ritornaLista(nomeLista: "Wishlist")
-            aggiungiPianta(istanzaPianta: self.pianta[0], istanzaLista: wishList)
+            aggiungiPianta(istanzaPianta: self.appoggio, istanzaLista: wishList)
             self.tabBarController?.tabBar.isHidden = false
             self.activityIndicator.startAnimating()
             self.waitlabel.text = "Processing..."
-            print("\(String(describing: self.waitlabel.text))")
-            
+            self.session?.startRunning()
+            svuotaFiltri()
         }
         actionSheet.addAction(add)
         actionSheet.addAction(cancel)

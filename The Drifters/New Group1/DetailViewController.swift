@@ -35,7 +35,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         plantImageView.image = generaImmagine(istanzaPianta: plantObject)
-        commonPlantNameLabel.text = plantObject.commonName
+        commonPlantNameLabel.text = (plantObject.commonName)?.firstUppercased
         scientificPlantNameLabel.text = plantObject.scientificName
         descriptionPlantLabel.text = plantObject.generalDescription
         filtersInformationLabel.text = ("Origins: \(String(describing: plantObject.origins!))\nCategory: \(String(describing: plantObject.category!))\nClimate: \(String(describing: plantObject.climate!))\nExposure: \(String(describing: plantObject.exposure!))\nDedication: \(String(describing: plantObject.dedication!))\nPlant size: \(String(describing: plantObject.size!))\nEnvironment: \(String(describing: plantObject.environment!))\nFlowering: \(String(describing: plantObject.flowering!))")
