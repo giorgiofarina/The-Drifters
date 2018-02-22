@@ -92,25 +92,35 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             print(error)
             input = nil
         }
-        if(session.canAddInput(input!) == true){
-            session.addInput(input!)
-            output.outputSettings = [AVVideoCodecKey : AVVideoCodecType.jpeg]
-            if(session.canAddOutput(output) == true){
-                session.addOutput(output)
-                previewLayer = AVCaptureVideoPreviewLayer(session: session)
-                previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-                previewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-                previewLayer?.frame = CameraV.bounds
-                CameraV.layer.addSublayer(previewLayer!)
-                session.startRunning()
+        
+        if input == nil {
+            
+            print("L'utente non ha consentito l'utilizzo della fotocamera")
+            
+        } else {
+            
+            if(session.canAddInput(input!) == true){
+                session.addInput(input!)
+                output.outputSettings = [AVVideoCodecKey : AVVideoCodecType.jpeg]
+                if(session.canAddOutput(output) == true){
+                    session.addOutput(output)
+                    previewLayer = AVCaptureVideoPreviewLayer(session: session)
+                    previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+                    previewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+                    previewLayer?.frame = CameraV.bounds
+                    CameraV.layer.addSublayer(previewLayer!)
+                    session.startRunning()
+                    
+                    
+                }
                 
-                
+                let dataOutput = AVCaptureVideoDataOutput()
+                dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "Eden"))
+                session.addOutput(dataOutput)
             }
             
-            let dataOutput = AVCaptureVideoDataOutput()
-            dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "Eden"))
-            session.addOutput(dataOutput)
         }
+            
     }
     
     
@@ -118,7 +128,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     var appoggio = Plant()
     
-//    
+    
 //    //        per coreml
 //
 //    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -163,7 +173,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //        }
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //    }
-//    
+    
     func showActionSheet(Message: String, Title: String){
         
         let messageAlert = NSAttributedString(string: Message, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.light) , NSAttributedStringKey.foregroundColor: UIColor.gray])
