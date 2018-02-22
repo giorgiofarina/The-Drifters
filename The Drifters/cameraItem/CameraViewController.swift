@@ -82,7 +82,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         //        button2.addTarget(self, action:#selector(self.bottone2), for: .touchUpInside)
         
         //Initialize session an output variables this is necessary
-        let session = AVCaptureSession()
+        session = AVCaptureSession()
         output = AVCaptureStillImageOutput()
         let camera = getDevice(position: .back)
         do {
@@ -98,7 +98,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             print("L'utente non ha consentito l'utilizzo della fotocamera")
             
         } else {
-            
+            if let session = session {
             if(session.canAddInput(input!) == true){
                 session.addInput(input!)
                 output.outputSettings = [AVVideoCodecKey : AVVideoCodecType.jpeg]
@@ -111,7 +111,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                     CameraV.layer.addSublayer(previewLayer!)
                     session.startRunning()
                     
-                    
+                }
                 }
                 
                 let dataOutput = AVCaptureVideoDataOutput()
@@ -152,7 +152,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //                aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
 //                self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
 //
-//                self.session?.stopRunning()
+//                // self.session?.stopRunning()
 //
 //                if(self.pianta.count != 0){
 //                    self.appoggio = self.pianta[0]
@@ -214,6 +214,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        self.session?.stopRunning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.session?.startRunning()
+    }
     
     func getDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         let devices: NSArray = AVCaptureDevice.devices() as NSArray;
