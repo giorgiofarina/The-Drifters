@@ -211,22 +211,23 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             svuotaFiltri()
         }
         
-        let add = UIAlertAction(title: "Add to Wishilist", style: .default) { action in
+        let detail = UIAlertAction(title: "Show details", style: .default) { action in
+
+            let garderStoryboard: UIStoryboard = UIStoryboard(name: "Camera", bundle: nil)
+            let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailFromCameraID") as! DetailFromCameraViewController
             
-            let wishList = ritornaLista(nomeLista: "Wishlist")
-            aggiungiPianta(istanzaPianta: self.appoggio, istanzaLista: wishList)
-            self.tabBarController?.tabBar.isHidden = false
-            self.activityIndicator.startAnimating()
             
-            self.notEnabledLabel.text = ""
-            self.session?.startRunning()
+            destinationView.plantObject = self.appoggio
+            self.navigationController?.pushViewController(destinationView, animated: true)
+            
             svuotaFiltri()
         }
-        actionSheet.addAction(add)
+        
+        actionSheet.addAction(detail)
         actionSheet.addAction(cancel)
-        
+
         present(actionSheet, animated: true, completion: nil)
-        
+
     }
     
     
@@ -250,6 +251,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
         }))
         
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
             alert.dismiss(animated: true, completion: nil)
             self.notEnabledLabel.text = "Camera not authorized"
@@ -265,6 +267,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     override func viewWillAppear(_ animated: Bool) {
         self.session?.startRunning()
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = false
+        self.activityIndicator.startAnimating()
+        
         if AVCaptureDevice.authorizationStatus(for: .video) != .authorized {
             
             check = false

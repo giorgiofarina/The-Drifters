@@ -25,10 +25,10 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let buttonBar = UIView()
     
     
-    class Responder: NSObject {
-        @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        }
-    }
+//    class Responder: NSObject {
+//        @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+//        }
+//    }
     
     
     @IBOutlet weak var segmentedControll: UISegmentedControl!
@@ -44,6 +44,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     @IBAction func SelectSegmentedControll(_ sender: UISegmentedControl) {
+        debugPrint(sender.selectedSegmentIndex)
         if sender.selectedSegmentIndex == 0 {
             selectedSegment = 1
             DataModel.shared.originView = true
@@ -59,7 +60,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let responder = Responder()
+//        let responder = Responder()
         
         segmentedControll.backgroundColor = .clear
         segmentedControll.tintColor = .clear
@@ -81,7 +82,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Constraint the button bar to the width of the segmented control divided by the number of segments
         buttonBar.widthAnchor.constraint(equalTo: segmentedControll.widthAnchor, multiplier: 1 / CGFloat(segmentedControll.numberOfSegments)).isActive = true
         
-        segmentedControll.addTarget(responder, action: #selector(responder.segmentedControlValueChanged(_:)), for: UIControlEvents.valueChanged)
+        segmentedControll.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: UIControlEvents.valueChanged)
         self.segmentedControll.reloadInputViews()
         
         self.tableView.delegate = self
@@ -99,6 +100,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        
         self.tableView.reloadData()
     }
     
