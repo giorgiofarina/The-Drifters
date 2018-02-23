@@ -16,6 +16,9 @@ final class DataModel {
 //    originView true -> Garden, false -> wishList
     var originView: Bool = true
     
+    var isFirstTimeCamera: Bool {
+        return userDefaults.bool(forKey: "Camera")
+    }
     
     // *** CHECK VARIABLE FOR FIRST ACCESS
     var isFirstTime: Bool {
@@ -24,7 +27,10 @@ final class DataModel {
     
     private init(){
         userDefaults.register(defaults: ["Onboarding" : true])
+        userDefaults.register(defaults: ["Camera" : true])
     }
+    
+    
     
     
 }

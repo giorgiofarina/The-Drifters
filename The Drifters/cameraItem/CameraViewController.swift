@@ -16,6 +16,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     var madeL = UILabel()
     var pianta : [Plant] = []
+    var check: Bool = false
 
     var session: AVCaptureSession?
     var input: AVCaptureDeviceInput?
@@ -23,17 +24,19 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var previewLayer: AVCaptureVideoPreviewLayer?
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+
     
-    var label2 = UILabel()
     
-    var waitlabel: UILabel = {
-        let waitLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 270, height: 37))
-        waitLabel.center = CGPoint(x: 180, y: 280)
-        waitLabel.textColor = UIColor.white
-        waitLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
-        waitLabel.textAlignment = .center
-        waitLabel.text = "Processing..."
-        return waitLabel
+    var labelCameraNotEnable = UILabel()
+    
+    var notEnabledLabel: UILabel = {
+        let notEnabledLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 270, height: 37))
+        notEnabledLabel.center = CGPoint(x: 180, y: 300)
+        notEnabledLabel.textColor = UIColor.gray
+        notEnabledLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
+        notEnabledLabel.textAlignment = .center
+        notEnabledLabel.text = ""
+        return notEnabledLabel
     }()
     
     let button2: UIButton = {
@@ -59,12 +62,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
     override func viewDidLoad() {
-        
-        
+       
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.navigationBar.isHidden = true
-
         
         activityIndicator.hidesWhenStopped = true
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
@@ -74,7 +75,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         activityIndicator.center = self.view.center
         self.activityIndicator.startAnimating()
         
-        self.view.addSubview(waitlabel)
+        self.view.addSubview(notEnabledLabel)
+       
         
         view.addSubview(activityIndicator)
         
@@ -82,8 +84,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         //        button2.addTarget(self, action:#selector(self.bottone2), for: .touchUpInside)
         
         //Initialize session an output variables this is necessary
-        session = AVCaptureSession()
-        output = AVCaptureStillImageOutput()
         let camera = getDevice(position: .back)
         do {
             input = try AVCaptureDeviceInput(device: camera!)
@@ -93,11 +93,18 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             input = nil
         }
         
-        if input == nil {
+        if AVCaptureDevice.authorizationStatus(for: .video) != .authorized {
             
+            check = false
             print("L'utente non ha consentito l'utilizzo della fotocamera")
             
+            
+            
+            
         } else {
+            self.session = AVCaptureSession()
+            output = AVCaptureStillImageOutput()
+            check = true
             if let session = session {
             if(session.canAddInput(input!) == true){
                 session.addInput(input!)
@@ -124,8 +131,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
     
-    
-    
     var appoggio = Plant()
     
     
@@ -133,7 +138,11 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //
 //    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
 //
-//
+//        print("Entra nel capture!")
+//        if check == true {
+//          
+//        print("L'utente ha consentito")
+//            
 //        let pixelBuffer : CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
 //
 //        let model = try? VNCoreMLModel(for: Oxford102().model)
@@ -142,11 +151,12 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //            guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
 //            guard let firstObservation = results.first else {return}
 //
-//            DispatchQueue.main.async(execute: {
-//
-//                self.label2.text = firstObservation.identifier
-//
-//
+//        DispatchQueue.main.async(execute: {
+//            if firstObservation.confidence >= 0.8 {
+//               
+//                self.notEnabledLabel.text = " "
+//                
+//                
 //                //controllo tra nome del modello al nome dal database
 //
 //                aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
@@ -160,20 +170,23 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //                    self.showActionSheet(Message: "You've found" ,Title: "\(self.appoggio.commonName!)")
 //                    self.tabBarController?.tabBar.isHidden = true
 //                        self.activityIndicator.stopAnimating()
-//                        self.waitlabel.text = " "
-//
+//                        self.notEnabledLabel.text = " "
+//                    
+//                    
 //                }else {
 //                    svuotaFiltri()
 //                }
-//            })
+//            }
+//        })
 //
 //
 //            print(firstObservation.identifier, firstObservation.confidence)
-//            sleep(2)
+//           sleep(1)
 //        }
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+//        }
 //    }
-    
+//    
     func showActionSheet(Message: String, Title: String){
         
         let messageAlert = NSAttributedString(string: Message, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.light) , NSAttributedStringKey.foregroundColor: UIColor.gray])
@@ -192,7 +205,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             self.tabBarController?.tabBar.isHidden = false
            
             self.activityIndicator.startAnimating()
-            self.waitlabel.text = "Processing..."
+           
+            self.notEnabledLabel.text = ""
             self.session?.startRunning()
             svuotaFiltri()
         }
@@ -203,7 +217,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             aggiungiPianta(istanzaPianta: self.appoggio, istanzaLista: wishList)
             self.tabBarController?.tabBar.isHidden = false
             self.activityIndicator.startAnimating()
-            self.waitlabel.text = "Processing..."
+            
+            self.notEnabledLabel.text = ""
             self.session?.startRunning()
             svuotaFiltri()
         }
@@ -214,12 +229,62 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
     }
     
+    
+    
+    func alertSettings(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.view.tintColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        
+        alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { (action: UIAlertAction!) in
+        
+            let url = URL(string:UIApplicationOpenSettingsURLString)
+                
+            _ =  UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+            
+            
+            
+//            UIApplication.shared.open(URL(string: "App-Prefs:root=Eden")!, options: [:], completionHandler: nil)
+            self.notEnabledLabel.text = ""
+           
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            alert.dismiss(animated: true, completion: nil)
+            self.notEnabledLabel.text = "Camera not authorized"
+          
+        }))
+        self.present(alert, animated: true , completion: nil)
+    }
+
+    
     override func viewDidDisappear(_ animated: Bool) {
         self.session?.stopRunning()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.session?.startRunning()
+        if AVCaptureDevice.authorizationStatus(for: .video) != .authorized {
+            
+            check = false
+            print("L'utente non ha consentito l'utilizzo della fotocamera")
+            self.notEnabledLabel.text = "Camera not authorized"
+            
+            
+            if DataModel.shared.isFirstTimeCamera{
+                UserDefaults.standard.set(false, forKey: "Camera")
+                self.notEnabledLabel.text = "Camera not authorized"
+                
+            }else  {
+                
+                alertSettings(title: "Camera Permissions", message: "You have turned off permission to camera for Eden. Please go to iOS settings and give permission.")
+                self.notEnabledLabel.text = "Camera not authorized"
+                
+            }
+        }
+        
+
     }
     
     func getDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {

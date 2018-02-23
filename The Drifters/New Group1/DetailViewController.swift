@@ -87,7 +87,7 @@ class DetailViewController: UIViewController {
 
     @IBAction func addToGardenList(_ sender: Any) {
 
-        alertMessageForGarden(title:"Attention", message: "Are you sure you want to add this plant to your garden?" )
+        alertMessageForGarden(title:"Hey", message: "Are you sure you want to add this plant to your garden?" )
     }
     
     
@@ -128,7 +128,7 @@ class DetailViewController: UIViewController {
     
     
     @IBAction func removeFromList(_ sender: Any) {
-        alertMessageToRemovePlantFromList(title: "Attention", message: "Are you sure you want remove the plant from this list?")
+        alertMessageToRemovePlantFromList(title: "Hey", message: "Are you sure you want remove the plant from this list?")
     }
     
     

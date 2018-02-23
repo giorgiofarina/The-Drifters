@@ -90,7 +90,7 @@ class DetailsViewController: UIViewController {
 
     @IBAction func addToFavouriteList(_ sender: Any) {
 
-        alertMessageForWishlist(title:"Attention", message: "\nAre you sure you want to add this plant to your list?" )
+        alertMessageForWishlist(title:"Hey", message: "\nAre you sure you want to add this plant to your list?" )
         
     }
 
