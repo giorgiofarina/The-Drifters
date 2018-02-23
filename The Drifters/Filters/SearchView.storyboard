@@ -380,7 +380,6 @@
         <!--Details-->
         <scene sceneID="zIY-aR-PfD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ON0-Q1-cW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="detailsID" id="IDT-O3-u7N" customClass="DetailsViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BNw-ma-yjo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
@@ -566,6 +565,7 @@
                         <outlet property="scientificPlantNameLabel" destination="20t-Y7-DGC" id="nWA-SG-7Ft"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ON0-Q1-cW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2000.8" y="4.497751124437781"/>
         </scene>
