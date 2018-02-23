@@ -186,7 +186,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //        }
 //    }
-//    
+    
     func showActionSheet(Message: String, Title: String){
         
         let messageAlert = NSAttributedString(string: Message, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.light) , NSAttributedStringKey.foregroundColor: UIColor.gray])
