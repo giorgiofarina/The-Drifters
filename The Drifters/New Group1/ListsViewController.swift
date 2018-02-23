@@ -209,7 +209,7 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let garderStoryboard: UIStoryboard = UIStoryboard(name: "MyGarden", bundle: nil)
-        let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
+        let destinationView = garderStoryboard.instantiateViewController(withIdentifier: "detailID") as! DetailViewController
         
          var pianteCategoria: [Plant] = []
         if selectedSegment == 1 {
