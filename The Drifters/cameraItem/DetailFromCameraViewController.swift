@@ -31,6 +31,7 @@ class DetailFromCameraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         plantImageView.image = generaImmagine(istanzaPianta: plantObject)
         commonPlantNameLabel.text = (plantObject.commonName)?.firstUppercased

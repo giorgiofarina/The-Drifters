@@ -16,7 +16,6 @@
 		4209FEE020348E7E00C64C7F /* List+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209FEDC20348E7E00C64C7F /* List+CoreDataClass.swift */; };
 		4209FEE220348E7E00C64C7F /* Plant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209FEDE20348E7E00C64C7F /* Plant+CoreDataClass.swift */; };
 		4209FEE820349B0F00C64C7F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4209FEE720349B0F00C64C7F /* data.json */; };
-		42841DB22040884C0018A93D /* Oxford102.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 42841DB12040884C0018A93D /* Oxford102.mlmodel */; };
 		42841DD72040886E0018A93D /* sunflower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42841DB42040886E0018A93D /* sunflower.jpg */; };
 		42841DD82040886E0018A93D /* water hyacint.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42841DB52040886E0018A93D /* water hyacint.jpg */; };
 		42841DD92040886E0018A93D /* basil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42841DB62040886E0018A93D /* basil.jpg */; };
@@ -110,7 +109,6 @@
 		4209FEDC20348E7E00C64C7F /* List+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4209FEDE20348E7E00C64C7F /* Plant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4209FEE720349B0F00C64C7F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		42841DB12040884C0018A93D /* Oxford102.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Oxford102.mlmodel; path = ../../../../Downloads/Oxford102.mlmodel; sourceTree = "<group>"; };
 		42841DB42040886E0018A93D /* sunflower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunflower.jpg; sourceTree = "<group>"; };
 		42841DB52040886E0018A93D /* water hyacint.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "water hyacint.jpg"; sourceTree = "<group>"; };
 		42841DB62040886E0018A93D /* basil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = basil.jpg; sourceTree = "<group>"; };
@@ -329,7 +327,6 @@
 		99DC2E7B20234B0800412EE4 /* The Drifters */ = {
 			isa = PBXGroup;
 			children = (
-				42841DB12040884C0018A93D /* Oxford102.mlmodel */,
 				999928022038B5FF007DCCBC /* DataModel.swift */,
 				99F99B4A203B35A500EA5426 /* cameraItem */,
 				4209FED720348DC700C64C7F /* CoreDataClasses */,
@@ -578,7 +575,6 @@
 				99DC2E8520234B0800412EE4 /* The_Drifters.xcdatamodeld in Sources */,
 				99DA17D0203AF42400A474A6 /* List+CoreDataProperties.swift in Sources */,
 				9944B6AF2036273A00A46B5D /* InsideCollectionViewCell.swift in Sources */,
-				42841DB22040884C0018A93D /* Oxford102.mlmodel in Sources */,
 				22809990202D900C00C2BCDD /* PageViewController.swift in Sources */,
 				9944B6AE2036273A00A46B5D /* TableViewController.swift in Sources */,
 				99DA17C8203ACE9C00A474A6 /* TabBarMainViewController.swift in Sources */,
@@ -732,7 +728,7 @@
 				DEVELOPMENT_TEAM = MC89RN7CV7;
 				INFOPLIST_FILE = "The Drifters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosda.Eden;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosda.Eden00997m6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -747,7 +743,7 @@
 				DEVELOPMENT_TEAM = MC89RN7CV7;
 				INFOPLIST_FILE = "The Drifters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosda.Eden;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosda.Eden00997m6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

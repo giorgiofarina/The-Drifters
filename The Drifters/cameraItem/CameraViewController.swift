@@ -17,6 +17,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var madeL = UILabel()
     var pianta : [Plant] = []
     var check: Bool = false
+    var appoggio = Plant()
     
     var session: AVCaptureSession?
     var input: AVCaptureDeviceInput?
@@ -83,6 +84,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         //        self.view.addSubview(button2)
         //        button2.addTarget(self, action:#selector(self.bottone2), for: .touchUpInside)
         
+        
         //Initialize session an output variables this is necessary
         let camera = getDevice(position: .back)
         do {
@@ -93,16 +95,20 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             input = nil
         }
         
-        if AVCaptureDevice.authorizationStatus(for: .video) != .authorized {
-            
-            check = false
-            print("L'utente non ha consentito l'utilizzo della fotocamera")
-            
-            
-        } else {
+        checkCamera()
+        
+    }
+    
+    
+    
+    func startSession() {
+        
+        print("\nSTART SESSION!")
+        
+            check = true
             self.session = AVCaptureSession()
             output = AVCaptureStillImageOutput()
-            check = true
+            
             if let session = session {
                 if(session.canAddInput(input!) == true){
                     session.addInput(input!)
@@ -126,64 +132,64 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
         }
         
-    }
     
     
-    var appoggio = Plant()
     
     
-    //        per coreml
     
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        
-        print("Entra nel capture!")
-        if check == true {
-            
-            print("L'utente ha consentito")
-            
-            let pixelBuffer : CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-            
-            let model = try? VNCoreMLModel(for: Oxford102().model)
-            let request = VNCoreMLRequest(model: model!){ (finishedReq, err) in
-                
-                guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
-                guard let firstObservation = results.first else {return}
-                
-                DispatchQueue.main.async(execute: {
-                    if firstObservation.confidence >= 0.8 {
-                        
-                        self.notEnabledLabel.text = " "
-                        
-                        
-                        //controllo tra nome del modello al nome dal database
-                        
-                        aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
-                        self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
-                        
-                        // self.session?.stopRunning()
-                        
-                        if(self.pianta.count != 0){
-                            self.appoggio = self.pianta[0]
-                            
-                            self.showActionSheet(Message: "You've found" ,Title: "\(self.appoggio.commonName!)")
-                            self.tabBarController?.tabBar.isHidden = true
-                            self.activityIndicator.stopAnimating()
-                            self.notEnabledLabel.text = " "
-                            
-                            
-                        }else {
-                            svuotaFiltri()
-                        }
-                    }
-                })
-                
-                
-                print(firstObservation.identifier, firstObservation.confidence)
-                sleep(1)
-            }
-            try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
-        }
-    }
+    
+//    //        per coreml
+//
+//    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+//
+//
+//        if check == true {
+//
+//
+//            let pixelBuffer : CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+//
+//            let model = try? VNCoreMLModel(for: Oxford102().model)
+//            let request = VNCoreMLRequest(model: model!){ (finishedReq, err) in
+//
+//                guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
+//                guard let firstObservation = results.first else {return}
+//
+//                DispatchQueue.main.async(execute: {
+//                    if firstObservation.confidence >= 0.8 {
+//
+//                        self.notEnabledLabel.text = ""
+//
+//
+//                        //controllo tra nome del modello al nome dal database
+//
+//                        aggiungiFiltri(nomeFiltro: "commonName", valoreFiltro: firstObservation.identifier)
+//                        self.pianta = ricercaPerFiltri(arrayFiltri: filtri)
+//
+//                        if(self.pianta.count != 0){
+//                            self.session?.stopRunning()
+//                            self.appoggio = self.pianta[0]
+//
+//                            self.showActionSheet(Message: "You've found" ,Title: "\(self.appoggio.commonName!)")
+//                            self.tabBarController?.tabBar.isHidden = true
+//                            self.activityIndicator.stopAnimating()
+//                            self.notEnabledLabel.text = ""
+//
+//
+//                        }else {
+//                            svuotaFiltri()
+//                        }
+//                    }
+//                })
+//
+//                
+//                print(firstObservation.identifier, firstObservation.confidence)
+//                sleep(1)
+//            }
+//            try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+//        }
+//    }
+    
+    
     
     func showActionSheet(Message: String, Title: String){
         
@@ -204,7 +210,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             self.activityIndicator.startAnimating()
             
-            self.notEnabledLabel.text = ""
+            
             self.session?.startRunning()
             svuotaFiltri()
         }
@@ -230,62 +236,76 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
     
+    
+    
+    
+    // ALERT DEI SETTINGS
+    
     func alertSettings(title: String, message: String) {
+        
+        print("ALERT DEI SETTING")
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         alert.view.tintColor = UIColor(red: 155.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-        
         alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { (action: UIAlertAction!) in
             
             let url = URL(string:UIApplicationOpenSettingsURLString)
-            
             _ =  UIApplication.shared.open(url!, options: [:], completionHandler: nil)
-            
-            
-            
-            //            UIApplication.shared.open(URL(string: "App-Prefs:root=Eden")!, options: [:], completionHandler: nil)
-            self.notEnabledLabel.text = ""
-            
             
         }))
         
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
             alert.dismiss(animated: true, completion: nil)
-            self.notEnabledLabel.text = "Camera not authorized"
             
         }))
         self.present(alert, animated: true , completion: nil)
     }
     
     
+    
+    // ASPETTA CHE SCELGA
+    
+    func waitForDecision() {
+        print("Ancora non ha scelto")
+        
+        AVCaptureDevice.requestAccess(for: .video) { granted in
+            DispatchQueue.main.async {
+                self.checkCamera()
+            }
+        }
+    }
+
+
+    // VERIFICA AUTORIZZAZIONE
+    
+    func checkCamera() {
+        let authStatus = AVCaptureDevice.authorizationStatus(for: .video)
+        switch authStatus {
+            
+        case .authorized: startSession()
+        case .denied: self.notEnabledLabel.text = "Camera not authorized"
+        case .notDetermined: waitForDecision()
+        default: break
+        }
+    }
+
+    
+    
     override func viewDidDisappear(_ animated: Bool) {
+        print("STOP SESSION!")
         self.session?.stopRunning()
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
-        self.session?.startRunning()
-        self.navigationController?.isNavigationBarHidden = true
-        self.tabBarController?.tabBar.isHidden = false
-        self.activityIndicator.startAnimating()
         
-        if AVCaptureDevice.authorizationStatus(for: .video) != .authorized {
-            
-            check = false
-            print("L'utente non ha consentito l'utilizzo della fotocamera")
+        if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
+            self.notEnabledLabel.text = ""
+            self.session?.startRunning()
+        } else if AVCaptureDevice.authorizationStatus(for: .video) == .denied {
             self.notEnabledLabel.text = "Camera not authorized"
-            
-            
-            if DataModel.shared.isFirstTimeCamera{
-                UserDefaults.standard.set(false, forKey: "Camera")
-                self.notEnabledLabel.text = "Camera not authorized"
-                
-            }else  {
-                
-                alertSettings(title: "Camera Permissions", message: "You have turned off permission to camera for Eden. Please go to iOS settings and give permission.")
-                self.notEnabledLabel.text = "Camera not authorized"
-                
-            }
+            alertSettings(title: "Camera Permissions", message: "You have turned off permission to camera for Eden. Please go to iOS settings and give permission.")
         }
         
         
@@ -305,5 +325,3 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
 }
-
-
