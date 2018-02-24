@@ -137,7 +137,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
     
-    
+//
 //    //        per coreml
 //
 //    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -181,7 +181,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //                    }
 //                })
 //
-//                
+//
 //                print(firstObservation.identifier, firstObservation.confidence)
 //                sleep(1)
 //            }
@@ -299,6 +299,9 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = false
+        self.activityIndicator.startAnimating()
         
         if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
             self.notEnabledLabel.text = ""
