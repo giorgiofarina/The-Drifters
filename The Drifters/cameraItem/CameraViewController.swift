@@ -137,8 +137,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
     
-//
-//    //        per coreml
+
+    //        per coreml
 //
 //    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
 //
@@ -183,7 +183,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //
 //
 //                print(firstObservation.identifier, firstObservation.confidence)
-//                sleep(1)
+////                sleep(1)
 //            }
 //            try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 //        }

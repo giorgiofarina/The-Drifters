@@ -67,7 +67,8 @@ class DetailFromCameraViewController: UIViewController {
             let wishList = ritornaLista(nomeLista: "Wishlist")
             
             aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: wishList)
-            
+            self.tabBarController?.tabBar.items![0].badgeValue = "New"
+            self.tabBarController?.tabBar.items![0].badgeColor = UIColor(red: 255.0/255.0, green: 144.0/255.0, blue: 62.0/255.0, alpha: 1.00)
         }))
         
         alert.addAction(UIAlertAction(title: "Add to Garden", style: .default, handler: { (action: UIAlertAction!) in
@@ -75,7 +76,8 @@ class DetailFromCameraViewController: UIViewController {
             let gardenList = ritornaLista(nomeLista: "Garden")
             
             aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
-            
+            self.tabBarController?.tabBar.items![0].badgeValue = "New"
+            self.tabBarController?.tabBar.items![0].badgeColor = UIColor(red: 255.0/255.0, green: 86.0/255.0, blue: 62.0/255.0, alpha: 1.00)
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in

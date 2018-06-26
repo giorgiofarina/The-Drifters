@@ -127,11 +127,11 @@
             </objects>
             <point key="canvasLocation" x="-38" y="233"/>
         </scene>
-        <!--Garden-->
+        <!--Lists-->
         <scene sceneID="aGh-L2-0sI">
             <objects>
                 <navigationController id="fMc-82-69b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Garden" image="listsIcon" id="ngk-J7-rbZ"/>
+                    <tabBarItem key="tabBarItem" title="Lists" image="listsIcon" id="ngk-J7-rbZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="MBy-eE-xQj">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -150,7 +150,6 @@
         <!--Details-->
         <scene sceneID="A1n-Dk-ba3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jz-tV-x9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="detailID" id="zHZ-mb-UIW" customClass="DetailViewController" customModule="The_Drifters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ycZ-4Y-pf1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
@@ -345,6 +344,7 @@
                         <outlet property="scientificPlantNameLabel" destination="GDv-81-Tn6" id="aEA-6D-Ujn"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jz-tV-x9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="854" y="233"/>
         </scene>

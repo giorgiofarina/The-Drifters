@@ -47,7 +47,6 @@ class DetailViewController: UIViewController {
         plantImageView.layer.cornerRadius = 10
         plantImageView.layer.masksToBounds = true
         
-        navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.shadowImage = UIImage()
         
         if DataModel.shared.originView{
@@ -70,7 +69,8 @@ class DetailViewController: UIViewController {
 
             let gardenList = ritornaLista(nomeLista: "Garden")
             aggiungiPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
-            
+            self.tabBarController?.tabBar.items![0].badgeValue = "New"
+            self.tabBarController?.tabBar.items![0].badgeColor = UIColor(red: 255.0/255.0, green: 86.0/255.0, blue: 62.0/255.0, alpha: 1.00)
 
         }))
 
@@ -105,12 +105,15 @@ class DetailViewController: UIViewController {
             if DataModel.shared.originView {
 
                 rimuoviPianta(istanzaPianta: self.plantObject, istanzaLista: gardenList)
-                
+                self.tabBarController?.tabBar.items![0].badgeValue = "New"
+                self.tabBarController?.tabBar.items![0].badgeColor = UIColor(red: 255.0/255.0, green: 86.0/255.0, blue: 62.0/255.0, alpha: 1.00)
                 self.list = mostraLista(istanzaLista: gardenList)
             } else {
 
                 rimuoviPianta(istanzaPianta: self.plantObject, istanzaLista: wishList)
-              
+                self.tabBarController?.tabBar.items![0].badgeValue = "New"
+                self.tabBarController?.tabBar.items![0].badgeColor = UIColor(red: 255.0/255.0, green: 144.0/255.0, blue: 62.0/255.0, alpha: 1.00)
+                self.list = mostraLista(istanzaLista: wishList)
             }
             appDelegate.saveContext()
             

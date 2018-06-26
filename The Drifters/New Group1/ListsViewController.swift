@@ -24,7 +24,6 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var imageSuggest = UIImageView()
     let buttonBar = UIView()
     
-    
 //    class Responder: NSObject {
 //        @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
 //        }
@@ -105,6 +104,9 @@ class ListsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        self.tabBarController?.tabBar.items![0].badgeValue = nil
+        
         self.tableView.reloadData()
     }
     
